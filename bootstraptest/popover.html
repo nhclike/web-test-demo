@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+	<meta charset="UTF-8">
+	<!--2 viewport-->
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<!--3、x-ua-compatible-->
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<title></title>
+	<!--4、引入两个兼容文件-->
+	<!--[if lt IE 9]>
+	<script src="../src/bootstrap/js/html5shiv.min.js"></script>
+	<script src="../src/bootstrap/js/respond.min.js"></script>
+	<![endif]-->
+	<!--6、引入 bootstrap.css-->
+	<script src="../src/bootstrap/css/bootstrap.min.css"></script>
+</head>
+<body style="padding-top: 200px">
+<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+	Popover on 左侧
+</button>
+
+<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+	Popover on 顶部
+</button>
+
+<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
+	Popover on 底部
+</button>
+
+<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+	Popover on 右侧
+</button>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<!--5、引入 jquery，bootstrap js-->
+<script src="../src/bootstrap/js/jquery-1.11.3.js"></script>
+<script src="../src/bootstrap/js/bootstrap.min.js"></script>
+<script src="../src/bootstrap/js/bootlint.js"></script>
+<script>
+	bootlint.showLintReportForCurrentDocument([]);
+</script>
+<script>
+	$(function () {
+		$('[data-toggle="popover"]').popover();
+	})
+</script>
+</body>
+</html>

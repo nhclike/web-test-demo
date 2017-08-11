@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <svg width="1800px" height="1800px" version="1.1"
+         xmlns="http://www.w3.org/2000/svg" id="w1">
+
+        <defs>
+            <g stroke="#000" id="bg" stroke-dasharray="5" transform="scale(1)">
+                <path d="M0,0000H1800" />
+                <path d="M0,0060H1800" />
+                <path d="M0,0120H1800" />
+                <path d="M0,0180H1800" />
+                <path d="M0,0240H1800" />
+                <path d="M0,0300H1800" />
+                <path d="M0,0360H1800" />
+                <path d="M0,0420H1800" />
+                <path d="M0,0480H1800" />
+                <path d="M0,0540H1800" />
+                <path d="M0,0600H1800" />
+                <path d="M0,0660H1800" />
+                <path d="M0,0720H1800" />
+                <path d="M0,0780H1800" />
+                <path d="M0,0840H1800" />
+                <path d="M0,0900H1800" />
+                <path d="M0,0960H1800" />
+                <path d="M0,1020H1800" />
+                <path d="M0,1080H1800" />
+                <path d="M0,1140H1800" />
+                <path d="M0,1200H1800" />
+                <path d="M0,1260H1800" />
+                <path d="M0,1320H1800" />
+                <path d="M0,1380H1800" />
+                <path d="M0,1440H1800" />
+                <path d="M0,1500H1800" />
+                <path d="M0,1560H1800" />
+                <path d="M0,1620H1800" />
+                <path d="M0,1680H1800" />
+                <path d="M0,1740H1800" />
+                <path d="M0,1800H1800" />
+                <path d="M0000,0V1800" />
+                <path d="M0060,0V1800" />
+                <path d="M0120,0V1800" />
+                <path d="M0180,0V1800" />
+                <path d="M0240,0V1800" />
+                <path d="M0300,0V1800" />
+                <path d="M0360,0V1800" />
+                <path d="M0420,0V1800" />
+                <path d="M0480,0V1800" />
+                <path d="M0540,0V1800" />
+                <path d="M0600,0V1800" />
+                <path d="M0660,0V1800" />
+                <path d="M0720,0V1800" />
+                <path d="M0780,0V1800" />
+                <path d="M0840,0V1800" />
+                <path d="M0900,0V1800" />
+                <path d="M0960,0V1800" />
+                <path d="M1020,0V1800" />
+                <path d="M1080,0V1800" />
+                <path d="M1140,0V1800" />
+                <path d="M1200,0V1800" />
+                <path d="M1260,0V1800" />
+                <path d="M1320,0V1800" />
+                <path d="M1380,0V1800" />
+                <path d="M1440,0V1800" />
+                <path d="M1500,0V1800" />
+                <path d="M1560,0V1800" />
+                <path d="M1620,0V1800" />
+                <path d="M1680,0V1800" />
+                <path d="M1740,0V1800" />
+                <path d="M1800,0V1800" />
+            </g>
+        </defs>
+        <use xlink:href="#bg" x="0" y="0"></use>
+        <rect width="100px" height="100px" fill="#ddd" id="r1"></rect>
+        <text  dominant-baseline="text-before-edge" x="0" y="0" fill="#000">文本对齐</text>
+
+    </svg>
+    <div draggable="true" id="p1">
+        this is a test
+    </div>
+    <script>
+//        var x=60,y=60;
+//        var path = document.createElementNS("http://www.w3.org/2000/svg","path");
+//        path.setAttribute('stroke','#000');
+//        path.setAttribute('d','M0,60H1800');
+//        w1.appendChild(path);
+        p1.ondragstart=function(ev){
+           console.log('start')
+        };
+        p1.ondrag=function(){
+            console.log('on drag')
+        };
+        p1.ondragend=function(){
+            console.log('dragend')
+        };
+        r1.ondragenter=function(ev){
+            console.log('enter')
+        };
+        r1.ondragover=function(ev){
+            ev.preventDefault();
+            console.log('over');
+        };
+        r1.ondragleave=function(){
+            console.log('leave');
+        };
+        r1.ondrop=function(ev){
+            console.log('drop');
+        }
+
+
+    </script>
+</body>
+</html>
