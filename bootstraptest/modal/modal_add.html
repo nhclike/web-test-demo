@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+  <meta charset="UTF-8">
+  <!--2 viewport-->
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <!--3、x-ua-compatible-->
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <title></title>
+  <!--4、引入两个兼容文件-->
+  <!--[if lt IE 9]>
+  <script src="../../src/bootstrap/js/html5shiv.min.js"></script>
+  <script src="../../src/bootstrap/js/respond.min.js"></script>
+  <![endif]-->
+  <!--6、引入 bootstrap.css-->
+  <link rel="stylesheet" href="../../src/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/video_meeting.css">
+  <link rel="stylesheet" href="../css/call.css">
+</head>
+<body>
+<div class="modal fade" id="inviteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="margin-top: 200px;">
+  <div class="modal-dialog small-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background: #0f7cc6;border-radius: 4px;">
+        <button type="button"  class="close" data-dismiss="modal"	aria-label="Close">
+          <span aria-hidden="true" class="glyphicon glyphicon-remove" ></span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">通讯录</h4>
+      </div>
+      <div class="modal-body">
+        <div id="form">
+          <!-- tabs title -->
+          <ul id="contactTab" class="nav nav-pills" role="tablist">
+            <li role="presentation" class="active">
+              <a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">联系人</a>
+            </li>
+            <li role="presentation">
+              <a href="#dial" aria-controls="dial" role="tab" data-toggle="tab">拨号</a>
+            </li>
+          </ul>
+          <!-- tabs content -->
+          <div class="tab-content">
+            <!-- 联系人 -->
+            <div role="tabpanel" class="tab-pane active" id="contact">
+              <form class="form-inline">
+                <div class="form-group">
+                  <label class="sr-only" for="exampleInputAmount">search</label>
+                  <!-- 搜索 -->
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="searchPhone" placeholder="请输入号码">
+                    <!-- 搜索按钮 -->
+                    <!-- <div class="input-group-addon search"></div> -->
+                  </div>
+                </div>
+              </form>
+              <!-- 联系人列表 -->
+              <ul id="contact-list" class="contact-list">
+              </ul>
+            </div>
+            <!-- 拨号 -->
+            <div role="tabpanel" class="tab-pane" id="dial">
+              <div class="nexus">
+                <div class="phone-tab-contents">
+                  <div class="tab-content phone current">
+                    <div class="number-area">
+                      <!-- 显示拨号数字 -->
+                      <span class="numbers"></span>
+                      <!-- 拨号信息提示 -->
+                      <span class="phone-pic" >正在呼叫</span>
+                    </div>
+                    <!-- 删除数字 -->
+                    <div class="btn-del delete-btn"></div>
+                    <!-- 拨号键盘 -->
+                    <div class="numbers-container">
+                      <span class="pushed1">1</span>
+                      <span class="pushed2">2</span>
+                      <span class="pushed3">3</span>
+                      <span class="pushed4">4</span>
+                      <span class="pushed5">5</span>
+                      <span class="pushed6">6</span>
+                      <span class="pushed7">7</span>
+                      <span class="pushed8">8</span>
+                      <span class="pushed9">9</span>
+                      <span class="pushedasterisk">*</span>
+                      <span class="pushed0">0</span>
+                      <span class="pushednumber">#</span>
+                    </div>
+                    <p class="cover"></p>
+                  </div>
+                </div>
+                <!-- 拨号操作 -->
+                <ul class="main-btns">
+                  <!-- 拨号 -->
+                  <li><a class="btn-dial" onclick="call(this)"></a></li>
+                  <!-- 挂断 -->
+                  <li><a class="btn-hang-up" id="hangupbtn" onclick="hangup(this)"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" style="display:none" id="hideBox" data-dismiss="modal"/>
+        <object classid="CLSID:8147B1B4-97BD-460E-8C8B-2CCC7B49806C" id="voiceocx" style="display:none"></object>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--5、引入 jquery，bootstrap js-->
+<script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
+<script src="../../src/bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/dial.js"></script>
+<script>
+    var $modal_alarm = $('#inviteModal');
+    $modal_alarm.modal('show');
+    $modal_alarm.modal({backdrop: 'static', keyboard: true});
+
+</script>
+</body>
+</html>

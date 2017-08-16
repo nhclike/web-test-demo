@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+  <meta charset="UTF-8">
+  <!--2 viewport-->
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <!--3、x-ua-compatible-->
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <title></title>
+  <!--4、引入两个兼容文件-->
+  <!--[if lt IE 9]>
+	<script src="../../src/bootstrap/js/html5shiv.min.js"></script>
+	<script src="../../src/bootstrap/js/respond.min.js"></script>
+	<![endif]-->
+  <!--6、引入 bootstrap.css-->
+  <link rel="stylesheet" href="../../src/bootstrap/css/bootstrap.min.css">
+  <style>
+    /*警告模态框*/
+    .modal_center{
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      width: 100%;
+      height: 100%;
+
+    }
+    #alarmModal .modal-dialog{
+      margin-top: 200px;
+    }
+    #alarmModal .modal-content .modal-header{
+      background: #237AE5;
+      color:#fff;
+    }
+    #alarmModal .modal-content .modal-header a{
+      text-decoration: none;
+      float: right;
+    }
+    #alarmModal .modal-content .modal-header a:link{
+      text-decoration: none;
+    }
+    #alarmModal .modal-content .modal-header a:visited{
+      text-decoration: none;
+    }
+    #alarmModal .modal-content .modal-header a:hover{
+      text-decoration: none;
+    }
+    #alarmModal .modal-content .modal-header a:active{
+      text-decoration: none;
+    }
+
+
+  </style>
+</head>
+<body>
+<div class="modal fade" id="alarmModal" style="margin:10%">
+ <div class="modal_center">
+    <div class="modal-content" style="width:100%;height:100%">
+      <div class="modal-header">
+        <a class="close" style="font-size:40px;color:#fff" data-dismiss="modal">&times;
+        </a>
+        <h4 class="modal-title" style="font-size:25px;font-weight:normal;color:#fff">告警紧急会议</h4>
+      </div>
+      <div class="modal-body clearfix">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-2">
+              <ul class="list-unstyled">
+                <li>
+                  <b>联系人</b>
+                </li>
+                <li>
+
+                </li>
+              </ul>
+              <div>
+                <button class="btn btn-danger">结束会议</button>
+              </div>
+            </div>
+            <div class="col-xs-10">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="alarm_info">
+                    <ul>
+                      <li>告警设备:
+                        <span>xxxxxx</span>
+                      </li>
+                      <li>告警时间:
+                        <span>xxxxxx</span>
+                      </li>
+                      <li>告警详情:
+                        <span>xxxxxx</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="alarm_video">
+                    <div style="border:1px solid #ddd;width:100%;height:200px;background: #000" >
+
+                    </div>
+                  </div>
+                </div>
+                <!--<div class="col-xs-4">-->
+                  <!--<div class="alarm_info">-->
+                    <!--<ul>-->
+                      <!--<li>告警设备:-->
+                        <!--<span>xxxxxx</span>-->
+                      <!--</li>-->
+                      <!--<li>告警时间:-->
+                        <!--<span>xxxxxx</span>-->
+                      <!--</li>-->
+                      <!--<li>告警详情:-->
+                        <!--<span>xxxxxx</span>-->
+                      <!--</li>-->
+                    <!--</ul>-->
+                  <!--</div>-->
+                  <!--<div class="alarm_video">-->
+                    <!--<div style="border:1px solid #ddd;width:100%;height:200px;background: #000" >-->
+
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-xs-4">-->
+                  <!--<div class="alarm_info">-->
+                    <!--<ul>-->
+                      <!--<li>告警设备:-->
+                        <!--<span>xxxxxx</span>-->
+                      <!--</li>-->
+                      <!--<li>告警时间:-->
+                        <!--<span>xxxxxx</span>-->
+                      <!--</li>-->
+                      <!--<li>告警详情:-->
+                        <!--<span>xxxxxx</span>-->
+                      <!--</li>-->
+                    <!--</ul>-->
+                  <!--</div>-->
+                  <!--<div class="alarm_video">-->
+                    <!--<div style="border:1px solid #ddd;width:100%;height:200px;background: #000" >-->
+
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+ </div>
+</div>
+
+
+<!--5、引入 jquery，bootstrap js-->
+<script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
+<script src="../../src/bootstrap/js/bootstrap.min.js"></script>
+
+<script>
+    var $modal_alarm = $('#alarmModal');
+    $modal_alarm.modal('show');
+    $modal_alarm.modal({backdrop: 'static', keyboard: true});
+</script>
+</body>
+</html>

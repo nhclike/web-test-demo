@@ -1,0 +1,311 @@
+/*警告模态框*/
+.modal_center{
+	position:relative;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+	height: 100%;
+}
+.img_sm{
+	width:15px;
+	height: 15px;
+	float: right;
+}
+.clearfloat:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.isShow{
+	display: block!important;
+}
+.active{
+	background: #fff;
+}
+#alarmModal .modal_center{
+	width:600px;
+	height:500px;
+}
+#alarmModal .modal-content{
+	width: 100%;
+	height: 100%;
+}
+#alarmModal .modal-content .modal-header{
+	background: #237AE5;
+	color:#fff;
+	width: 100%;
+	height: 12%;
+}
+#alarmModal .modal-content  a{
+	text-decoration: none;
+}
+#alarmModal .modal-content  a:link{
+	text-decoration: none;
+}
+#alarmModal .modal-content  a:visited{
+	text-decoration: none;
+}
+#alarmModal .modal-content  a:hover{
+	text-decoration: none;
+}
+#alarmModal .modal-content  a:active{
+	text-decoration: none;
+}
+
+
+#container{
+	width: 100%;
+	height: 100%;
+}
+* html #container{
+	height:1%; /* So IE plays nice */
+}
+#left{
+	position: relative;
+	top:0;
+	left:0;
+	z-index:999;
+	width: 20%;
+	height: 100%;
+	background:#E7F1FF ;
+	float: left;
+}
+#left>div{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 90%;
+}
+#left>div>ul.alarm_device{
+	margin: 5px 0 5px 5px
+}
+#addMember{
+	margin: 5px 15px;
+	position: absolute;
+	top:90%;
+	left: 0;
+	width: 80px;
+	height: 30px;
+}
+#right{
+	position: relative;
+	top:0;
+	left:0;
+	float: left;
+	width:80%;
+	height: 100%;
+}
+
+#right div[id^="alert"]{
+	display: none;
+	padding: 10px;
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+}
+#right>button.btn_stop_meeting{
+	margin: 5px 15px;
+	position: absolute;
+	top:90%;
+	right: 0;
+	width: 80px;
+	height: 30px;
+}
+
+
+/* 邀请参会--弹出框 */
+#invite{
+	position: relative;
+	top:-104%;
+	left:102%;
+	float: left;
+	width:60%;
+	height: 108%;
+}
+#invite .modal-content{
+	width: 100%;
+	height: 100%;
+}
+#invite .modal-content .modal-body{
+	background-color: #fff;
+	padding: 5px;
+	width: 100%;
+	height: 100%;
+}
+ .nav-pills{
+	border-bottom: 1px solid #ccc;
+}
+.nav-tabs{
+	background-color: #fff;
+}
+/* 邀请参会--弹出框--搜索栏 */
+ .nav > li{
+	width: 50%;
+}
+ .nav-pills > li + li{
+	margin-left: 0;
+}
+ .nav > li > a{
+	 display: block;
+	width:100%;
+	color: #626261;
+	text-align: center;
+	border-radius: 0;
+	font-size: 18px;
+	margin: 0 auto;
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:focus,
+.nav-pills > li.active > a:hover{
+	background-color: #fff;
+	color: #237ae5;
+	border-bottom: 2px solid #237ae5;
+}
+.tab-content{
+	position: relative;
+}
+.tab-content .form-inline{
+	padding: 15px 0;
+	background-color: #F5F5F5;
+}
+.tab-content .form-inline .input-group{
+	margin: 0 auto;
+	width: 320px;
+}
+.tab-content .form-inline .form-control{
+	font-size: 14px;
+}
+.tab-content .form-group input,.tab-content .input-group-addon{
+	background-color: #fff;
+}
+#searchPhone::-ms-clear{
+	display: none;
+}
+.search:before{
+	content: "\f002";
+	font-family: FontAwesome;
+}
+.contact-add{
+	display: none;
+}
+.result-info{
+	height: 60px;
+	line-height:60px;
+	text-align: center;
+	margin-top: 10px;
+}
+/* 邀请参会--弹出框--联系人列表 */
+.contact-list{
+	height: 285px;
+	overflow-y: auto;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.contact-list .contact-info{
+	border-bottom: 1px dotted #ccc;
+	overflow: hidden;
+	height: 50px;
+	width: 90%;
+	margin: 0 auto;
+	cursor: pointer;
+}
+.contact-list .contact-info.no-border{
+	border: 0;
+}
+.contact-list .contact-info>div{
+	float: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.icon-size.contact-img{
+	color: #80C633;
+	font-size: 32px;
+	margin-top: 10px;
+	cursor: default;
+	float: left;
+}
+.contact-name{
+	margin: 3px 10px 0 20px;
+	float: left;
+}
+.contact-name p.info-name{
+	font-size: 18px;
+	margin: 0;
+}
+.contact-name p.info-phone{
+	color: #626261;
+	margin: 0;
+}
+.contact-edit input{
+	display: block;
+	margin-top: 9px;
+	width: 120px;
+}
+.contact-edit input:last-child{
+	margin-top: 3px;
+}
+.contact-list .contact-info>div.contact-pull{
+	float: right;
+	margin-right: 5px;
+}
+.contact-pull i{
+	float: left;
+	display: inline-block;
+	font-size: 12px;
+	margin: 17px 0 0 10px;
+	color: #ccc;
+	cursor: pointer;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	padding-top: 3px;
+	border: 2px solid #ccc;
+}
+.contact-pull i:before{
+	content: "\f078";
+	font-family: FontAwesome;
+}
+.no-border .contact-pull i:before{
+	content: "\f077";
+}
+/* 联系人操作 */
+.contact-opt{
+	background-color: #f5f5f5;
+	color: #626261;
+	overflow: hidden;
+	padding: 15px 0;
+	display: none;
+}
+.contact-opt-btn{
+	float: left;
+	margin-left: 70px;
+	cursor: pointer;
+}
+.contact-opt-btn .icon-size{
+	font-size: 20px;
+	margin: 0;
+}
+.contact-opt-btn.contact-call .icon-size{
+	margin-top: 1px;
+}
+.contact-opt-btn span{
+	padding-left: 5px;
+}
+.contact-edit{
+	display: none;
+	width: 130px;
+	margin: 0 10px 0 20px;
+}
+.contact-btn{
+	display: none;
+}
+.contact-btn .btn-confirm,.contact-btn .btn-cancel{
+	display: inline-block;
+	width: 50px;
+	margin-top: 17px;
+}
