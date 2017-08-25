@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>音频</title>
+<style type="text/css">
+*{margin:0;padding:0;box-sizing: border-box}
+
+body{background:#fff;}
+.audio_context{
+	width:550px;
+	height:370px;
+	margin:40px auto;
+	border:1px solid #ccc;
+	background-color:#2D96FB;
+}
+p{
+	margin:10px 0;
+	color:#fff;
+}
+
+#paly_bg{
+	width:380px;
+	height:30px;
+padding: 0 8px;
+	float: left;
+}
+#play_bar{
+	width:100%;
+	height:8px;
+	background:#D7EAF6;
+	position:relative;
+	left:0;
+	top:11px;
+}
+.play_cur_bar{
+	width:8px;
+	height:8px;
+	border-radius:8px;
+	background-color:#4F95EA;
+	position:absolute;
+	left:0;
+	top:0px;
+	text-indent:-20000em;
+	z-index:5;
+}
+.highlight_bar{
+	position:absolute;left:0;
+	top:0;
+	height:8px;
+	width:0;
+	z-index:0;
+	background-color:#4F95EA;
+}
+	#audio_play{
+		float: left;
+	}
+	#play_time{
+		float: left;
+		color:#000;
+	}
+
+
+</style>
+</head>
+<body>
+<div class="audio_context">
+	<div id="song_list" style="height: 328px;padding: 20px">
+		<h4 style="color:#fff">播放信息</h4>
+		<ul style="list-style: none">
+			<li>
+				<p>当前播放文件：<span id="audio_name"></span></p>
+			</li>
+			<li>
+				<p>执行人：<span >张三</span></p>
+			</li>
+			<li>
+				<p>执行时间：<span></span>2017-3-3</p>
+			</li>
+			<li>
+				<p>描述：<span></span>这是一个测试案件</p>
+			</li>
+		</ul>
+	</div>
+
+
+	<div style="width: 100%;height:40px;background: #FAFAFA">
+		<img src="src/play.png" id="audio_play" style="margin: 5px">
+		<div id="paly_bg">
+			<div id="play_bar">
+				<div class="highlight_bar">
+				</div>
+				<div class="play_cur_bar">
+					播放条
+				</div>
+			</div>
+		</div>
+		<div id="play_time">
+			<span id="curTime">00:00:00</span> / <span id="allTime">00:00:00</span>
+		</div>
+
+	</div>
+
+<audio id="source" src=""></audio>
+</div>
+<script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+window.onload=function(){
+	var source=document.querySelector('#source');
+
+	var playImg=document.querySelector('#audio_play');
+	var name=document.querySelector('#audio_name');
+	var curTime=document.querySelector('#curTime');
+	var allTime=document.querySelector('#allTime');
+
+	//进度条
+	var playBar=document.querySelector('#play_bar');
+	var playCurBar=playBar.querySelector('.play_cur_bar');
+	var hightLight=playBar.querySelector('.highlight_bar');
+
+	source.src='src/test.mp3';
+	//播放进度
+	var playTime_timer=null;
+  //进度条
+   var play_range=parseInt(getStyle(playBar,'width'))-parseInt(getStyle(playCurBar,'width'));
+	source.onpause=function(){
+		clearInterval(playTime_timer);
+		$(playImg).attr('src','src/play.png')
+	};
+	source.onplay=function(){
+		playTimeTimer();
+		clearInterval(playTime_timer);
+		playTime_timer=setInterval(playTimeTimer,500);
+		$(playImg).attr('src','src/pause.png')
+	};
+	source.ondurationchange=function(){
+		var  h=Math.floor(source.duration/3600),
+				m=Math.floor(source.duration/60),
+			s=Math.round(source.duration%60);
+		allTime.innerHTML=supply0(h)+':'+supply0(m)+':'+supply0(s);
+	};
+	source.onloadeddata=initParam;
+
+	//播放、暂停
+	playImg.onclick=function(){
+		if(source.paused){
+			source.play();
+		}else{
+			source.pause();
+		}
+	};
+
+	//初始化播放文件
+	function initParam(){
+		var nameDetails=source.currentSrc.substring(source.currentSrc.lastIndexOf('/')+1,source.currentSrc.lastIndexOf('.'));
+		name.innerHTML=decodeURI(nameDetails);
+
+	}
+	//播放进度
+	function playTimeTimer(){
+		var cur=source.currentTime;
+		console.log(cur);
+		var h=Math.floor(cur/3600);
+		var m=Math.floor(cur/60);
+		var s=Math.round(cur%60);
+		curTime.innerHTML=supply0(h)+':'+supply0(m)+':'+supply0(s);
+		var play_scale=source.currentTime/source.duration;
+		var val=play_range*play_scale;
+		playCurBar.style.left=val+'px';	
+		hightLight.style.width=val+'px';
+	}
+};
+
+
+function getStyle(obj,name){
+	return obj.currentStyle?obj.currentStyle[name]:getComputedStyle(obj,false)[name];
+}
+function supply0(n){
+	if(n<10){
+		return '0'+n;
+	}else{
+		return n;
+	}
+}
+</script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Alert Messager - jQuery EasyUI Demo</title>
+	<title>onbeforeunload Demo</title>
 	<link rel="stylesheet" type="text/css" href="../src/easyui/easyui.css">
 	<link rel="stylesheet" type="text/css" href="../src/easyui/icon.css">
 	<link rel="stylesheet" type="text/css" href="../src/easyui/demo.css">
@@ -19,7 +19,6 @@
 	<div style="margin:20px 0;">
 		<a href="#" class="easyui-linkbutton" onclick="alert1()">Alert</a>
 		<a href="#" class="easyui-linkbutton" onclick="confirm1();">Confirm</a>
-		<a href="#" class="easyui-linkbutton" onclick="prompt1()">Prompt</a>
 	</div>
 </div>
 <script>
@@ -28,30 +27,22 @@
 	window.onbeforeunload=function(){
 		if(status){
 			alert('刷新');
+			//刷新关闭后要调的方法
 		}
 		else{
 			status=true;
-			return;
+			return "";
 		}
-	}
+	};
 	function alert1(){
 		$.messager.alert('My Title','Here is a message!');
-	};
-
+	}
 	function confirm1() {
       $.messager.confirm('My Title', 'Are you confirm this?', function (r) {
           if (r) {
               alert('confirmed: ' + r);
           }
       });
-  }
-
-	function prompt1(){
-		$.messager.prompt('My Title', 'Please type something', function(r){
-			if (r){
-				alert('you type: '+r);
-			}
-		});
 	}
 </script>
 </body>
