@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <title></title>
+    <script type="text/javascript">
+      function init(){
+        recordVideoOcx.SetWindowLayout(1, 0);
+
+        recordVideoOcx.addEventListener("PlayBackFinished", function(nWndIndex){
+          console.info("PlayBackFinished");
+          recordVideoOcx.Stop(nWndIndex);
+          recordVideoOcx.SetVideoWndHandle(nWndIndex, -1);
+        });
+      }
+
+      function play(){
+        var file = "e://test.mp4";
+        if(recordVideoOcx.PlayFile(0,4, file)){
+          recordVideoOcx.SetVideoWndHandle(0, 0);
+          recordVideoOcx.SetInfo(0, "0");
+          console.info("SetInfo");
+          //打开声音
+          recordVideoOcx.StartAudio(0);
+          console.info("StartAudio");
+        }
+      }
+
+      function stop(){
+        recordVideoOcx.Stop(0);
+        recordVideoOcx.SetVideoWndHandle(0, -1);
+      }
+    </script>
+</head>
+<body onload="init();">
+<input type="button" value="播放" onclick="play();">
+<input type="button" value="停止" onclick="stop();">
+<object classid="CLSID:22A0C36F-457B-469D-88D7-3C76D0EB4BD7" id="recordVideoOcx" style="width:500px;height:500px;"></object>
+<h1>使用1:替换videoplay</h1>
+<h1>2:运行videoplay下的regOcx.bat</h1>
+</body>
+</html>

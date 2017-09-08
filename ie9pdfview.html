@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+
+    </head>
+    <body>
+           <img src="src/img/add1.png" alt="" class="aaa"/>
+           <script src="src/easyui/jquery.min.js"></script>
+    </body>
+    <script>
+    $(function(){
+    if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<10){
+       /*     alert("您的浏览器版本过低，请下载IE9及以上版本");*/
+            function isAcrobatPluginInstall() {
+                //下面代码都是处理IE浏览器的情况 
+                if((window.ActiveXObject)||(navigator.userAgent.indexOf("Trident") > -1)) {
+                    for(x = 2; x < 10; x++) {
+                        try {
+                            oAcro = eval("new ActiveXObject('PDF.PdfCtrl." + x + "');");
+                            if(oAcro) {
+                                return true;
+                            }
+                        } catch(e) {}
+                    }
+                    try {
+                        oAcro4 = new ActiveXObject('PDF.PdfCtrl.1');
+                        if(oAcro4)
+                            return true;
+                    } catch(e) {}
+                    try {
+                        oAcro7 = new ActiveXObject('AcroPDF.PDF.1');
+                        if(oAcro7)
+                            return true;
+                    } catch(e) {}
+                }else{
+                //chrome和FF、safrai等其他浏览器
+                    return true;
+                }
+            };
+            $('.aaa').bind('click',function(){
+//          	debugger
+                var pdfresult=isAcrobatPluginInstall();
+                if(pdfresult){
+//                    已安装后跳转
+                    alert(6666);
+                    location = 'src/pdf/test.pdf';
+                }else{
+//                    未安装跳转到下载安装地址
+                    alert("对不起,您还没有安装PDF阅读器软件呢,为了方便预览PDF文档,请选择安装！");
+                    location = 'http://ardownload.adobe.com/pub/adobe/reader/win/9.x/9.3/chs/AdbeRdr930_zh_CN.exe';
+                }
+            });
+    }
+            
+ 
+})
+    </script>
+</html>
