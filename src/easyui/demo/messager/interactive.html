@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Interactive Messager - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../../themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../demo.css">
+	<script type="text/javascript" src="../../jquery.min.js"></script>
+	<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+</head>
+<body>
+	<h2>Interactive Messager</h2>
+	<p>Click on each button to display interactive message box.</p>
+	<div style="margin:20px 0;">
+		<a href="#" class="easyui-linkbutton" onclick="confirm1();">Confirm</a>
+		<a href="#" class="easyui-linkbutton" onclick="prompt1()">Prompt</a>
+	</div>
+	<script>
+    var MSG_UNLOAD="会议关闭异常,请留在此页?";
+    var UnloadConfirm = {};
+    //启用监听浏览器刷新、关闭的方法
+    UnloadConfirm.set = function(confirm_msg){
+      window.onbeforeunload = function(event){
+        event = event || window.event;
+        event.returnValue = confirm_msg;
+        $.messager.confirm('会议关闭', '告警会议结束异常,您确定要结束会议?', function(t){
+          if (t){
+            alert('confirmed: '+t);
+            alert(status);
+            //调结束会议的方法
+          }
+
+        });
+      }
+    };
+    //关闭监听浏览器刷新、关闭的方法
+    UnloadConfirm.clear = function(){
+      window.onbeforeunload = function(){};
+    };
+    UnloadConfirm.set(MSG_UNLOAD);
+
+		function confirm1(){
+			$.messager.confirm('My Title', 'Are you confirm this?', function(t){
+				if (t){
+					alert('confirmed: '+t);
+					alert(status);
+				}
+			});
+		}
+		function prompt1(){
+			$.messager.prompt('My Title', 'Please type something', function(r){
+				if (r){
+					alert('you type: '+r);
+				}
+			});
+		}
+	</script>
+</body>
+</html>

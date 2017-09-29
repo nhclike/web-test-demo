@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>onbeforeunload Demo</title>
-	<link rel="stylesheet" type="text/css" href="../src/easyui/easyui.css">
-	<link rel="stylesheet" type="text/css" href="../src/easyui/icon.css">
-	<link rel="stylesheet" type="text/css" href="../src/easyui/demo.css">
+	<link rel="stylesheet" type="text/css" href="../src/easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../src/easyui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../src/easyui/demo/demo.css">
 	<script type="text/javascript" src="../src/easyui/jquery.min.js"></script>
 	<script type="text/javascript" src="../src/easyui/jquery.easyui.min.js"></script>
 </head>
@@ -22,8 +22,8 @@
 	</div>
 </div>
 <script>
-	//修改easyui源码加入一个独有的全局变量，只有当点击的是easyui的弹出框才能拿到这个变量，控制onbeforeunload的开关
-	var status=true;
+	//修改easyui源码加入一个独有的全局变量，只有当点击的是easyui的弹出框才能拿到这个变量，控制onbeforeunload的开关,
+	//easyui源码中已经将status设为false
 	window.onbeforeunload=function(){
 		if(status){
 			alert('刷新');

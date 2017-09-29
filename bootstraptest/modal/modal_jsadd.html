@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+  <meta charset="UTF-8">
+  <!--2 viewport-->
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <!--3、x-ua-compatible-->
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <title></title>
+  <!--4、引入两个兼容文件-->
+  <!--[if lt IE 9]>
+  <script src="../../src/bootstrap/js/html5shiv.min.js"></script>
+  <script src="../../src/bootstrap/js/respond.min.js"></script>
+  <![endif]-->
+  <!--6、引入 bootstrap.css-->
+  <link rel="stylesheet" href="../../src/bootstrap/css/bootstrap.min.css">
+
+</head>
+<body>
+  <button id="jsAddModal">动态添加模态框</button>
+<!--5、引入 jquery，bootstrap js-->
+<script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
+<script src="../../src/bootstrap/js/bootstrap.min.js"></script>
+
+<script>
+
+  $('#jsAddModal').click(function () {
+    if(window.confirm("你确定要xxxx？")){
+      alert('确定')
+    }
+    var val=window.prompt("What's your name?", "Default");
+    alert(val);
+    addModal("test.html","test",500,500,20,30);
+
+  });
+
+  function addModal(url,iframeid,iframewidth,iframeheight,top,left) {
+    var $w = $('<div ></div>');
+    $w.attr({
+
+        width:'100%',
+      style:'position:fixed;z-index:9999;top:'+top+'%;left:'+left+'%'
+    }
+    );
+    var _iframe = $('<iframe></iframe>');
+    _iframe.attr({
+      id:iframeid,
+      src: url,
+      frameborder: 0,
+      width:iframewidth,
+      height:iframeheight,
+      scrolling: 'auto'
+    });
+    $w.append(_iframe);
+    $("body").append($w);
+  }
+
+
+
+
+</script>
+</body>
+</html>

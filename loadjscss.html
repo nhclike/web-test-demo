@@ -1,0 +1,48 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  </head>
+  <body>
+<b>动态执行JS和css</b>
+
+<script>
+//动态执行JS
+var flag=false ;
+
+
+function loadScript(url){
+  var script =document.createElement('script');
+  script.type='text/javascript';
+  script.src=url;
+  document.getElementsByTagName('head')[0].appendChild(script);
+}
+function loadStyle(url){
+  var link=document.createElement('link');
+  link.rel='stylesheet';
+  link.type ='text/css';
+  link.href=url;
+  document.getElementsByTagName('head')[0].appendChild(link);
+}
+
+function task() {
+  console.log('开始添加js和css');
+  flag=true;
+  if(flag){
+    loadScript('bootstraptest/js/dial.js');
+    loadStyle('bootstraptest/css/call.call.css');
+  }
+}
+
+var time=setTimeout(task,10000);
+</script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+	<meta charset="UTF-8">
+	<!--2 viewport-->
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<!--3、x-ua-compatible-->
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<title></title>
+	<!--4、引入两个兼容文件-->
+	<!--[if lt IE 9]>
+	<script src="../../src/bootstrap/js/html5shiv.min.js"></script>
+	<script src="../../src/bootstrap/js/respond.min.js"></script>
+	<![endif]-->
+	<!--6、引入 bootstrap.css-->
+	<link rel="stylesheet" href="../../src/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="formtest.css">
+</head>
+<body style="overflow-x:hidden;overflow-y:auto">
+<div id="section" style="width: 786px;height: 564px">
+	<form id="form1" class="form-horizontal" style="width:100%;height:100%">
+		<input type="hidden" name="operator" id="operator" value=""/>
+		<fieldset>
+			<legend>审委会信息</legend>
+
+			<div class="form-group">
+				<label for="liveAddress" class="control-label col-sm-2 col-md-2 col-lg-1">直播地址:</label>
+				<div class="col-sm-10 col-md-10">
+					<div class="row">
+						<div class="col-xs-12">
+							<input type="text" class="form-control" name="liveAddress" id="liveAddress">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group" style="height:90px;">
+				<label for="description" class="control-label col-sm-2 col-md-2  col-lg-1">审委会描述:</label>
+				<div class="col-sm-10 col-md-10">
+					<textarea  class="form-control" rows=3 name="description" id="description"></textarea>
+				</div>
+			</div>
+		</fieldset>
+
+
+		<fieldset>
+			<legend>审委会账号</legend>
+			<div class="form-group">
+				<label for="email" class="control-label col-sm-2 col-md-2  col-lg-1">邮箱:</label>
+				<div class="col-sm-4 col-md-4">
+					<div class="row">
+						<div class="col-xs-12">
+							<input type="text" class="form-control" name="email" id="email">
+						</div>
+					</div>
+				</div>
+				<label for="password" class="control-label col-sm-2 col-md-2  col-lg-1">审委会密码:</label>
+				<div class="col-sm-4 col-md-4">
+					<div class="row">
+						<div class="col-xs-12">
+							<input type="password" class="form-control" name="password" id="password">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="url" class="control-label col-sm-2 col-md-2 col-lg-1">审委会URL:</label>
+				<div class="col-sm-10 col-md-10">
+					<div class="row">
+						<div class="col-xs-12">
+							<input type="text" class="form-control" name="url" id="url">
+						</div>
+					</div>
+				</div>
+			</div>
+		</fieldset>
+
+
+		<fieldset>
+			<legend>数据库信息</legend>
+			<div class="form-group">
+				<label for="databaseServer" class="control-label col-sm-2 col-md-2  col-lg-1">服务器:</label>
+				<div class="col-sm-4 col-md-4">
+					<div class="row">
+						<div class="col-xs-12">
+							<input type="text" class="form-control" name="databaseServer" id="databaseServer">
+						</div>
+					</div>
+				</div>
+				<label for="databaseName" class="control-label col-sm-2 col-md-2  col-lg-1">数据库:</label>
+				<div class="col-sm-4 col-md-4">
+					<div class="row">
+						<div class="col-xs-12">
+							<input type="text" class="form-control" name="databaseName" id="databaseName">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="databaseAccount" class="control-label col-sm-2 col-md-2  col-lg-1">用户名:</label>
+				<div class="col-sm-4 col-md-4">
+					<div class="row">
+						<div class="col-xs-12">
+							<input type="text" class="form-control" name="databaseAccount" id="databaseAccount">
+						</div>
+					</div>
+				</div>
+				<label for="databasePassword" class="control-label col-sm-2 col-md-2  col-lg-1">密码:</label>
+				<div class="col-sm-4 col-md-4">
+					<div class="row">
+						<div class="col-xs-12">
+							<input type="password" class="form-control" name="databasePassword" id="databasePassword">
+						</div>
+					</div>
+				</div>
+			</div>
+		</fieldset>
+
+
+		<div class="form-group">
+			<div class="col-md-8 col-md-offset-2 col-xs-6 col-xs-offset-3 text-center">
+				<button id="btn_add" type="submit" class="btn btn-primary">添加</button>
+				<button class="btn btn-default" onclick="fnCancel();">取消</button>
+			</div>
+		</div>
+	</form>
+</div>
+<script src="../../src/jquery-1.7.2.min.js"></script>
+<script src="src/jquery.validate.js"></script>
+<script src="src/messages_zh.js"></script>
+<script type="text/javascript">
+  //存储页面传过来的值
+  var courtName;
+  var courtCode;
+  $(function() {
+    $("#court").change(function() { selectChange(); });
+    var validator =$('#form1').validate({
+      errorElement: 'p',
+      errorClass: 'help_block',
+      focusInvalid: true,
+      debug : true,
+      onkeyup: false,
+      rules: {
+        email:{required:true,email:true},
+        name:{required:true},
+        url: {required: true},
+        liveAddress: {maxlength: 80},
+        account: {required: true},
+        password: {
+          required: true,
+          minlength: 6
+        },
+        pwdConfirm: {
+          required: true,
+          minlength: 6,
+          equalTo: "#password"
+        },
+        databaseServer: {required: true},
+        databaseName: {required: true},
+        databaseAccount: {required: true},
+        databasePassword: {required: true},
+        courtCode:{required:false}
+      },
+      messages: {
+        name:{required:"请输入审委会名称"},
+        url: {required: "请输入审委会url地址"},
+        account: {required: "请输入审委会账号"},
+        password: {
+          required: "请输入密码"
+        },
+        pwdConfirm: {
+          required: "请输入确认密码",
+          equalTo: "两次密码输入不一致"
+        },
+        databaseServer: {required: "请输入数据库服务器地址"},
+        databaseName: {required: "请输入数据库名称"},
+        databaseAccount: {required: "请输入数据库用户名"},
+        databasePassword: {required: "请输入密码"},
+        courtCode:{required:false}
+
+      },
+      highlight: function (e) {
+        $(e).closest('.form-group').removeClass('has-info').addClass('has-error');
+      },
+
+      success: function (e) {
+        $(e).closest('.form-group').removeClass('has-error');//.addClass('has-info');
+        $(e).remove();
+      },
+      errorPlacement: function (error, element) {
+        if(element.is('input[type=checkbox]') || element.is('input[type=radio]')) {
+          var controls = element.closest('div[class*="col-"]');
+          if(controls.find(':checkbox,:radio').length > 1) controls.append(error);
+          else error.insertAfter(element.nextAll('.lbl:eq(0)').eq(0));
+        }
+        else if(element.is('.select2')) {
+          error.insertAfter(element.siblings('[class*="select2-container"]:eq(0)'));
+        }
+        else if(element.is('.chosen-select')) {
+          error.insertAfter(element.siblings('[class*="chosen-container"]:eq(0)'));
+        }
+        else error.insertAfter(element.parent());
+      },
+      submitHandler:function(form){
+        alert('提交表单');
+        form.submit();
+      }
+    });
+  });
+
+  function selectChange() {
+    //获取下拉框选中项的value属性值
+    //courtName = $("#court").text();
+    courtName = $("#court option:selected").text();
+    courtCode = $("#court").val();
+  }
+
+  //取消
+  function fnCancel() {
+    parent.window.closeWind("committee_add_dlg");
+  }
+
+</script>
+</body>
+</html>

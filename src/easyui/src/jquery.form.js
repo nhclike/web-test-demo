@@ -1,7 +1,7 @@
-﻿/**
- * jQuery EasyUI 1.5
+/**
+ * jQuery EasyUI 1.5.2
  * 
- * Copyright (c) 2009-2016 www.jeasyui.com. All rights reserved.
+ * Copyright (c) 2009-2017 www.jeasyui.com. All rights reserved.
  *
  * Licensed under the freeware license: http://www.jeasyui.com/license_freeware.php
  * To use it on other terms please contact us: info@jeasyui.com
@@ -284,6 +284,7 @@
 	 */
 	function clear(target){
 		$('input,select,textarea', target).each(function(){
+			if ($(this).hasClass('textbox-value')){return;}
 			var t = this.type, tag = this.tagName.toLowerCase();
 			if (t == 'text' || t == 'hidden' || t == 'password' || tag == 'textarea'){
 				this.value = '';
@@ -307,13 +308,15 @@
 			
 		});
 		
+		var tmp = $();
 		var form = $(target);
 		var opts = $.data(target, 'form').options;
-		for(var i=opts.fieldTypes.length-1; i>=0; i--){
+		for(var i=0; i<opts.fieldTypes.length; i++){
 			var type = opts.fieldTypes[i];
-			var field = form.find('.'+type+'-f');
+			var field = form.find('.'+type+'-f').not(tmp);
 			if (field.length && field[type]){
 				field[type]('clear');
+				tmp = tmp.add(field);
 			}
 		}
 		form.form('validate');

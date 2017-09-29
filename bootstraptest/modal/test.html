@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		html,body{
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			min-height: 100%;
+			position: fixed;
+			top:0;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+<div style="border: 1px solid #ddd;position:relative;top:0;left: 0;width: 100%;height: 500px;background: #ddd">
+	<h1>this is a test</h1>
+
+	<button id="clear">点击清除</button>
+</div>
+
+<script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
+<script>
+  function removeIframe(iframeId) {
+    var _iframe=window.parent.document.getElementById(iframeId);
+
+    $(_iframe).parent().remove();
+  }
+	$('#clear').click(function () {
+    removeIframe('test')
+  })
+</script>
+</body>
+</html>

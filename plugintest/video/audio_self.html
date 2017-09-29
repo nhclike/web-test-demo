@@ -65,6 +65,8 @@ padding: 0 8px;
 </style>
 </head>
 <body>
+<button id="play_btn">播放</button>
+<button id="stop_btn">停止</button>
 <div class="audio_context">
 	<div id="song_list" style="height: 328px;padding: 20px">
 		<h4 style="color:#fff">播放信息</h4>
@@ -102,79 +104,110 @@ padding: 0 8px;
 
 	</div>
 
-<audio id="source" src=""></audio>
+  <audio id="audioLocalSource" src=""></audio>
 </div>
 <script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
 <script type="text/javascript">
-window.onload=function(){
-	var source=document.querySelector('#source');
+  $('#play_btn').click(function () {
+    audioLocalSource.src='src/test.mp3';
+    audioLocalSource.play();
+    $(pauseBtn).prop('disabled',false);
+    pauseBtn.addEventListener('click', localAudioPause, false);
 
-	var playImg=document.querySelector('#audio_play');
-	var name=document.querySelector('#audio_name');
-	var curTime=document.querySelector('#curTime');
-	var allTime=document.querySelector('#allTime');
+  });
+  $('#stop_btn').click(function () {
+    audioLocalSource.src='';
+		$(pauseBtn).prop('disabled',true);
+    pauseBtn.removeEventListener('click', localAudioPause, false);
+    clearInterval(playTime_timer);
+    playTime_timer=null;
+    playTime=0;
+    setprogress(playTime,curTime,playCurBar,hightLight);
+    allTime=0;
+    totalTimeshow(allTime, totalTime);
+  });
 
-	//进度条
-	var playBar=document.querySelector('#play_bar');
-	var playCurBar=playBar.querySelector('.play_cur_bar');
-	var hightLight=playBar.querySelector('.highlight_bar');
+	var audioLocalSource=document.querySelector('#audioLocalSource');
 
-	source.src='src/test.mp3';
-	//播放进度
-	var playTime_timer=null;
+  var playstatus=false;//目前播放
+
+  //播放进度
+  var playTime_timer=null;//播放定时器
+  //播放按钮
+  var pauseBtn=document.querySelector("#audio_play");
+  var curTime=document.querySelector('#curTime');
+  var totalTime=document.querySelector('#allTime');
   //进度条
-   var play_range=parseInt(getStyle(playBar,'width'))-parseInt(getStyle(playCurBar,'width'));
-	source.onpause=function(){
+  var playBar=document.querySelector('#play_bar');
+  var playCurBar=playBar.querySelector('.play_cur_bar');
+  var hightLight=playBar.querySelector('.highlight_bar');
+  //进度条
+  var play_range=parseInt($(playBar).width());
+  //播放时间
+  var playTime=0;
+  var allTime=0;
+  var startTime=0;
+
+
+
+	audioLocalSource.onpause=function(){
 		clearInterval(playTime_timer);
-		$(playImg).attr('src','src/play.png')
+    playTime_timer=null;
+		$(pauseBtn).attr('src','src/play.png')
 	};
-	source.onplay=function(){
+	audioLocalSource.onplay=function(){
 		clearInterval(playTime_timer);
-		playTime_timer=setInterval(playTimeTimer,500);
-		$(playImg).attr('src','src/pause.png')
+		playTime_timer=setInterval(localplayTimeTimer,1000);
+		$(pauseBtn).attr('src','src/pause.png');
 	};
-	source.ondurationchange=function(){
-		var  h=Math.floor(source.duration/3600),
-				m=Math.floor(source.duration/60),
-			s=Math.round(source.duration%60);
-		allTime.innerHTML=supply0(h)+':'+supply0(m)+':'+supply0(s);
-	};
-	source.onloadeddata=initParam;
-
-	//播放、暂停
-	playImg.onclick=function(){
-		if(source.paused){
-			source.play();
-		}else{
-			source.pause();
-		}
+	audioLocalSource.ondurationchange=function(){
+	  allTime=audioLocalSource.duration*1000;
+	  console.log("allTime"+allTime);
+		totalTimeshow(allTime,totalTime);
 	};
 
-	//初始化播放文件
-	function initParam(){
-		var nameDetails=source.currentSrc.substring(source.currentSrc.lastIndexOf('/')+1,source.currentSrc.lastIndexOf('.'));
-		name.innerHTML=decodeURI(nameDetails);
 
-	}
+
+  //本地暂停/继续执行函数
+  function localAudioPause() {
+    if(audioLocalSource.paused){
+      audioLocalSource.play();
+    }else{
+      audioLocalSource.pause();
+    }
+  }
+
+
 	//播放进度
-	function playTimeTimer(){
-		var cur=source.currentTime;
-		console.log(cur);
-		var h=Math.floor(cur/3600);
-		var m=Math.floor(cur/60);
-		var s=Math.round(cur%60);
-		curTime.innerHTML=supply0(h)+':'+supply0(m)+':'+supply0(s);
-		var play_scale=source.currentTime/source.duration;
-		var val=play_range*play_scale;
-		playCurBar.style.left=val+'px';	
-		hightLight.style.width=val+'px';
+	function localplayTimeTimer(){
+		playTime=audioLocalSource.currentTime*1000;
+    setprogress(playTime,curTime,playCurBar,hightLight);
 	}
-};
+//总时间显示
+	function totalTimeshow(allTime, totalTime) {
+    var s=parseInt((allTime)/1000);
+    var h=Math.floor(s/3600);
+    var m=Math.floor(s/60);
+    var s=Math.round(s%60);
+    totalTime.innerHTML=supply0(h)+':'+supply0(m)+':'+supply0(s);
+  }
+  //设置进度条
+  function setprogress(playTime,curTime,playCurBar,hightLight) {
+	  console.log("playTime"+playTime);
+    var s=parseInt(playTime/1000);
+    var h=Math.floor(s/3600);
+    var m=Math.floor(s/60);
+    var s=Math.round(s%60);
+    console.log("s"+s);
+    curTime.innerHTML=supply0(h)+':'+supply0(m)+':'+supply0(s);
+    var play_scale=playTime/allTime;
+    var val=play_range*play_scale;
+    console.log("play_range"+play_range);
+    playCurBar.style.left=val+'px';
+    hightLight.style.width=val+'px';
+  }
 
 
-function getStyle(obj,name){
-	return obj.currentStyle?obj.currentStyle[name]:getComputedStyle(obj,false)[name];
-}
 function supply0(n){
 	if(n<10){
 		return '0'+n;
@@ -182,6 +215,34 @@ function supply0(n){
 		return n;
 	}
 }
+  //添加事件监听兼容函数
+  function addHandler(target, eventType, handler){
+    if(target.addEventListener){//主流浏览器
+      addHandler = function(target, eventType, handler){
+        target.addEventListener(eventType, handler, false);
+      };
+    }else{//IE
+      addHandler = function(target, eventType, handler){
+        target.attachEvent("on"+eventType, handler);
+      };
+    }
+    //执行新的函数
+    addHandler(target, eventType, handler);
+  }
+  //删除事件监听兼容函数
+  function removeHandler(target, eventType, handler){
+    if(target.removeEventListener){//主流浏览器
+      removeHandler = function(target, eventType, handler){
+        target.removeEventListener(eventType, handler, false);
+      }
+    }else{//IE
+      removeHandler = function(target, eventType, handler){
+        target.detachEvent("on"+eventType, handler);
+      }
+    }
+    //执行新的函数
+    removeHandler(target, eventType, handler);
+  }
 </script>
 </body>
 </html>

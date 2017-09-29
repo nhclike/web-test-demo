@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+	<meta charset="UTF-8">
+	<!--2 viewport-->
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<!--3、x-ua-compatible-->
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<title></title>
+	<!--4、引入两个兼容文件-->
+	<!--[if lt IE 9]>
+	<script src="../../src/bootstrap/js/html5shiv.min.js"></script>
+	<script src="../../src/bootstrap/js/respond.min.js"></script>
+	<![endif]-->
+	<!--6、引入 bootstrap.css-->
+	<link rel="stylesheet" href="../../src/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap-datetimepicker.css">
+</head>
+<body style="padding-top: 200px">
+<form action="" class="form-horizontal">
+	<div class="form-group">
+		<label for="birthday" class="control-label  col-xs-2">出生日期</label>
+		<div class="col-xs-4">
+			<input id="birthday" name="birthday" type="text" class="form-control  form_datetime ">
+		</div>
+	</div>
+</form>
+<!--5、引入 jquery，bootstrap js-->
+<script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
+<script src="../../src/bootstrap/js/bootstrap.min.js"></script>
+<script src="bootstrap-datetimepicker.js"></script>
+<script>
+	$(function () {
+    $(".form_datetime").datetimepicker({
+      format: 'yyyy-mm-dd',
+      autoclose: true,
+      todayBtn: true,
+      language : 'zh-CN',
+      minView : 2,
+      pickerPosition: "bottom-right",
+      endDate : new Date()
+    });
+    $(".form_datetime").val(new Date().Format('YYYY-MM-dd'));
+  })
+
+</script>
+</body>
+</html>
