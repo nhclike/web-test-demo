@@ -61,7 +61,7 @@
 #alarmModal .modal-content  a:active{
 	text-decoration: none;
 }
-#container{
+#alarmModal #container{
 	width: 100%;
 	height: 100%;
 }

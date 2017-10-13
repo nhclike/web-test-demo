@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+  <meta charset="UTF-8">
+  <!--2 viewport-->
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <!--3、x-ua-compatible-->
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <title></title>
+  <!--4、引入两个兼容文件-->
+  <!--[if lt IE 9]>
+  <script src="../../src/bootstrap/js/html5shiv.min.js"></script>
+  <script src="../../src/bootstrap/js/respond.min.js"></script>
+  <![endif]-->
+  <!--6、引入 bootstrap.css-->
+  <link rel="stylesheet" href="../../src/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<button id="jsAddModal">动态添加模态框</button>
+<!--5、引入 jquery，bootstrap js-->
+<script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
+<script src="../../src/bootstrap/js/bootstrap.min.js"></script>
+<script>
+  $('#jsAddModal').click(function () {
+    addModal("modal_alert.html","test",'1111111111',30);
+  });
+
+  function addModal(url,iframeid,title,modalId) {
+    var template =
+      '<div class="modal fade" tabindex="-1" role="dialog" id="'+ modalId +'" data-backdrop="static">'
+      +   '<div class="modal-dialog modal-lg" role="document" aria-hidden="true">'
+      +		  '<div class="modal-content">'
+      +        '<div class="modal-header">'
+      +	         '<button type="button" class="close" aria-label="Close" onclick="closeModal(this);"><span aria-hidden="true">×</span></button>'
+      +	         '<h4 class="modal-title">' + title + '</h4>'
+      +        '</div>'
+      +	    '</div>'
+      +   '</div>'
+      +'</div>';
+    $(template).appendTo('body');
+    var $modalBody = $('<div class="modal-body"></div>');
+    $modalBody.attr({
+        width:'100%'
+      }
+    );
+
+    var _iframe = $('<iframe></iframe>');
+    _iframe.attr({
+      id:iframeid,
+      src: url,
+      frameborder: 0,
+      width:'100%',
+      height:'100%',
+      scrolling: 'auto'
+    });
+    $modalBody.append( _iframe);
+    var modal=$('#'+modalId);
+    $(modal.find('.modal-content')).append($modalBody);
+    console.log( $(modal.find('.modal-content')));
+    modal.modal('show');
+
+  }
+  function closeModal(obj) {
+    var modal = $(obj).parents("div.modal");
+    if(modal.length>0){
+      modal.remove();
+      $('.modal-backdrop').remove();
+    }
+  }
+
+
+
+</script>
+</body>
+</html>

@@ -26,21 +26,21 @@
 }
 
 .main-btns .btn-dial,.main-btns .btn-hang-up{
-	background: url(../img/dial.png) 0 0/50px 50px no-repeat;
-	height: 30px; 
-	cursor: pointer; 
+	background: url(../../conference/img/dial.png) 0 0/50px 50px no-repeat;
+	height: 30px;
+	cursor: pointer;
 	margin:0 auto;
 	width: 50px;
 	height: 50px;
 	display: block;
 }
 .main-btns .btn-hang-up{
-	background:  url(../img/hang-up.png) 0 0/50px 50px no-repeat;
+	background:  url(../../conference/img/hang-up.png) 0 0/50px 50px no-repeat;
 }
 .btn-del{
-	background:  url(../img/dial-del.png) 0 0/24px 18px no-repeat;
-	width: 24px; 
-	height: 18px; 
+	background:  url(../../conference/img/dial-del.png) 0 0/24px 18px no-repeat;
+	width: 24px;
+	height: 18px;
 	cursor: pointer;
 	position: absolute;
 	top: 23px;
@@ -79,13 +79,13 @@
 	overflow:hidden;
 	margin:5px auto;
 }
-.phone .cover{ 
+.phone .cover{
 	position: absolute;
-	top:60px; 
-	left: 0; 
-	z-index: 99; 
-	width: 318px; 
-	height: 232px; 
+	top:52px;
+	left: 0;
+	z-index: 99;
+	width: 318px;
+	height: 232px;
 	background:rgba(255,255,255,0.7);
 }
 .numbers-container span{
@@ -100,47 +100,47 @@
 
 .numbers-container .pushed1{
 	margin-left: 16px;
-	background: url(../img/dial1.png) 0 0/50px 50px no-repeat;
+	background: url(img/dial1.png) 0 0/50px 50px no-repeat;
 }
 .numbers-container .pushed2{
-	background: url(../img/dial2.png) 0 0/50px 50px no-repeat;
+	background: url(img/dial2.png) 0 0/50px 50px no-repeat;
 }
 .numbers-container .pushed3{
 	margin-right: 0;
-	background: url(../img/dial3.png) 0 0/50px 50px no-repeat;
+	background: url(../../conference/img/dial3.png) 0 0/50px 50px no-repeat;
 }
 .numbers-container .pushed4{
-	margin-left: 16px; 
-	background: url(../img/dial4.png) 0 0/50px 50px no-repeat;
+	margin-left: 16px;
+	background: url(../../conference/img/dial4.png) 0 0/50px 50px no-repeat;
 }
 .numbers-container .pushed5{
-	background: url(../img/dial5.png) 0 0/50px 50px no-repeat;
+	background: url(../../conference/img/dial5.png) 0 0/50px 50px no-repeat;
 }
 .numbers-container .pushed6{
 	margin-right: 0;
-	background: url(../img/dial6.png) 0 0/50px 50px no-repeat;
+	background: url(../../conference/img/dial6.png) 0 0/50px 50px no-repeat;
 }
 .numbers-container .pushed7{
-	margin-left: 16px; 
-	background: url(../img/dial7.png) 0 0/50px 50px no-repeat;
+	margin-left: 16px;
+	background: url(../../conference/img/dial7.png) 0 0/50px 50px no-repeat;
 }
 .numbers-container .pushed8{
-	background: url(../img/dial8.png) 0 0/50px 50px no-repeat;
+	background: url(../../conference/img/dial8.png) 0 0/50px 50px no-repeat;
 }
 .numbers-container .pushed9{
 	margin-right: 0;
-	background: url(../img/dial9.png) 0 0/50px 50px no-repeat;
+	background: url(../../conference/img/dial9.png) 0 0/50px 50px no-repeat;
 }
 .numbers-container .pushedasterisk{
 	margin-left:16px;
-	background: url(../img/dial-asterisk.png) 0 0/50px 50px no-repeat;
+	background: url(../../conference/img/dial-asterisk.png) 0 0/50px 50px no-repeat;
 }
 .numbers-container .pushed0{
-	background: url(../img/dial0.png) 0 0/50px 50px no-repeat;
+	background: url(../../conference/img/dial0.png) 0 0/50px 50px no-repeat;
 }
 .numbers-container .pushednumber{
 	margin-right: 0;
-	background: url(../img/dial-number.png) 0 0/50px 50px no-repeat;
+	background: url(../../conference/img/dial-number.png) 0 0/50px 50px no-repeat;
 }
 /******** pdf展示***********/
 

@@ -18,201 +18,180 @@
   <link rel="stylesheet" href="../css/call.css">
 </head>
 <body>
-<div class="modal fade" id="alarmModal" data-backdrop="static">
-  <div class="modal_center">
-    <div class="modal-content">
-      <div class="modal-header">
-        <a class="close" style="font-size:40px;color:#fff" onclick="closeAlarmConference()">&times;
-        </a>
-        <h4 class="modal-title" style="font-size:25px;font-weight:normal;color:#fff">告警紧急会议</h4>
+<div id="container">
+  <div id="left">
+    <div>
+      <ul class="list-unstyled alarm_device"  id="deviceUl">
+        <li class="actives clearfloat">
+          <a href="#alert1" class="pull-left" >
+            <img src="../img/danbin.png" class="img_sm1" alt="">
+            <b title="单兵设备2">单兵设备1</b>
+          </a>
+          <img src="../img/delete-meeting.png" class="img_sm" title="删除" alt="">
+        </li>
+
+      </ul>
+      <ul class="list-unstyled" style="overflow: auto;height:80%;margin: 5px" id="phoneUl">
+        <li class="clearfloat">
+          <span class="pull-left" title="8005">8005</span>
+          <img class="img_sm" src="../img/delete-meeting.png" alt="">
+        </li>
+      </ul>
+    </div>
+    <div id="addMember" >
+      <img src="/custom/comm/img/add_member.png">
+      <br>
+      <span style="color:#237ae5">添加成员</span>
+    </div>
+  </div>
+  <div id="right">
+    <div id="alarm_info">
+      <div id="alert1" class="isShow">
+        <div class="alarm_info">
+          <ul class="list-unstyled" style="color:#237ae5">
+            <li class="clearfloat">
+              <div class="pull-left">
+                告警设备:
+                <span>单兵1</span>
+              </div>
+              <div class="pull-right">
+                告警时间:
+                <span>单兵1</span>
+              </div>
+
+            </li>
+
+            <li>告警详情:
+              <span>xxxxxx</span>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="modal-body" style="width: 100%;height: 88%">
-        <div id="container">
-          <div id="left">
-            <div>
-              <ul class="list-unstyled alarm_device"  id="deviceUl">
-                <li class="actives clearfloat">
-                  <a href="#alert1" class="pull-left" >
-                    <img src="../img/danbin.png" class="img_sm1" alt="">
-                    <b title="单兵设备2">单兵设备1</b>
-                  </a>
-                  <img src="../img/delete-meeting.png" class="img_sm" title="删除" alt="">
-                </li>
 
-              </ul>
-              <ul class="list-unstyled" style="overflow: auto;height:80%;margin: 5px" id="phoneUl">
-                <li class="clearfloat">
-                  <span class="pull-left" title="8005">8005</span>
-                  <img class="img_sm" src="../img/delete-meeting.png" alt="">
-                </li>
-              </ul>
-            </div>
-            <div id="addMember" >
-              <img src="/custom/comm/img/add_member.png">
-              <br>
-              <span style="color:#237ae5">添加成员</span>
-            </div>
-          </div>
-          <div id="right">
-            <div id="alarm_info">
-              <div id="alert1" class="isShow">
-                <div class="alarm_info">
-                  <ul class="list-unstyled" style="color:#237ae5">
-                    <li class="clearfloat">
-                      <div class="pull-left">
-                        告警设备:
-                        <span>单兵1</span>
-                      </div>
-                      <div class="pull-right">
-                        告警时间:
-                        <span>单兵1</span>
-                      </div>
-
-                    </li>
-
-                    <li>告警详情:
-                      <span>xxxxxx</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-            </div>
-            <div class="alarm_video" style="width: 100%;height:70%;position:absolute;top:20%;left:0 ">
-              <div style="border:1px solid #ddd;width:100%;min-height:100%;background: #000;padding: 10px" >
-                <object classid="CLSID:22A0C36F-457B-469D-88D7-3C76D0EB4BD7" style="width:100%;height:100%" id="video11"></object>
-              </div>
-            </div>
-            <button class="btn btn-danger btn_stop_meeting btn-sm" onclick="closeAlarmConference()">结束会议</button>
-          </div>
-          <div id="invite">
-            <div class="modal-content">
-              <div class="modal-body">
-                <div id="form">
-                  <!-- tabs title -->
-                  <ul id="contactTab" class="nav nav-pills" role="tablist">
-                    <li role="presentation" class="active">
-                      <a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">联系人</a>
-                    </li>
-                    <li role="presentation">
-                      <a href="#dial" aria-controls="dial" role="tab" data-toggle="tab">拨号</a>
-                    </li>
-                  </ul>
-                  <!-- tabs content -->
-                  <div class="tab-content">
-                    <!-- 联系人 -->
-                    <div role="tabpanel" class="tab-pane active" id="contact" style="width: 100%;height: 100%">
-                      <form class="form-inline">
-                        <div class="form-group">
-                          <label class="sr-only" for="searchPhone">search</label>
-                          <!-- 搜索 -->
-                          <div class="input-group">
-                            <input type="text" class="form-control" id="searchPhone" placeholder="请输入号码">
-                            <!-- 搜索按钮 -->
-                          </div>
-                        </div>
-                      </form>
-                      <!-- 联系人列表 -->
-                      <ul id="contact-list" class="contact-list">
-                        <li>
-                          <!-- 联系人信息 -->
-                          <div class="contact-info" ondblclick="doubleClickDial(this)">
-                            <div class="glyphicon glyphicon-user icon-size contact-img"></div>
-                            <div class="contact-name">
-                              <p class="info-name">单兵1</p>
-                              <p class="info-phone">133333333333</p>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <!-- 联系人信息 -->
-                          <div class="contact-info" ondblclick="doubleClickDial(this)">
-                            <div class="glyphicon glyphicon-user icon-size contact-img"></div>
-                            <div class="contact-name">
-                              <p class="info-name">单兵1</p>
-                              <p class="info-phone">135555555555</p>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <!-- 拨号 -->
-                    <div role="tabpanel" class="tab-pane" id="dial">
-                      <div class="nexus">
-                        <div class="phone-tab-contents">
-                          <div class="tab-content phone current">
-                            <div class="number-area">
-                              <!-- 显示拨号数字 -->
-                              <span class="numbers"></span>
-                              <!-- 拨号信息提示 -->
-                              <span class="phone-pic" >正在呼叫</span>
-                            </div>
-                            <!-- 删除数字 -->
-                            <div class="btn-del delete-btn"></div>
-                            <!-- 拨号键盘 -->
-                            <div class="numbers-container">
-                              <span class="pushed1">1</span>
-                              <span class="pushed2">2</span>
-                              <span class="pushed3">3</span>
-                              <span class="pushed4">4</span>
-                              <span class="pushed5">5</span>
-                              <span class="pushed6">6</span>
-                              <span class="pushed7">7</span>
-                              <span class="pushed8">8</span>
-                              <span class="pushed9">9</span>
-                              <span class="pushedasterisk">*</span>
-                              <span class="pushed0">0</span>
-                              <span class="pushednumber">#</span>
-                            </div>
-                            <p class="cover"></p>
-                          </div>
-                        </div>
-                        <!-- 拨号操作 -->
-                        <ul class="main-btns list-unstyled list-inline text-center">
-                          <!-- 拨号 -->
-                          <li><a class="btn-dial" onclick="call(this)"></a></li>
-                          <!-- 挂断 -->
-                          <li><a class="btn-hang-up" id="hangupbtn" onclick="hangup(this)"></a></li>
-                        </ul>
-                      </div>
-                    </div>
+    </div>
+    <div class="alarm_video" style="width: 100%;height:70%;position:absolute;top:20%;left:0 ">
+      <div style="border:1px solid #ddd;width:100%;min-height:100%;background: #000;padding: 10px" >
+        <object classid="CLSID:22A0C36F-457B-469D-88D7-3C76D0EB4BD7" style="width:100%;height:100%" id="video11"></object>
+      </div>
+    </div>
+    <button class="btn btn-danger btn_stop_meeting btn-sm" onclick="closeAlarmConference()">结束会议</button>
+  </div>
+  <div id="invite">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div id="form">
+          <!-- tabs title -->
+          <ul id="contactTab" class="nav nav-pills" role="tablist">
+            <li role="presentation" class="active">
+              <a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">联系人</a>
+            </li>
+            <li role="presentation">
+              <a href="#dial" aria-controls="dial" role="tab" data-toggle="tab">拨号</a>
+            </li>
+          </ul>
+          <!-- tabs content -->
+          <div class="tab-content">
+            <!-- 联系人 -->
+            <div role="tabpanel" class="tab-pane active" id="contact" style="width: 100%;height: 100%">
+              <form class="form-inline">
+                <div class="form-group">
+                  <label class="sr-only" for="searchPhone">search</label>
+                  <!-- 搜索 -->
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="searchPhone" placeholder="请输入号码">
+                    <!-- 搜索按钮 -->
                   </div>
                 </div>
+              </form>
+              <!-- 联系人列表 -->
+              <ul id="contact-list" class="contact-list">
+                <li>
+                  <!-- 联系人信息 -->
+                  <div class="contact-info" ondblclick="doubleClickDial(this)">
+                    <div class="glyphicon glyphicon-user icon-size contact-img"></div>
+                    <div class="contact-name">
+                      <p class="info-name">单兵1</p>
+                      <p class="info-phone">133333333333</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <!-- 联系人信息 -->
+                  <div class="contact-info" ondblclick="doubleClickDial(this)">
+                    <div class="glyphicon glyphicon-user icon-size contact-img"></div>
+                    <div class="contact-name">
+                      <p class="info-name">单兵1</p>
+                      <p class="info-phone">135555555555</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- 拨号 -->
+            <div role="tabpanel" class="tab-pane" id="dial">
+              <div class="nexus">
+                <div class="phone-tab-contents">
+                  <div class="tab-content phone current">
+                    <div class="number-area">
+                      <!-- 显示拨号数字 -->
+                      <span class="numbers"></span>
+                      <!-- 拨号信息提示 -->
+                      <span class="phone-pic" >正在呼叫</span>
+                    </div>
+                    <!-- 删除数字 -->
+                    <div class="btn-del delete-btn"></div>
+                    <!-- 拨号键盘 -->
+                    <div class="numbers-container">
+                      <span class="pushed1">1</span>
+                      <span class="pushed2">2</span>
+                      <span class="pushed3">3</span>
+                      <span class="pushed4">4</span>
+                      <span class="pushed5">5</span>
+                      <span class="pushed6">6</span>
+                      <span class="pushed7">7</span>
+                      <span class="pushed8">8</span>
+                      <span class="pushed9">9</span>
+                      <span class="pushedasterisk">*</span>
+                      <span class="pushed0">0</span>
+                      <span class="pushednumber">#</span>
+                    </div>
+                    <p class="cover"></p>
+                  </div>
+                </div>
+                <!-- 拨号操作 -->
+                <ul class="main-btns list-unstyled list-inline text-center">
+                  <!-- 拨号 -->
+                  <li><a class="btn-dial" onclick="call(this)"></a></li>
+                  <!-- 挂断 -->
+                  <li><a class="btn-hang-up" id="hangupbtn" onclick="hangup(this)"></a></li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-     </div>
+    </div>
   </div>
 </div>
-
-
 <!--5、引入 jquery，bootstrap js-->
 <script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
 <script src="../../src/bootstrap/js/bootstrap.min.js"></script>
 <script src="../js/dial.js"></script>
 <script>
-  //让模态框可拖动
-  $(document).on("show.bs.modal", ".modal", function(){
-    $(this).draggable({
-//            handle: ".modal-header"   // 只能点击头部拖动
-    });
-    $(this).css("overflow", "hidden"); // 防止出现滚动条，出现的话，你会把滚动条一起拖着走的
+
+  var $modal_alarm = $('#alarmModal');
+  $modal_alarm.modal('show');
+  $modal_alarm.modal({backdrop: 'static', keyboard: true});
+  $('#left ul.alarm_device li').on('click','a',function (e) {
+    e.preventDefault();
+    var id=$(this).attr('href');
+    $(id).addClass('isShow').siblings('.isShow').removeClass('isShow');
+    $(this).parent().addClass('active').siblings('.active').removeClass('active');
   });
-    var $modal_alarm = $('#alarmModal');
-    $modal_alarm.modal('show');
-    $modal_alarm.modal({backdrop: 'static', keyboard: true});
-    $('#left ul.alarm_device li').on('click','a',function (e) {
-      e.preventDefault();
-        var id=$(this).attr('href');
-        $(id).addClass('isShow').siblings('.isShow').removeClass('isShow');
-        $(this).parent().addClass('active').siblings('.active').removeClass('active');
-    });
-    $('#addMember').click(function () {
-        console.log(1);
-        $('#invite').toggleClass('hide');
-    })
+  $('#addMember').click(function () {
+    console.log(1);
+    $('#invite').toggleClass('hide');
+  })
 </script>
 </body>
 </html>
