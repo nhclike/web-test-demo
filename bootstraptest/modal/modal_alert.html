@@ -29,6 +29,13 @@
           </a>
           <img src="../img/delete-meeting.png" class="img_sm" title="删除" alt="">
         </li>
+        <li class="clearfloat">
+          <a href="#alert2" class="pull-left" >
+            <img src="../img/danbin.png" class="img_sm1" alt="">
+            <b title="单兵设备2">单兵设备1</b>
+          </a>
+          <img src="../img/delete-meeting.png" class="img_sm" title="删除" alt="">
+        </li>
 
       </ul>
       <ul class="list-unstyled" style="overflow: auto;height:80%;margin: 5px" id="phoneUl">
@@ -39,7 +46,7 @@
       </ul>
     </div>
     <div id="addMember" >
-      <img src="/custom/comm/img/add_member.png">
+      <img src="../img/add_member.png">
       <br>
       <span style="color:#237ae5">添加成员</span>
     </div>
@@ -58,27 +65,42 @@
                 告警时间:
                 <span>单兵1</span>
               </div>
-
             </li>
-
             <li>告警详情:
-              <span>xxxxxx</span>
+              <span>xxxxxx1111111111111111111111111111111111111111111111111111111</span>
             </li>
           </ul>
         </div>
       </div>
-
+      <div id="alert2">
+        <div class="alarm_info">
+          <ul class="list-unstyled" style="color:#237ae5">
+            <li class="clearfloat">
+              <div class="pull-left">
+                告警设备:
+                <span>单兵2</span>
+              </div>
+              <div class="pull-right">
+                告警时间:
+                <span>单兵2</span>
+              </div>
+            </li>
+            <li>告警详情:
+              <span>xxxxxx2222222222222222222222222222222222222222222222222222222222</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="alarm_video" style="width: 100%;height:70%;position:absolute;top:20%;left:0 ">
-      <div style="border:1px solid #ddd;width:100%;min-height:100%;background: #000;padding: 10px" >
+    <div class="alarm_video" style="width: 100%;height:70%;position:absolute;top:20%;left:0 ;padding:10px">
+      <div style="border:1px solid #ddd;width:100%;min-height:100%;background: #000" >
         <object classid="CLSID:22A0C36F-457B-469D-88D7-3C76D0EB4BD7" style="width:100%;height:100%" id="video11"></object>
       </div>
     </div>
     <button class="btn btn-danger btn_stop_meeting btn-sm" onclick="closeAlarmConference()">结束会议</button>
   </div>
   <div id="invite">
-    <div class="modal-content">
-      <div class="modal-body">
+
         <div id="form">
           <!-- tabs title -->
           <ul id="contactTab" class="nav nav-pills" role="tablist">
@@ -120,8 +142,8 @@
                   <div class="contact-info" ondblclick="doubleClickDial(this)">
                     <div class="glyphicon glyphicon-user icon-size contact-img"></div>
                     <div class="contact-name">
-                      <p class="info-name">单兵1</p>
-                      <p class="info-phone">135555555555</p>
+                      <p class="info-name">单兵2</p>
+                      <p class="info-phone">13300005555555</p>
                     </div>
                   </div>
                 </li>
@@ -169,8 +191,7 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
+
   </div>
 </div>
 <!--5、引入 jquery，bootstrap js-->
@@ -179,18 +200,14 @@
 <script src="../js/dial.js"></script>
 <script>
 
-  var $modal_alarm = $('#alarmModal');
-  $modal_alarm.modal('show');
-  $modal_alarm.modal({backdrop: 'static', keyboard: true});
-  $('#left ul.alarm_device li').on('click','a',function (e) {
+  $('#left ul.alarm_device ').on('click','li>a',function (e) {
     e.preventDefault();
-    var id=$(this).attr('href');
-    $(id).addClass('isShow').siblings('.isShow').removeClass('isShow');
-    $(this).parent().addClass('active').siblings('.active').removeClass('active');
+    var href=$(this).attr('href');
+    $(href).addClass('isShow').siblings('.isShow').removeClass('isShow');
+    $(this).parent().addClass('actives').siblings('.actives').removeClass('actives');
   });
   $('#addMember').click(function () {
-    console.log(1);
-    $('#invite').toggleClass('hide');
+    $('.modal .modal-body',window.parent.document).toggleClass('overflowed');
   })
 </script>
 </body>

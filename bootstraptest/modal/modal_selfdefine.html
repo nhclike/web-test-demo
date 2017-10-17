@@ -14,6 +14,16 @@
   <![endif]-->
   <!--6、引入 bootstrap.css-->
   <link rel="stylesheet" href="../../src/bootstrap/css/bootstrap.min.css">
+  <style>
+    /*在common.css中定义modal整体样式*/
+    .modal>.modal-dialog>.modal-content>.modal-header{
+      background: #237AE5;
+      color:#fff;
+    }
+    .overflowed{
+      overflow: hidden;
+    }
+  </style>
 </head>
 <body>
 <button id="jsAddModal">动态添加模态框</button>
@@ -22,35 +32,32 @@
 <script src="../../src/bootstrap/js/bootstrap.min.js"></script>
 <script>
   $('#jsAddModal').click(function () {
-    addModal("modal_alert.html","test",'1111111111',30);
+    addModal("modal_alert.html","alarmMeeting",'告警会议','alarmModal',700,500,60,'146%','100%','overflowed');
   });
-
-  function addModal(url,iframeid,title,modalId) {
+  function addModal(url,iframeid,title,modalId,modalWidth,modalHeight,modalHeaderHeight,iframeWidth,iframeHeight,modalBodyClass) {
     var template =
       '<div class="modal fade" tabindex="-1" role="dialog" id="'+ modalId +'" data-backdrop="static">'
-      +   '<div class="modal-dialog modal-lg" role="document" aria-hidden="true">'
+      +   '<div class="modal-dialog modal-lg" role="document" aria-hidden="true" style="width:'+modalWidth+'px;height: '+modalHeight+'px">'
       +		  '<div class="modal-content">'
-      +        '<div class="modal-header">'
-      +	         '<button type="button" class="close" aria-label="Close" onclick="closeModal(this);"><span aria-hidden="true">×</span></button>'
+      +        '<div class="modal-header" style="height: '+modalHeaderHeight+'px">'
+      +	         '<button type="button" class="close" aria-label="Close" onclick="closeModal(this);"><span aria-hidden="true" style="font-size:40px;color:#fff">×</span></button>'
       +	         '<h4 class="modal-title">' + title + '</h4>'
       +        '</div>'
       +	    '</div>'
       +   '</div>'
       +'</div>';
     $(template).appendTo('body');
-    var $modalBody = $('<div class="modal-body"></div>');
-    $modalBody.attr({
-        width:'100%'
-      }
-    );
+    var modalBodyHeight=Number(modalHeight)-Number(modalHeaderHeight);
+    var $modalBody = $('<div class="modal-body '+modalBodyClass+'" style="padding:0;width: 100%;height: '+modalBodyHeight+'px"></div>');
+
 
     var _iframe = $('<iframe></iframe>');
     _iframe.attr({
       id:iframeid,
       src: url,
       frameborder: 0,
-      width:'100%',
-      height:'100%',
+      width:iframeWidth,
+      height:iframeHeight,
       scrolling: 'auto'
     });
     $modalBody.append( _iframe);
@@ -58,7 +65,6 @@
     $(modal.find('.modal-content')).append($modalBody);
     console.log( $(modal.find('.modal-content')));
     modal.modal('show');
-
   }
   function closeModal(obj) {
     var modal = $(obj).parents("div.modal");
@@ -67,9 +73,6 @@
       $('.modal-backdrop').remove();
     }
   }
-
-
-
 </script>
 </body>
 </html>
