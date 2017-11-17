@@ -22,21 +22,21 @@
 			width: 100%;
 			background: orange;
 			position: relative;
-			right: 40%;/*大小等于col2的宽度*/
+			right: 50%;/*大小等于col2的宽度*/
 		}
 
-		#col1 {
+		#right {
 			float:left;
-			width:60%;/*增加了2%的padding，所以宽度减少4%*/
+			width:50%;/*增加了2%的padding，所以宽度减少4%*/
 			position: relative;
-			left: 40%;/*距左边呀增加2%就成72%*/
+			left: 50%;/*距左边呀增加2%就成72%*/
 			overflow: hidden;
 		}
-		#col2 {
+		#left {
 			float:left;
-			width:40%;/*增加了2%的padding，所以宽度减少4%*/
+			width:50%;/*增加了2%的padding，所以宽度减少4%*/
 			position: relative;
-			left: 40%;/*距左边有三个padding为2%,所以距离变成76%*/
+			left: 50%;/*距左边有三个padding为2%,所以距离变成76%*/
 			overflow: hidden;
 		}
 	</style>
@@ -47,10 +47,10 @@
 
 	<div id="container2">
 		<div id="container1">
-			<div id="col1">
-
+			<div id="left">
+				col1
 			</div>
-			<div id="col2">
+			<div id="right">
 				Column 2
 				<div style="border: 1px solid #ddd;height: 800px"></div>
 			</div>

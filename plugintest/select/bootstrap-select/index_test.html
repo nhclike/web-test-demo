@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap-select test page</title>
+
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+  <link rel="stylesheet" href="dist/css/bootstrap-select.css">
+
+  <style>
+    body {
+      padding-top: 70px;
+    }
+  </style>
+
+  <script src="http://www.jq22.com/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+  <script src="dist/js/bootstrap-select.js"></script>
+</head>
+<body>
+<select id="first-disabled" class="selectpicker" data-hide-disabled="true" data-live-search="true">
+  <optgroup disabled="disabled" label="disabled">
+    <option>Hidden</option>
+  </optgroup>
+  <optgroup label="Fruit">
+    <option>Apple</option>
+    <option>Orange</option>
+  </optgroup>
+  <optgroup label="Vegetable">
+    <option>Corn</option>
+    <option>Carrot</option>
+  </optgroup>
+</select>
+
+<script>
+  $(document).ready(function () {
+    /*var mySelect = $('#first-disabled2');
+
+    $('#special').on('click', function () {
+      mySelect.find('option:selected').prop('disabled', true);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#special2').on('click', function () {
+      mySelect.find('option:disabled').prop('disabled', false);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#basic2').selectpicker({
+      liveSearch: true,
+      maxOptions: 1
+    });*/
+  });
+</script>
+</body>
+</html>

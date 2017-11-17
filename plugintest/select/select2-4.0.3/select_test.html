@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="css/select2.css">
+</head>
+<body>
+	<div>
+		<select name="test" id="select_test" class="select2">
+
+		</select>
+	</div>
+<script src="../../../src/jquery-1.7.2.min.js"></script>
+<script src="js/select2.full.js"></script>
+<script src="js/select2.js"></script>
+<script>
+  var data = [{ id: 0, text: 'enhancement' }, { id: 1, text: 'bug' }, { id: 2, text: 'duplicate' }, { id: 3, text: 'invalid' }, { id: 4, text: 'wontfix' }];
+  $("#select_test").select2({
+    data: data,
+    placeholder:'请选择',
+    allowClear:true
+  })
+</script>
+</body>
+</html>
