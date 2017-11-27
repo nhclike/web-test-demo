@@ -25,14 +25,13 @@
 	//修改easyui源码加入一个独有的全局变量，只有当点击的是easyui的弹出框才能拿到这个变量，控制onbeforeunload的开关,
 	//easyui源码中已经将status设为false
 	window.onbeforeunload=function(){
-		if(status){
-			alert('刷新');
-			//刷新关闭后要调的方法
-		}
-		else{
-			status=true;
-			return "";
-		}
+
+		/*	alert('刷新');*/
+			if(window.confirm("确定退出")){
+				alert('111 ');
+			}
+
+
 	};
 	function alert1(){
 		$.messager.alert('My Title','Here is a message!');

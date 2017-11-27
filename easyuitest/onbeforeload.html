@@ -1,27 +1,92 @@
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-	��<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-	��<title>onbeforeunload����</title>��
-	</head>
-��<body>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Interactive Messager - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../src/easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../src/easyui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../src/easyui/demo/demo.css">
+	<script type="text/javascript" src="../src/easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="../src/easyui/jquery.easyui.min.js"></script>
+</head>
+<body>
 		<h1>this is a test</h1>
-		<a href="../ierightclick.html">��ת������ҳ��</a>
+		<div>
+			<h3>
+				onbeforeunload 是在页面刷新或关闭前触发，这时浏览器并未请求服务器读取新页面，因此onbeforeunload是可以阻止页面更新或关闭的。
+			</h3>
+			<p>
+				事件触发时会弹出一个有确定和取消的对话框，确定后才会执行后续事件，否则继续留在本页。
+			</p>
+			<p>
+				触发于：
+				<br>
+				1.关闭浏览器窗口
+				<br>
+				2.通过地址栏或收藏夹前往其他页面的时候
+				<br>
+				3.点击返回，前进，刷新，主页其中一个的时候
+				<br>
+				4.点击 一个前往其他页面的url连接的时候
+				<br>
+				5.调用以下任意一个事件的时候：
+				<br>
+				click，document write，document open，document close，window close ，window navigate ，window NavigateAndFind,location replace,location reload,form submit.
+				<br>
+				6.当用window open打开一个页面，并把本页的window的名字传给要打开的页面的时候。
+				<br>
+				7.重新赋予location.href的值的时候。
+				<br>
+				8.通过input type=”submit”按钮提交一个具有指定action的表单的时候。
+			</p>
+			<a href="#" class="easyui-linkbutton" onclick="alert1()">Alert</a>
+			<a href="#" class="easyui-linkbutton" onclick="confirm1();">Confirm</a>
+
+		</div>
+		<a href="../ierightclick.html">跳转到其他页面</a>
 		<script>
-			var MSG_UNLOAD="����ر��쳣���Ƿ��뿪?";
-			var UnloadConfirm = {};
-			//���ü��������ˢ�¡��رյķ���
-			UnloadConfirm.set = function(confirm_msg){
-				window.onbeforeunload = function(event){
-					event = event || window.event;
-					event.returnValue = confirm_msg;
-				}
-			}
-			//�رռ��������ˢ�¡��رյķ���
-			UnloadConfirm.clear = function(){
-				window.onbeforeunload = function(){};
-			}
-			UnloadConfirm.set(MSG_UNLOAD);
+      function alert1(){
+        $.messager.alert('My Title','Here is a message!');
+      }
+      function confirm1() {
+        $.messager.confirm('My Title', 'Are you confirm this?', function (r) {
+          if (r) {
+            //alert('confirmed: ' + r);
+          }
+        });
+      }
+      $(document).keydown(function () {
+        if ((event.keyCode == 116) || //屏蔽 F5 刷新键
+          (event.ctrlKey && event.keyCode == 82)) { //Ctrl + R
+          event.keyCode = 0;
+          event.returnValue = false;
+        }
+      });
+      window.onbeforeunload=function(e){
+        //window.event.clientY < 0表示鼠标已经离开了document的区域
+
+        if(window.event.clientY < 0 || window.event.altKey)
+        {
+          alert("是关闭而非刷新");
+          window.event.returnValue ="是否离开页面？";
+          bCloseFlag=true;
+
+        }else{
+         alert("是刷新而非关闭");
+        }
+      };
+
+      var bCloseFlag=false;//关闭窗口标志位
+      //关闭浏览器的时候释放资源
+      window.onunload = function() {
+        if (bCloseFlag) {
+          try{
+
+            //释放所有的资源
+            //**此处做相关的关闭窗口后的代码**
+          }catch(e){}finally{}
+        }
+      }
 		</script>
-��</body>
+　</body>
 </html>
