@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<title>音频</title>
+	<link rel="stylesheet" href="../../src/font-awesome/css/font-awesome.min.css">
+	<style type="text/css">
+		#videobox{
+			position: relative;
+			width: 860px;
+			height: 350px;
+			display: block;
+
+		}
+		#videobox #ocx_box {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 350px;
+			display: block;
+			/*  overflow: hidden; */
+		}
+		#videobox #ocx_obj {
+			position: absolute;
+			top: 0px;
+			left: 0;
+			width: 100%;
+			height: 300px;
+			display: block;
+		}
+		#videobox #ocx_ctrl {
+			position: absolute;
+			top: 300px;
+			left: 0;
+			width: 100%;
+			height: 50px;
+			display: block;
+			background: #EDF1F6;
+			z-index: 999;
+		}
+		.ocx_Img{
+			float:left;
+			width: 10%;
+		}
+		.progress{position: relative; width:60%;float:left;height: 50px;
+			line-height: 50px;padding: 20px 0}
+		.progress_bg{height: 10px; border: 1px solid #ddd; border-radius: 5px; overflow: hidden;background-color:#D7EAF6;}
+		.progress_bar{background: #4F95EA; width: 0; height: 10px; border-radius: 5px;}
+		.progress_btn{margin: 20px 0;width: 20px; height: 20px; border-radius: 5px; position: absolute;background:#4F95EA;
+			left:0; top:-5px; cursor: pointer;border:1px #ddd solid;box-sizing:border-box;}
+		.progress_btn:hover{
+			border-color:#F7B824;
+		}
+		.ocx_time {
+			float: left;
+			color: #000;
+			width: 26%;
+			height: 50px;
+			line-height: 50px;
+			font-size: 16px;
+			padding:2px;
+		}
+	</style>
+</head>
+<body style="background-color: #000;">
+<div id="videobox">
+	<div id="ocx_box">
+		<div id="ocx_obj">
+			<audio id="audioLocalSource" src=""></audio>
+		</div>
+		<div id="ocx_ctrl">
+			<i class="fa fa-play-circle fa-3x blue ocx_Img" style="cursor:pointer"> </i>
+			<div class="progress">
+				<div class="progress_bg">
+					<div class="progress_bar"></div>
+				</div>
+				<div class="progress_btn" title="0%"></div>
+
+			</div>
+			<div class="ocx_time">
+				<span id="ocx_curtime">00:00:00</span>/
+				<span id="ocx_alltime">00:00:00</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+  $(function(){
+    var  tag = false,ox = 0,left = 0; //tag为鼠标确认事件标注ox鼠标拖动起点位置，left为鼠标进度条移动距离
+    var  bar_width=parseInt($('.progress_bg').width())-Number(20);
+    var  bgleft = $('.progress_bg').offset().left;
+    $('.progress_btn').mousedown(function(e) {
+      ox = e.pageX - left;
+      tag = true;
+      stopEvent(e);
+      console.log('mousedown'+tag)
+    }).mousemove(function(e) {//鼠标移动
+      if (tag) {
+
+        left = e.pageX - ox;
+        if (left <= 0) {
+          left = 0;
+        }else if (left >bar_width) {
+          left = bar_width
+        }
+        $('.progress_btn').css('left', left);
+        $('.progress_bar').width(left);
+        $('.progress_btn').attr('title', parseInt((left/bar_width)*100) + '%');
+        console.log('mousemove')
+      }
+    }).mouseup(function(e) {
+      stopEvent(e);
+      $('.progress_btn').unbind('mousemove');
+      tag = false;
+      console.log('mouseup'+tag)
+    });
+
+
+    $('.progress_bg').mousedown(function () {
+      tag = false;
+      console.log('click+mousedown'+tag);
+      //$('.progress_btn').css('left', '300px');
+    }).mouseup(function () {
+      console.log('click+mouseup')
+    }).click(function(e) {//鼠标点击
+      if (!tag) {
+        bgleft = $('.progress_bg').offset().left;
+
+
+        left = e.pageX - bgleft;
+        console.log('left'+left+'bgleft'+bgleft+'e.pageX '+e.pageX )
+        if (left <= 0) {
+          left = 0;
+        }else if (left > bar_width) {
+          left = bar_width;
+        }
+        $('.progress_btn').css('left', left);
+        $('.progress_bar').animate({width:left},300);
+        $('.progress_btn').attr('title', parseInt((left/bar_width)*100) + '%');
+        console.log('click')
+      }
+    });
+    function stopEvent(event){ //阻止冒泡事件
+      //取消事件冒泡
+      var e=arguments.callee.caller.arguments[0]||event; //若省略此句，下面的e改为event，IE运行可以，但是其他浏览器就不兼容
+      if (e && e.stopPropagation) {
+        // this code is for Mozilla and Opera
+        e.stopPropagation();
+      } else if (window.event) {
+        // this code is for IE
+        window.event.cancelBubble = true;
+      }
+    }
+  });
+</script>
+</body>
+</html>
