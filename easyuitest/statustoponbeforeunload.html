@@ -24,14 +24,19 @@
 <script>
 	//修改easyui源码加入一个独有的全局变量，只有当点击的是easyui的弹出框才能拿到这个变量，控制onbeforeunload的开关,
 	//easyui源码中已经将status设为false
-	window.onbeforeunload=function(){
-
-		/*	alert('刷新');*/
-			if(window.confirm("确定退出")){
-				alert('111 ');
-			}
-
-
+	window.onbeforeunload=function(event){
+    event = event || window.event;
+    event.returnValue = '确定离开此页面';
+    console.log(event);
+    setTimeout(function () {
+      //用户点击留在此页执行的操作
+      window.location.href='../ierightclick.html'
+    },5000)
+	};
+	//确认离开此页，点击确认时触发的事件
+	window.onunload=function(){
+	  //用户确定离开此页后需要执行的代码
+		alert('您已经离开此页')
 	};
 	function alert1(){
 		$.messager.alert('My Title','Here is a message!');
