@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 <head>
 
 	<title>Video.js | HTML5 Video Player</title>
@@ -11,9 +12,10 @@
 </head>
 
 <body>
-
+<button id="startplaybtn">开始播放</button>
+<button id="stopplaybtn">结束播放</button>
 <video id="video_play" class="video-js vjs-default-skin" controls preload="none" width="640" height="264" poster="http://vjs.zencdn.net/v/oceans.png" data-setup="{}">
-	<source src="src/protect.mp4" type="video/mp4">
+	<source src="" type="video/mp4">
 	<!--<source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">-->
 	<!--<source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">-->
 	<!--<track kind="captions" src="../shared/example-captions.vtt" srclang="en" label="English"></track>-->
@@ -22,6 +24,58 @@
 	<!-- Tracks need an ending tag thanks to IE9 -->
 	<!--<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>-->
 </video>
+<script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
+
+<script>
+	$(function () {
+    var myPlayer = videojs("video_play");
+    $('#startplaybtn').click(function () {
+
+        myPlayer.ready(function() {
+          myPlayer.src("src/protect.mp4");
+          myPlayer.play();
+          myPlayer.on("durationchange", function() {
+            console.log('durationchange')
+          });
+          myPlayer.on("progress", function() {
+            console.log('progress')
+          });
+          myPlayer.on("timeupdate", playchange);
+          myPlayer.on("play", function() {
+            console.log('play')
+          });
+          // 监听停止
+          myPlayer.on("ended", function() {
+           // myPlayer.src('');
+            stop()
+            console.log('ended')
+          });
+        })
+      }
+    );
+    $('#stopplaybtn').click(function () {
+      //myPlayer.src('');
+      //myPlayer.enterFullScreen();
+      stop()
+
+    })
+		function stop() {
+      myPlayer.pause();
+      var whereYouAt = myPlayer.currentTime();
+      console.log(whereYouAt)
+    }
+    function playchange() {
+      console.log('playchange')
+      // 如果 currentTime() === duration()，则视频已播放完毕
+      if (myPlayer.duration() != 0 && myPlayer.currentTime() === myPlayer.duration()) {
+        // 播放结束
+        alert('播放结束')
+
+      }
+    }
+  })
+
+</script>
 </body>
 
 </html>

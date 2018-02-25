@@ -1,0 +1,62 @@
+#section {
+  padding: 10px 30px;
+}
+#section form fieldset {
+  border: 1px dashed #ddd;
+  margin: 10px auto;
+}
+#section form fieldset legend {
+  border: none;
+  width: 120px;
+  margin-left: 10px;
+  margin-bottom: 0;
+  font-size: 18px;
+}
+#section form .form-group {
+  margin: 10px auto;
+  height: 55px ;
+}
+#section form .form-group label {
+  font-size: 18px;
+  font-weight: normal;
+  color: #596E81;
+  padding: 0;
+}
+#section form .form-group div div.row p.help_block {
+  margin: 0 20px !important;
+  color: #acacac;
+}
+#section form .form-group div button {
+  width: 100px;
+  height: 40px;
+  margin: 0 20px;
+  outline: none;
+  color: #acacac;
+  font-size: 18px;
+}
+#section form .form-group div #btn_add {
+  background: #0093f9;
+  color: #fff;
+}
+#section form .form-group div select {
+  font-size: 15px;
+  color: #000;
+  border: solid 1px #ddd;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: url("../images/down.png") no-repeat scroll 180px center transparent;
+  padding-right: 14px;
+}
+#section form .form-group div select::-ms-expand {
+  display: none;
+}
+#section form .form-group input {
+  font-size: 14px;
+}
+#section form .form-group textarea {
+  font-size: 16px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  resize: none;
+}
