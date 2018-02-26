@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+  <meta charset="UTF-8">
+  <!--2 viewport-->
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <!--3、x-ua-compatible-->
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <title></title>
+  <!--4、引入两个兼容文件-->
+  <!--[if lt IE 9]>
+  <script src="../../src/bootstrap/js/html5shiv.min.js"></script>
+  <script src="../../src/bootstrap/js/respond.min.js"></script>
+  <![endif]-->
+  <!--6、引入 bootstrap.css-->
+  <link rel="stylesheet" href="../../src/bootstrap/css/bootstrap.min.css">
+  <style>
+    /*在common.css中定义modal整体样式*/
+    .modal>.modal-dialog>.modal-content>.modal-header{
+      background: #237AE5;
+      color:#fff;
+    }
+    .overflowed{
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+<button id="jsAddModal">拨打电话</button>
+<!--5、引入 jquery，bootstrap js-->
+<script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
+<script src="../../src/bootstrap/js/bootstrap.min.js"></script>
+<script>
+  $('#jsAddModal').click(function () {
+    addModal("telcall.html","tel_call",'拨打电话','telModal',700,500,60,'146%','100%','overflowed');
+  });
+  function addModal(url,iframeid,title,modalId,modalWidth,modalHeight,modalHeaderHeight,iframeWidth,iframeHeight,modalBodyClass) {
+    var template =
+      '<div class="modal fade" tabindex="-1" role="dialog" id="'+ modalId +'" data-backdrop="static">'
+      +   '<div class="modal-dialog modal-lg" role="document" aria-hidden="true" style="width:'+modalWidth+'px;height: '+modalHeight+'px">'
+      +		  '<div class="modal-content">'
+      +        '<div class="modal-header" style="height: '+modalHeaderHeight+'px">'
+      +	         '<button type="button" class="close" aria-label="Close" onclick="closeModal(this);"><span aria-hidden="true" style="font-size:40px;color:#fff">×</span></button>'
+      +	         '<h4 class="modal-title">' + title + '</h4>'
+      +        '</div>'
+      +	    '</div>'
+      +   '</div>'
+      +'</div>';
+    $(template).appendTo('body');
+    var modalBodyHeight=Number(modalHeight)-Number(modalHeaderHeight);
+    var $modalBody = $('<div class="modal-body '+modalBodyClass+'" style="padding:0;width: 100%;height: '+modalBodyHeight+'px"></div>');
+
+
+    var _iframe = $('<iframe></iframe>');
+    _iframe.attr({
+      id:iframeid,
+      src: url,
+      frameborder: 0,
+      width:iframeWidth,
+      height:iframeHeight,
+      scrolling: 'auto'
+    });
+    $modalBody.append( _iframe);
+    var modal=$('#'+modalId);
+    $(modal.find('.modal-content')).append($modalBody);
+    console.log( $(modal.find('.modal-content')));
+    modal.modal('show');
+  }
+  function closeModal(obj) {
+    var modal = $(obj).parents("div.modal");
+    if(modal.length>0){
+      modal.remove();
+      $('.modal-backdrop').remove();
+    }
+  }
+</script>
+</body>
+</html>

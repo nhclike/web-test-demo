@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<input type="text" style="ime-mode:disabled;" onpaste="return false;"  onkeypress="keyPress()" />
+<input type="text" style="ime-mode:disabled" onkeyup="return ValidateNumber($(this),value)" />
+
+<script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
+<script>
+  function keyPress() {
+    var keyCode = event.keyCode;
+    if ((keyCode >= 48 && keyCode <= 57))
+    {
+      event.returnValue = true;
+    } else {
+      event.returnValue = false;
+    }
+  }
+  function ValidateNumber(e, pnumber){
+    if (!/^\d+$/.test(pnumber)){
+      $(e).val(/^\d+/.exec($(e).val()));
+    }
+    return false;
+  }
+</script>
+</body>
+</html>
