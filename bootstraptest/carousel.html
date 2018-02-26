@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+	<meta charset="UTF-8">
+	<!--2 viewport-->
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<!--3、x-ua-compatible-->
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<title></title>
+	<!--4、引入两个兼容文件-->
+	<!--[if lt IE 9]>
+	<script src="../src/bootstrap/js/html5shiv.min.js"></script>
+	<script src="../src/bootstrap/js/respond.min.js"></script>
+	<![endif]-->
+	<!--6、引入 bootstrap.css-->
+	<link rel="stylesheet" href="../src/bootstrap/css/bootstrap.min.css">
+	<style>
+		.carousel .carousel-inner .item img{
+			width:100%;
+		}
+	</style>
+</head>
+<body>
+<div id="car1" class="carousel slide" data-ride="carousel" data-interval="2000">
+	<!--轮播区域-->
+	<div class="carousel-inner">
+		<!--具体轮播项-->
+		<div class="item active">
+			<img src="img/11.jpg"/>
+			<div class="carousel-caption">
+				<h4>菊花</h4>
+				<p>好大一朵好看的菊花</p>
+			</div>
+		</div>
+		<div class="item">
+			<img src="img/22.jpg"/>
+		</div>
+		<div class="item">
+			<img src="img/33.jpg"/>
+		</div>
+		<div class="item">
+			<img src="img/44.jpg"/>
+		</div>
+	</div>
+	<!-- 左右方向 -->
+	<a href="#car1" class="carousel-control left" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left"></span>
+	</a>
+	<a href="#car1" class="carousel-control right" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+	</a>
+	<!-- 增加导航圆点 -->
+	<ul class="carousel-indicators">
+		<li class="active" data-target="#car1" data-slide-to="0"></li>
+		<li data-target="#car1" data-slide-to="1"></li>
+		<li data-target="#car1" data-slide-to="2"></li>
+		<li data-target="#car1" data-slide-to="3"></li>
+	</ul>
+</div>
+<script src="../src/bootstrap/js/jquery-1.11.3.js"></script>
+<script src="../src/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

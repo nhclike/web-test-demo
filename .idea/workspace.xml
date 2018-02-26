@@ -2,82 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8cf9de38-ef71-4c88-88ea-1feabee0bc64" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/blank.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/cloud-popup-relative.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/drag-rectangle-off.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/drag-rectangle-on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/east-mini.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/layer-switcher-maximize.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/layer-switcher-minimize.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/marker-blue.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/marker-gold.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/marker-green.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/marker.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/measuring-stick-off.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/measuring-stick-on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/north-mini.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/panning-hand-off.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/panning-hand-on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/slider.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/south-mini.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/west-mini.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/zoom-minus-mini.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/zoom-plus-mini.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/zoom-world-mini.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/zoombar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/add_point_off.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/add_point_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/blank.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/close.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/drag-rectangle-off.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/drag-rectangle-on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/draw_line_off.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/draw_line_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/draw_point_off.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/draw_point_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/draw_polygon_off.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/draw_polygon_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/editing_tool_bar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/move_feature_off.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/move_feature_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/navigation_history.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/overview_replacement.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/pan-panel-NOALPHA.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/pan-panel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/pan_off.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/pan_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/panning-hand-off.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/panning-hand-on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/remove_point_off.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/remove_point_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/ruler.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/save_features_off.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/save_features_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/view_next_off.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/view_next_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/view_previous_off.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/view_previous_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/zoom-panel-NOALPHA.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/zoom-panel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/OpenLayers/map_test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/Validator/formtest.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/select/bootstrap-select/less/bootstrap-select.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/select/bootstrap-select/less/variables.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/OpenLayers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/google.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/google.tidy.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/ie6-style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/ie6-style.tidy.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/style.mobile.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/style.mobile.tidy.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/style.tidy.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/font-awesome/less/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/font-awesome/less/mixins.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/font-awesome/less/variables.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstraptest/img/11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstraptest/img/22.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstraptest/img/33.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstraptest/img/44.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/layout/module_layout/css/Thumbs.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/layout/module_layout/css/sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstraptest/carousel.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/layout/module_layout/css/jquery.gridster.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/layout/module_layout/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/layout/module_layout/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/layout/module_layout/js/jquery-1.7.2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/layout/module_layout/js/jquery.gridster.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/layout/module_layout/www.jq22.com.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenLayers-2.13.1/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugintest/video/videojs.html" afterPath="$PROJECT_DIR$/plugintest/video/videojs.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/video/video-js.css" afterPath="$PROJECT_DIR$/src/video/video-js.css" />
     </list>
     <ignored path="zxzhtest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,28 +36,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="videojs.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugintest/video/videojs.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="42" column="33" lean-forward="false" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="map_test.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/plugintest/OpenLayers/map_test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="video.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/video/video.js">
+      <file leaf-file-name="jquery.gridster.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/layout/module_layout/js/jquery.gridster.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -127,13 +46,98 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="audio_self_drag_self.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugintest/video/audio_self_drag_self.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/layout/module_layout/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1710">
-              <caret line="90" column="28" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <state relative-caret-position="-1596">
+              <caret line="3" column="67" lean-forward="true" selection-start-line="3" selection-start-column="67" selection-end-line="3" selection-end-column="67" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modal_alert.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bootstraptest/modal/modal_alert.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modal_complex.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bootstraptest/modal/modal_complex.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modal_jsaddiframe.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bootstraptest/modal/modal_jsaddiframe.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56">
+              <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modal_selfdefine.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bootstraptest/modal/modal_selfdefine.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-442">
+              <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+              <folding>
+                <marker date="1507880441261" expanded="true" signature="1488:1536" ph="..." />
+                <marker date="1507880441261" expanded="true" signature="1630:1661" ph="..." />
+                <marker date="1507880441261" expanded="true" signature="1798:1823" ph="..." />
+                <marker date="1507880441261" expanded="true" signature="2166:2217" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="popover.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bootstraptest/popover.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="carousel.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bootstraptest/carousel.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-276">
+              <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/layout/module_layout/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sprite.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/layout/module_layout/css/sprite.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -186,11 +190,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/plugintest/video/audio_chajian.html" />
-        <option value="$PROJECT_DIR$/ie9pdfview.html" />
-        <option value="$PROJECT_DIR$/ierightclick.html" />
-        <option value="$PROJECT_DIR$/OCX.html" />
-        <option value="$USER_HOME$/Desktop/executeMeeting_detail.html" />
         <option value="$USER_HOME$/Desktop/executeMeeting_detail.js" />
         <option value="$PROJECT_DIR$/executeMeeting_detail.js" />
         <option value="$PROJECT_DIR$/src/easyui/jquery.easyui.min.js" />
@@ -237,6 +236,11 @@
         <option value="$PROJECT_DIR$/easyuitest/statustoponbeforeunload.html" />
         <option value="$PROJECT_DIR$/plugintest/video/videojs.html" />
         <option value="$PROJECT_DIR$/plugintest/OpenLayers/map_test.html" />
+        <option value="$PROJECT_DIR$/src/OpenLayers-2.13.1/index.html" />
+        <option value="$PROJECT_DIR$/layout/module_layout/css/style.css" />
+        <option value="$PROJECT_DIR$/layout/module_layout/index.html" />
+        <option value="$PROJECT_DIR$/layout/module_layout/carousel.html" />
+        <option value="$PROJECT_DIR$/bootstraptest/carousel.html" />
       </list>
     </option>
   </component>
@@ -247,10 +251,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1358" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -268,6 +272,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -326,9 +331,72 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zxzhtest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webtest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zxzhtest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webtest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="module_layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zxzhtest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webtest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstraptest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zxzhtest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webtest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstraptest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
@@ -345,19 +413,19 @@
     <property name="SearchEverywhereHistoryKey" value="声音&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\GitHub\webtest\src" />
-      <recent name="E:\GitHub\webtest\src\video" />
-      <recent name="E:\GitHub\webtest\plugintest\video" />
-      <recent name="E:\GitHub\webtest" />
-      <recent name="E:\GitHub\webtest\plugintest\video\src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\GitHub\webtest\layout\module_layout" />
       <recent name="E:\GitHub\webtest\plugintest\cityChoose\type1" />
       <recent name="E:\GitHub\webtest\src\img" />
       <recent name="E:\GitHub\webtest" />
       <recent name="E:\GitHub\webtest\plugintest\select" />
-      <recent name="E:\GitHub\webtest\plugintest\video\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\GitHub\webtest\bootstraptest\img" />
+      <recent name="E:\GitHub\webtest\bootstraptest" />
+      <recent name="E:\GitHub\webtest\layout" />
+      <recent name="E:\GitHub\webtest\src" />
+      <recent name="E:\GitHub\webtest\src\video" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -889,7 +957,8 @@
       <workItem from="1517997924463" duration="116000" />
       <workItem from="1518054518463" duration="2502000" />
       <workItem from="1518242727530" duration="2998000" />
-      <workItem from="1519540810274" duration="339000" />
+      <workItem from="1519540810274" duration="3693000" />
+      <workItem from="1519607876672" duration="6130000" />
     </task>
     <task id="LOCAL-00001" summary="重新整理文件夹">
       <created>1502862553809</created>
@@ -975,14 +1044,21 @@
       <option name="project" value="LOCAL" />
       <updated>1516846458096</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="增加视频全屏结束测试代码">
+      <created>1519542547592</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1519542547592</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="339252000" />
+    <option name="totallyTimeSpent" value="348736000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -998,7 +1074,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17217484" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24659607" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24427083" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1101,7 +1177,8 @@
     <MESSAGE value="增加意外退出情况的demo" />
     <MESSAGE value="完善意外退出的demo" />
     <MESSAGE value="增加拖拽进度条demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加拖拽进度条demo" />
+    <MESSAGE value="增加视频全屏结束测试代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加视频全屏结束测试代码" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1114,69 +1191,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bootstraptest/form_inquire.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstraptest/css/alarm_modal.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2185">
-          <caret line="115" column="15" lean-forward="false" selection-start-line="110" selection-start-column="2" selection-end-line="115" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstraptest/js/modal_comple.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/Validator/bootstrapValidatorFormTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="182" column="11" lean-forward="false" selection-start-line="182" selection-start-column="11" selection-end-line="182" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/select/bootstrap-select/less/bootstrap-select.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/select/bootstrap-select/less/variables.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/select/bootstrap-select/less/variables.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/select/bootstrap-select/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3952">
-          <caret line="208" column="32" lean-forward="false" selection-start-line="208" selection-start-column="32" selection-end-line="208" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/select/bootstrap-select/index_test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugintest/select/select2tree-master/LICENSE">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1415,24 +1429,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootstraptest/modal/modal_selfdefine.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bootstraptest/modal/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstraptest/modal/modal_jsaddiframe.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="44" column="18" lean-forward="false" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1460,7 +1460,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/mask/jqmask.html">
+    <entry file="file://$PROJECT_DIR$/plugintest/mask/jqmask.html" />
+    <entry file="file://$PROJECT_DIR$/plugintest/OpenLayers/map_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenLayers-2.13.1/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="51" lean-forward="false" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout/module_layout/js/jquery.gridster.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1468,11 +1487,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/OpenLayers/map_test.html">
+    <entry file="file://$PROJECT_DIR$/layout/module_layout/css/sprite.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout/module_layout/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        <state relative-caret-position="38">
+          <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstraptest/popover.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstraptest/modal/modal_alert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstraptest/modal/modal_complex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstraptest/modal/modal_jsaddiframe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstraptest/modal/modal_selfdefine.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-442">
+          <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+          <folding>
+            <marker date="1507880441261" expanded="true" signature="1488:1536" ph="..." />
+            <marker date="1507880441261" expanded="true" signature="1630:1661" ph="..." />
+            <marker date="1507880441261" expanded="true" signature="1798:1823" ph="..." />
+            <marker date="1507880441261" expanded="true" signature="2166:2217" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstraptest/carousel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-276">
+          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout/module_layout/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1596">
+          <caret line="3" column="67" lean-forward="true" selection-start-line="3" selection-start-column="67" selection-end-line="3" selection-end-column="67" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
