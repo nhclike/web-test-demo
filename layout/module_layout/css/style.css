@@ -46,7 +46,7 @@ body {
 }
 
 .gridster {
-    width: 940px;
+    width: 80%;
     margin: 0 auto;
 
     opacity: .8;
