@@ -1,6 +1,4 @@
-/**
- * Created by 张雅鹏 on 2016/11/8.
- */
+var eraserWidth=20;
 function Draw(obj,setting){
     this.obj=obj;
     this.type=setting.type||"stroke";
@@ -74,7 +72,7 @@ Draw.prototype={
     },
     eraser:function(x,y,x1,y1){
         this.obj.lineCap="round";
-        this.obj.clearRect(x1-5,y1-5,10,10);
+        this.obj.clearRect(x1-(eraserWidth/2),y1-(eraserWidth/2),eraserWidth,eraserWidth);
     },
     cut:function(x,y,x1,y1){
         this.init();
@@ -86,4 +84,4 @@ Draw.prototype={
         this.obj.stroke();
         this.obj.restore();
     }
-}
+};

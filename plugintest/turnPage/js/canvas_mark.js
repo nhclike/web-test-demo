@@ -34,12 +34,13 @@ var create_close=$(".xinjian_before");
 var cutflag=false;
 var iscut=true;
 var color="#000"; //默认都为黑色
-var type="line";
-var n=3;
-var linewidth="1";
-var style="stroke";
+var type="line"; //默认画直线
+var n=3; //默认是三边形
+var linewidth="1"; //默认线条宽度为1
+var style="stroke";  //默认描边
 var arr=[];
-$(".fill").css({display:"none"});
+var eraserWidth=20; //默认橡皮擦宽度
+$(".fill").css({display:"none"}); //默认不显示填充
 // 多边形
 poly.hover(function(){
   bian.fadeIn();
@@ -78,6 +79,7 @@ cut.click(function(){
   $(this).css({color:"#5bd219",backgroundColor:"#fff"}).toggleClass("shezhistyle");
   iscut=true;
 });
+//复制
 copy.click(function(){
   type="cut";
   typechoose.removeClass("typeactive");
@@ -142,6 +144,7 @@ canvasHeight.onblur=function(){
   }
   height=this.value;
 };
+//确定新建画布
 ding.onclick=function(e){
   canvas.width=width;
   canvas.height=height;
@@ -164,6 +167,9 @@ widthchoose.onchange=function(){
 polychoose.change(function(){
   n=this.value;
 });
+
+
+
 var x,y,w,h;
 var lx,ly,lw,lh;
 var cutdata;
@@ -175,7 +181,7 @@ canvas.onmousedown=function(e){
     obj.moveTo(x,y);
   }
   if(type=="eraser"){
-    obj.clearRect(x-5,y-5,10,10);
+    obj.clearRect(x-(eraserWidth/2),y-(eraserWidth/2),eraserWidth,eraserWidth);
   }
   if(cutflag&&type=="cut"){
     if(arr.length!=0){
@@ -190,6 +196,7 @@ canvas.onmousedown=function(e){
       obj.clearRect(0,0,width,height);
       if(arr.length!=0){
         obj.putImageData(arr[arr.length-1],0,0,0,0,width,height);
+        console.log(obj);
       }
     }
     if(cutflag&&type=="cut"){
@@ -213,13 +220,16 @@ canvas.onmousedown=function(e){
       if(!cutflag){
         cutflag=true;
         cutdata=obj.getImageData(x+1,y+1,w-x-2,h-y-2);
+        console.log('cutdata');
+        console.log(cutdata);
         lx=x;ly=y;lw=w;lh=h;
-        container.css({display:"none"});
+        //container.css({display:"none"});
       }else{
         cutflag=false;
-        container.css({display:"block"});
+        //container.css({display:"block"});
       }
     }
     arr.push(obj.getImageData(0,0,width,height));
+
   }
-}
+};
