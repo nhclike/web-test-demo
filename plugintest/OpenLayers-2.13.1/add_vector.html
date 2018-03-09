@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='zh-cn'>
+<head>
+	<meta charset='utf-8' />
+	<title>My OpenLayers Map</title>
+	<script type='text/javascript' src='js/OpenLayers.js'></script>
+
+</head>
+<body onload='init();'>
+<div id='map' style='width: 800px; height: 600px;'>
+
+
+</div>
+<script type="text/javascript" src="js/E_Vector.js"></script>
+<script type='text/javascript'>
+  var map;
+  function init() {
+    map = new OpenLayers.Map('map', {
+      controls : [
+        new OpenLayers.Control.Navigation(),//导航
+        new OpenLayers.Control.PanZoomBar(),//漫游
+				new OpenLayers.Control.LayerSwitcher({'ascending':false}),//overlayers
+        new OpenLayers.Control.ScaleLine(),//比例尺
+        new OpenLayers.Control.Permalink('permalink'),//永久链接
+        new OpenLayers.Control.MousePosition(),//显示鼠标坐标
+        new OpenLayers.Control.OverviewMap(),//鹰眼
+        new OpenLayers.Control.KeyboardDefaults()//键盘
+      ],
+      //缩放级别
+      numZoomLevels:20
+    });
+    var wms = new OpenLayers.Layer.WMS(
+      'OpenLayers WMS',
+      'http://vmap0.tiles.osgeo.org/wms/vmap3',
+      {
+        layers: 'basic'
+      },
+      {}
+    );
+    map.addLayer(wms);
+    if (!map.getCenter()) {
+      map.zoomToMaxExtent();
+    }
+    /*var e_vectorLayer = new OpenLayers.Layer.E_Vector("Simple Geometry", {
+      style: layer_style,
+      renderers: renderer
+    });
+
+    var point = new OpenLayers.Geometry.Point(-111.04, 45.68);
+    var pointFeature = new OpenLayers.Feature.Vector(point,{name:"2222222"});
+    e_vectorLayer.addFeature(pointFeature);
+
+    map.addLayer(e_vectorLayer);
+
+    e_vectorLayer.initAnnotations();
+    e_vectorLayer.setAnnotationStyle(0,0,"name");
+    e_vectorLayer.showAnnotations();*/
+  }
+</script>
+</body>
+</html>

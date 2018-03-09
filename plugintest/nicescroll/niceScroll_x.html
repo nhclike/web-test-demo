@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../../src/bootstrap/css/bootstrap.min.css">
+	<style type="text/css">
+		#d1{
+
+			width: 100px;
+
+			height:200px;
+			overflow: auto;
+			border:1px solid #ddd;
+			margin:100px auto;
+			padding:10px;
+		}
+		#d2,#d3{
+			height:1000px;
+		}
+	</style>
+</head>
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-2" style="border: 1px solid #000;overflow: scroll;height: 100px">
+			<h1 style="width: 600px;height: 300px;background-color: #666;color: #fff;font-size: 40px">
+				this is left
+			</h1><h1 style="width: 600px;height: 300px;background-color: #666;color: #fff;font-size: 40px">
+			this is left
+		</h1><h1 style="width: 600px;height: 300px;background-color: #666;color: #fff;font-size: 40px">
+			this is left
+		</h1><h1 style="width: 600px;height: 300px;background-color: #666;color: #fff;font-size: 40px">
+			this is left
+		</h1>
+		</div>
+		<div class="col-xs-10" style="border: 1px solid #ddd;overflow: scroll;height: 100px">
+			<h1 style="width: 600px;height: 300px;background-color: #000"> this is right</h1>
+
+		</div>
+	</div>
+</div>
+<div id = "d1">
+	<div id="text">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		<h1 style="width: 300px;border: 1px solid #ddd"></h1>
+	</div>
+
+</div>
+<div id = "d3">
+
+</div>
+<script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
+<script src="../../src/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script type="text/javascript">
+
+  $("body").niceScroll({
+    cursorcolor:"#398F70"
+
+  });
+  $("#d1").niceScroll('#text',{
+    cursorcolor:"#398F70"
+
+  });
+  $(".col-xs-2").niceScroll({
+    cursorcolor:"#398F70",
+    autohidemode: false,
+    background:'#e4393c',
+    horizrailenabled:true
+  });
+</script>
+</body>
+</html>

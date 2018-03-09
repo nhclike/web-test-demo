@@ -2,12 +2,153 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8cf9de38-ef71-4c88-88ea-1feabee0bc64" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstraptest/media_query.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/nicescroll/js/jquery.nicescroll.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/nicescroll/niceScroll.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/canvaspaint/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pages/1-large.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pages/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pages/2-large.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pages/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pages/3-large.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pages/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pages/4-large.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pages/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pages/5-large.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pages/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pages/6-large.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pages/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pages/7-large.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pages/7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pages/8-large.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pages/8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pages/Thumbs.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pages/test.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pics/Thumbs.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pics/arrows.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pics/background.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pics/buttons.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pics/loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pics/zoom-icons-editable.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pics/zoom-icons.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/pics/zoom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/add_vector.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/js/E_Vector.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/canvaspaint/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/canvaspaint/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/canvaspaint/jquery插件库.url" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/canvaspaint/paint.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/canvaspaint/saveToImage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/canvaspaint/www.jq22.com.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/colorSelect/docs/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/colorSelect/docs/docs.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/colorSelect/docs/docs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/colorSelect/docs/jquery-1.9.1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/colorSelect/docs/jquery-2.1.0.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/colorSelect/docs/prettify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/colorSelect/docs/toc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/colorSelect/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/colorSelect/jquery插件库.url" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/colorSelect/spectrum.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/colorSelect/spectrum.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/colorSelect/www.jq22.com.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/nicescroll/niceScroll_x.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/.idea/TurnBook-150328124836.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/css/jquery.ui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/css/jquery.ui.html4.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/css/magazine.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/css/paint.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/css/spectrum.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/js/canvas_mark.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/js/docs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/js/draw.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/js/hash.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/js/jquery-ui-1.8.20.custom.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/js/jquery.min.1.7.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/js/magazine.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/js/modernizr.2.5.3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/js/paint.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/js/reader-index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/js/spectrum.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/js/turn.html4.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/js/turn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/js/zoom.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/paintDemo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/turnPage/turnPage.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugintest/OpenLayers/map_test.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/layout/module_layout/css/style.css" afterPath="$PROJECT_DIR$/layout/module_layout/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/layout/module_layout/index.html" afterPath="$PROJECT_DIR$/layout/module_layout/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/OpenLayers.js" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/js/OpenLayers.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/blank.gif" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/blank.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/cloud-popup-relative.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/cloud-popup-relative.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/drag-rectangle-off.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/drag-rectangle-off.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/drag-rectangle-on.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/drag-rectangle-on.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/east-mini.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/east-mini.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/layer-switcher-maximize.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/layer-switcher-maximize.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/layer-switcher-minimize.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/layer-switcher-minimize.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/marker-blue.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/marker-blue.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/marker-gold.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/marker-gold.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/marker-green.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/marker-green.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/marker.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/marker.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/measuring-stick-off.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/measuring-stick-off.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/measuring-stick-on.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/measuring-stick-on.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/north-mini.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/north-mini.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/panning-hand-off.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/panning-hand-off.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/panning-hand-on.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/panning-hand-on.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/slider.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/slider.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/south-mini.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/south-mini.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/west-mini.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/west-mini.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/zoom-minus-mini.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/zoom-minus-mini.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/zoom-plus-mini.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/zoom-plus-mini.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/zoom-world-mini.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/zoom-world-mini.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/img/zoombar.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/img/zoombar.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/index.html" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/simple_demo.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/google.css" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/google.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/google.tidy.css" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/google.tidy.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/ie6-style.css" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/ie6-style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/ie6-style.tidy.css" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/ie6-style.tidy.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/add_point_off.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/add_point_off.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/add_point_on.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/add_point_on.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/blank.gif" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/blank.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/close.gif" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/close.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/drag-rectangle-off.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/drag-rectangle-off.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/drag-rectangle-on.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/drag-rectangle-on.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/draw_line_off.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/draw_line_off.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/draw_line_on.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/draw_line_on.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/draw_point_off.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/draw_point_off.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/draw_point_on.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/draw_point_on.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/draw_polygon_off.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/draw_polygon_off.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/draw_polygon_on.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/draw_polygon_on.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/editing_tool_bar.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/editing_tool_bar.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/move_feature_off.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/move_feature_off.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/move_feature_on.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/move_feature_on.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/navigation_history.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/navigation_history.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/overview_replacement.gif" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/overview_replacement.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/pan-panel-NOALPHA.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/pan-panel-NOALPHA.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/pan-panel.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/pan-panel.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/pan_off.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/pan_off.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/pan_on.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/pan_on.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/panning-hand-off.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/panning-hand-off.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/panning-hand-on.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/panning-hand-on.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/remove_point_off.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/remove_point_off.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/remove_point_on.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/remove_point_on.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/ruler.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/ruler.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/save_features_off.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/save_features_off.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/save_features_on.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/save_features_on.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/view_next_off.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/view_next_off.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/view_next_on.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/view_next_on.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/view_previous_off.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/view_previous_off.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/view_previous_on.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/view_previous_on.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/zoom-panel-NOALPHA.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/zoom-panel-NOALPHA.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/img/zoom-panel.png" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/img/zoom-panel.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/style.css" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/style.mobile.css" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/style.mobile.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/style.mobile.tidy.css" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/style.mobile.tidy.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OpenLayers-2.13.1/theme/default/style.tidy.css" afterPath="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/theme/default/style.tidy.css" />
     </list>
     <ignored path="zxzhtest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,41 +168,118 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="niceScroll.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/plugintest/nicescroll/niceScroll.html">
+      <file leaf-file-name="turnPage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugintest/turnPage/turnPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="1025">
+              <caret line="545" column="18" lean-forward="false" selection-start-line="545" selection-start-column="18" selection-end-line="545" selection-end-column="18" />
+              <folding>
+                <marker date="1520472876735" expanded="true" signature="52:59" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_telcall.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugintest/telcall/add_telcall.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="17" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="8" selection-end-column="17" />
+              <folding>
+                <marker date="1519626969654" expanded="true" signature="1475:1523" ph="..." />
+                <marker date="1519626969654" expanded="true" signature="1617:1648" ph="..." />
+                <marker date="1519626969654" expanded="true" signature="1785:1810" ph="..." />
+                <marker date="1519626969654" expanded="true" signature="2153:2204" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="paintDemo.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugintest/turnPage/paintDemo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="33" column="74" lean-forward="false" selection-start-line="33" selection-start-column="73" selection-end-line="33" selection-end-column="74" />
+              <folding>
+                <element signature="n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#ul#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#4;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="canvas_mark.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugintest/turnPage/js/canvas_mark.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="117">
+              <caret line="35" column="26" lean-forward="false" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.nicescroll.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugintest/nicescroll/js/jquery.nicescroll.min.js">
+      <file leaf-file-name="spectrum.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugintest/turnPage/css/spectrum.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="183">
+              <caret line="491" column="17" lean-forward="false" selection-start-line="491" selection-start-column="1" selection-end-line="491" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="docs.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugintest/turnPage/js/docs.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56">
+              <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spectrum.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugintest/turnPage/js/spectrum.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-11606">
+              <caret line="708" column="34" lean-forward="false" selection-start-line="708" selection-start-column="20" selection-end-line="708" selection-end-column="34" />
+              <folding>
+                <marker date="1396922304000" expanded="true" signature="2042:2049" ph="&amp;##9660;" />
+                <marker date="1396922304000" expanded="true" signature="5300:5329" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugintest/colorSelect/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="23" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="draw.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugintest/turnPage/js/draw.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1330">
+              <caret line="70" column="30" lean-forward="false" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="paint.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/plugintest/turnPage/css/paint.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2404">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="select.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugintest/select/select.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="28" column="44" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="input_add_number.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugintest/telcall/input_add_number.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -73,10 +291,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Html5" />
-        <option value="CSS File" />
+        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="Less File" />
-        <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -95,6 +313,18 @@
       <find>progress</find>
       <find>ocx_bar_bg_btn</find>
       <find>ocx_bar_bg_bar</find>
+      <find>colorchoose</find>
+      <find>arr</find>
+      <find>resizeViewport</find>
+      <find>alert('cWidth'+cWidth+'cHeight'+cHeight);</find>
+      <find>ding</find>
+      <find>width</find>
+      <find>toc</find>
+      <find>prettyPrint</find>
+      <find>sp-preview-inner</find>
+      <find>previewElement</find>
+      <find>hover</find>
+      <find>canvas</find>
     </findStrings>
     <replaceStrings>
       <replace>playImg</replace>
@@ -117,26 +347,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/plugintest/Validator/bootstrapValidatorFormTest.html" />
-        <option value="$PROJECT_DIR$/jsgeturl.html" />
-        <option value="$PROJECT_DIR$/plugintest/cityChoose/js/main.js" />
-        <option value="$PROJECT_DIR$/plugintest/cityChoose/type2/index.html" />
-        <option value="$PROJECT_DIR$/plugintest/cityChoose/type2/js/main.js" />
-        <option value="$PROJECT_DIR$/plugintest/timerChoose/time.html" />
-        <option value="$PROJECT_DIR$/bootstraptest/modal/test.html" />
-        <option value="$PROJECT_DIR$/bootstraptest/js/modal_comple.js" />
-        <option value="$PROJECT_DIR$/bootstraptest/modal/modal_comple.html" />
-        <option value="$PROJECT_DIR$/bootstraptest/modal/modal_jsadd.html" />
-        <option value="$PROJECT_DIR$/bootstraptest/modal/modal_basic.html" />
-        <option value="$PROJECT_DIR$/settimeout.html" />
-        <option value="$PROJECT_DIR$/bootstraptest/css/call.css" />
-        <option value="$PROJECT_DIR$/bootstraptest/css/alarm_modal.css" />
-        <option value="$PROJECT_DIR$/bootstraptest/modal/modal_selfdefine.html" />
-        <option value="$PROJECT_DIR$/layout/left_right_height1.html" />
-        <option value="$PROJECT_DIR$/layout/left_right_height.html" />
-        <option value="$PROJECT_DIR$/plugintest/select/bootstrap-select/less/variables.less" />
-        <option value="$PROJECT_DIR$/plugintest/select/bootstrap-select/index.html" />
-        <option value="$PROJECT_DIR$/plugintest/select/bootstrap-select/index_test.html" />
         <option value="$PROJECT_DIR$/plugintest/select/select2-4.0.3/select_test.html" />
         <option value="$PROJECT_DIR$/easyuitest/onunload.html" />
         <option value="$PROJECT_DIR$/easyuitest/statustopunload.html" />
@@ -157,7 +367,6 @@
         <option value="$PROJECT_DIR$/bootstraptest/carousel.html" />
         <option value="$PROJECT_DIR$/bootstraptest/modal/modal_alert.html" />
         <option value="$PROJECT_DIR$/bootstraptest/js/dial.js" />
-        <option value="$PROJECT_DIR$/plugintest/telcall/add_telcall.html" />
         <option value="$PROJECT_DIR$/plugintest/telcall/css/call.css" />
         <option value="$PROJECT_DIR$/plugintest/telcall/css/dial.css" />
         <option value="$PROJECT_DIR$/plugintest/telcall/input_add_number.html" />
@@ -168,6 +377,27 @@
         <option value="$PROJECT_DIR$/bootstraptest/media_query.html" />
         <option value="$PROJECT_DIR$/layout/module_layout/index.html" />
         <option value="$PROJECT_DIR$/plugintest/nicescroll/niceScroll.html" />
+        <option value="$PROJECT_DIR$/plugintest/nicescroll/niceScroll_1.html" />
+        <option value="$PROJECT_DIR$/plugintest/nicescroll/niceScroll_x.html" />
+        <option value="$PROJECT_DIR$/plugintest/OpenLayers-2.13.1/add_vector.html" />
+        <option value="$PROJECT_DIR$/plugintest/canvaspaint/saveToImage.html" />
+        <option value="$PROJECT_DIR$/plugintest/turn.js/js/turn.js" />
+        <option value="$PROJECT_DIR$/plugintest/turn.js/index.html" />
+        <option value="$PROJECT_DIR$/plugintest/turn.js/js/paint.js" />
+        <option value="$PROJECT_DIR$/plugintest/turn.js/css/paint.less" />
+        <option value="$PROJECT_DIR$/plugintest/turn.js/css/paint.css" />
+        <option value="$PROJECT_DIR$/plugintest/turn.js/js/canvas_mark.js" />
+        <option value="$PROJECT_DIR$/plugintest/canvaspaint/paint.html" />
+        <option value="$PROJECT_DIR$/plugintest/turn.js/paintDemo.html" />
+        <option value="$PROJECT_DIR$/plugintest/colorSelect/index.html" />
+        <option value="$PROJECT_DIR$/plugintest/colorSelect/docs/docs.js" />
+        <option value="$PROJECT_DIR$/plugintest/turnPage/css/spectrum.css" />
+        <option value="$PROJECT_DIR$/plugintest/turnPage/css/paint.less" />
+        <option value="$PROJECT_DIR$/plugintest/telcall/add_telcall.html" />
+        <option value="$PROJECT_DIR$/plugintest/turnPage/paintDemo.html" />
+        <option value="$PROJECT_DIR$/plugintest/turnPage/js/docs.js" />
+        <option value="$PROJECT_DIR$/plugintest/turnPage/js/canvas_mark.js" />
+        <option value="$PROJECT_DIR$/plugintest/turnPage/css/paint.css" />
       </list>
     </option>
   </component>
@@ -178,10 +408,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1352" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1376" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -199,8 +429,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -255,7 +484,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="telcall" />
+              <option name="myItemId" value="turnPage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -273,7 +502,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="telcall" />
+              <option name="myItemId" value="turnPage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zxzhtest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webtest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugintest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="turnPage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -295,7 +546,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="select" />
+              <option name="myItemId" value="telcall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -313,7 +564,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="nicescroll" />
+              <option name="myItemId" value="drag" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -331,25 +582,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="nicescroll" />
+              <option name="myItemId" value="drag" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zxzhtest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webtest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -363,13 +600,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bootstraptest" />
+              <option name="myItemId" value="plugintest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="colorSelect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zxzhtest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webtest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugintest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="colorSelect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -380,23 +644,23 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="list.type.of.created.stylesheet" value="Less" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="SearchEverywhereHistoryKey" value="声音&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\GitHub\webtest\plugintest\turnPage\js" />
+      <recent name="E:\GitHub\webtest\plugintest\OpenLayers-2.13.1\js" />
+      <recent name="E:\GitHub\webtest\plugintest" />
       <recent name="E:\GitHub\webtest\plugintest\nicescroll\js" />
       <recent name="E:\GitHub\webtest\layout\module_layout" />
-      <recent name="E:\GitHub\webtest\plugintest\cityChoose\type1" />
-      <recent name="E:\GitHub\webtest\src\img" />
-      <recent name="E:\GitHub\webtest" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\GitHub\webtest\plugintest\nicescroll" />
-      <recent name="E:\GitHub\webtest\bootstraptest" />
-      <recent name="E:\GitHub\webtest\plugintest\telcall" />
-      <recent name="E:\GitHub\webtest\bootstraptest\img" />
-      <recent name="E:\GitHub\webtest\layout" />
+      <recent name="E:\GitHub\webtest\plugintest\turnPage\css" />
+      <recent name="E:\GitHub\webtest\plugintest\turnPage\js" />
+      <recent name="E:\GitHub\webtest\plugintest\colorSelect" />
+      <recent name="E:\GitHub\webtest\plugintest\turn.js\pages" />
+      <recent name="E:\GitHub\webtest\plugintest\canvaspaint" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -937,7 +1201,13 @@
       <workItem from="1519881941846" duration="3431000" />
       <workItem from="1520221294887" duration="2022000" />
       <workItem from="1520228193295" duration="758000" />
-      <workItem from="1520233013590" duration="18000" />
+      <workItem from="1520233013590" duration="954000" />
+      <workItem from="1520238831900" duration="4183000" />
+      <workItem from="1520298541645" duration="2603000" />
+      <workItem from="1520304945244" duration="2911000" />
+      <workItem from="1520409576535" duration="4157000" />
+      <workItem from="1520471774331" duration="8808000" />
+      <workItem from="1520558042789" duration="11771000" />
     </task>
     <task id="LOCAL-00001" summary="重新整理文件夹">
       <created>1502862553809</created>
@@ -1044,14 +1314,21 @@
       <option name="project" value="LOCAL" />
       <updated>1519647594236</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="增加媒体查询和优化滚动条demo">
+      <created>1520233102389</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1520233102389</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="385504000" />
+    <option name="totallyTimeSpent" value="420873000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1352" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1061,20 +1338,20 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16950959" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25987843" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24427083" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1108,10 +1385,10 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21526718" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25987843" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -1173,7 +1450,8 @@
     <MESSAGE value="增加视频全屏结束测试代码" />
     <MESSAGE value="增加可移动网格布局" />
     <MESSAGE value="抽提拨号盘绑定键盘输入事件，并且控制键盘输入只能输入数字" />
-    <option name="LAST_COMMIT_MESSAGE" value="抽提拨号盘绑定键盘输入事件，并且控制键盘输入只能输入数字" />
+    <MESSAGE value="增加媒体查询和优化滚动条demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加媒体查询和优化滚动条demo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1186,338 +1464,264 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/filelistclick.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="15" lean-forward="false" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/filelist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="57" lean-forward="false" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/video/audio_self.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2014">
-          <caret line="106" column="1" lean-forward="false" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/font-awesome/css/font-awesome.css">
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/js/magazine.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/video/audio_self_drag.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2394">
-          <caret line="126" column="8" lean-forward="false" selection-start-line="126" selection-start-column="8" selection-end-line="126" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/easyuitest/onbeforeload.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="42" column="70" lean-forward="false" selection-start-line="42" selection-start-column="70" selection-end-line="42" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/easyuitest/onunload.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="83" lean-forward="false" selection-start-line="10" selection-start-column="83" selection-end-line="10" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/easyuitest/stopF5AndStopRightClick.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="7" lean-forward="false" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/easyuitest/interactive.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/easyuitest/statustoponbeforeunload.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ocxlocalplay.html">
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/js/modernizr.2.5.3.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loadjscss.html">
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/js/turn.html4.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jsgeturl.html">
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/js/turn.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="4218">
+          <caret line="429" column="27" lean-forward="true" selection-start-line="429" selection-start-column="27" selection-end-line="429" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imglook.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/video/audio_self_drag_self.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="90" column="28" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/video/video.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/video/videojs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="42" column="33" lean-forward="false" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/mask/jqmask.html" />
-    <entry file="file://$PROJECT_DIR$/plugintest/OpenLayers/map_test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenLayers-2.13.1/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="51" lean-forward="false" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout/module_layout/css/sprite.png">
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/pages/1-large.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootstraptest/popover.html">
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/pages/2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/pages/2-large.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/pages/5.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/js/reader-index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1520405876540" expanded="true" signature="756:824" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootstraptest/modal/modal_complex.html">
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/js/paint.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="4028">
+          <caret line="214" column="4" lean-forward="false" selection-start-line="214" selection-start-column="4" selection-end-line="214" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootstraptest/modal/modal_jsaddiframe.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstraptest/carousel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-276">
-          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstraptest/form_inquire.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstraptest/modal/modal_basic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/telcall/js/modal_comple.js" />
-    <entry file="file://$PROJECT_DIR$/bootstraptest/js/dial.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="212" column="22" lean-forward="false" selection-start-line="212" selection-start-column="22" selection-end-line="212" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstraptest/modal/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstraptest/modal/modal_selfdefine.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout/module_layout/www.jq22.com.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstraptest/css/call.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="7" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/telcall/css/dial.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="89" column="53" lean-forward="false" selection-start-line="89" selection-start-column="53" selection-end-line="89" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/telcall/css/call.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/telcall/add_telcall.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstraptest/modal/modal_alert.html">
+    <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/saveToImage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="569">
-          <caret line="129" column="16" lean-forward="false" selection-start-line="129" selection-start-column="16" selection-end-line="148" selection-end-column="21" />
+          <caret line="119" column="7" lean-forward="false" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turn.js/css/paint.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-142">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turn.js/css/paint.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1824">
+          <caret line="96" column="13" lean-forward="true" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/pages/1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/paint.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="492" column="9" lean-forward="true" selection-start-line="492" selection-start-column="9" selection-end-line="492" selection-end-column="9" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ul#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/pics/background.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/pics/arrows.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/pics/loader.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/pics/zoom.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/pics/zoom-icons.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/pics/zoom-icons-editable.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/debug.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/drag/img/test.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/colorSelect/docs/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/colorSelect/docs/docs.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/colorSelect/docs/jquery-1.9.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/colorSelect/docs/jquery-2.1.0.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/colorSelect/docs/prettify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/colorSelect/spectrum.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugintest/telcall/telcall.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="60" column="37" lean-forward="true" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
+        <state relative-caret-position="403">
+          <caret line="98" column="29" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/telcall/js/dial.js">
+    <entry file="file://$PROJECT_DIR$/plugintest/colorSelect/docs/toc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="117" column="0" lean-forward="true" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout/module_layout/css/jquery.gridster.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-1539">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/layout/module_layout/js/jquery.gridster.js">
+    <entry file="file://$PROJECT_DIR$/plugintest/colorSelect/spectrum.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-3391">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout/module_layout/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="48" column="14" lean-forward="false" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout/left_right_height1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout/left_right_height.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstraptest/media_query.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout/module_layout/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1501">
-          <caret line="212" column="23" lean-forward="false" selection-start-line="212" selection-start-column="23" selection-end-line="212" selection-end-column="23" />
           <folding>
-            <element signature="n#li#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#li#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#li#2;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#li#3;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#li#4;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#li#5;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#li#6;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1396922304000" expanded="true" signature="2042:2049" ph="&amp;##9660;" />
+            <marker date="1396922304000" expanded="true" signature="5300:5329" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/telcall/css/dial.less">
+    <entry file="file://$PROJECT_DIR$/plugintest/colorSelect/docs/docs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="23" column="77" lean-forward="false" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="77" />
+        <state relative-caret-position="370">
+          <caret line="418" column="0" lean-forward="true" selection-start-line="418" selection-start-column="0" selection-end-line="418" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/nicescroll/js/jquery.nicescroll.min.js">
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/css/docs.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1525,26 +1729,149 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/select/select.html">
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/css/jquery.ui.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="44" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/telcall/input_add_number.html">
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/css/jquery.ui.html4.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/nicescroll/niceScroll.html">
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/css/paint.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="171">
+          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/css/magazine.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/drag/drag_plugin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="82" lean-forward="true" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/drag/drag_h5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/telcall/add_telcall.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="17" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <marker date="1519626969654" expanded="true" signature="1475:1523" ph="..." />
+            <marker date="1519626969654" expanded="true" signature="1617:1648" ph="..." />
+            <marker date="1519626969654" expanded="true" signature="1785:1810" ph="..." />
+            <marker date="1519626969654" expanded="true" signature="2153:2204" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/turnPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1025">
+          <caret line="545" column="18" lean-forward="false" selection-start-line="545" selection-start-column="18" selection-end-line="545" selection-end-column="18" />
+          <folding>
+            <marker date="1520472876735" expanded="true" signature="52:59" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/css/spectrum.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="491" column="17" lean-forward="false" selection-start-line="491" selection-start-column="1" selection-end-line="491" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/js/spectrum.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11606">
+          <caret line="708" column="34" lean-forward="false" selection-start-line="708" selection-start-column="20" selection-end-line="708" selection-end-column="34" />
+          <folding>
+            <marker date="1396922304000" expanded="true" signature="2042:2049" ph="&amp;##9660;" />
+            <marker date="1396922304000" expanded="true" signature="5300:5329" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/colorSelect/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/js/draw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1330">
+          <caret line="70" column="30" lean-forward="false" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/js/docs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/paintDemo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="33" column="74" lean-forward="false" selection-start-line="33" selection-start-column="73" selection-end-line="33" selection-end-column="74" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ul#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/js/canvas_mark.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="35" column="26" lean-forward="false" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/css/paint.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2404">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
