@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title></title>
+    <script type="text/javascript">
+      function init(){
+        recordVideoOcx.SetWindowLayout(1, 0);
+
+        recordVideoOcx.addEventListener("PlayBackFinished", function(nWndIndex){
+          console.info("PlayBackFinished");
+          recordVideoOcx.Stop(nWndIndex);
+          recordVideoOcx.SetVideoWndHandle(nWndIndex, -1);
+        });
+      }
+
+      function play(){
+        var file = "e://test.mp4";
+        if(recordVideoOcx.PlayFile(0,4, file)){
+          recordVideoOcx.SetVideoWndHandle(0, 0);
+          recordVideoOcx.SetInfo(0, "0");
+          console.info("SetInfo");
+          //打开声音
+          recordVideoOcx.StartAudio(0);
+          console.info("StartAudio");
+        }
+      }
+
+      function stop(){
+        recordVideoOcx.Stop(0);
+        recordVideoOcx.SetVideoWndHandle(0, -1);
+      }
+    </script>
+</head>
+<body onload="init();">
+<input type="button" value="播放" onclick="play();">
+<input type="button" value="停止" onclick="stop();">
+<object classid="CLSID:22A0C36F-457B-469D-88D7-3C76D0EB4BD7" id="recordVideoOcx" style="width:500px;height:500px;"></object>
+<h1>使用1:替换videoplay</h1>
+<h1>2:运行videoplay下的regOcx.bat</h1>
+<!--<script  language="javascript" for="recordVideoOcx" event="OnCloseVideo">
+  recordVideoOcx.Stop(0);
+  //自定义处理事件
+</script>-->
+<script>
+    var ocxObj={
+      wno:0, //窗口
+      ocx:recordVideoOcx
+
+    };
+    ocxControl(ocxObj);
+    function ocxControl(ocxObj) {
+
+      //关闭视屏
+      ocxControlClose(ocxObj);
+      //截屏
+      ocxControlCapture(ocxObj);
+      //本地录制
+
+    }
+
+    //关闭视屏
+    function ocxControlClose(ocxObj) {
+      var ocx=ocxObj.ocx;
+      var wno=ocxObj.wno;
+      ocx.attachEvent("OnCloseVideo", function() {
+        ocx.Stop(0);
+        ocx.SetVideoWndHandle(wno, -1);
+      });
+    }
+    //截屏
+    function ocxControlCapture(ocxObj) {
+      var ocx=ocxObj.ocx;
+      ocx.attachEvent("OnCapturePic",function() {
+        var date=new Date();
+        var result,year,month,day,hour,Minutes,Seconds;
+        year = date.getYear() + 1900;
+        month = date.getMonth() + 1;
+        day = date.getDate();
+        hour=date.getHours();
+        Minutes=date.getMinutes();
+        Seconds=date.getSeconds();
+        result = year.toString() + (month>9?month:'0'+month) + (day>9?day:'0'+day)+ (hour>9?hour:'0'+hour)
+          + (Minutes>9?Minutes:'0'+Minutes)+ (Seconds>9?Seconds:'0'+Seconds);
+
+        var filePath=recordVideoOcx.SnapPicture(0, 'e://'+result+'.png');
+        if(filePath){
+          alert('抓屏成功');
+        }
+        else {
+          alert("抓屏失败,请重试！");
+        }
+      });
+    }
+
+</script>
+</body>
+</html>

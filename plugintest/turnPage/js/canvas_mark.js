@@ -31,6 +31,7 @@ var save=$(".save");
 var create=$(".create");
 var xinjian=$(".xinjian");
 var create_close=$(".xinjian_before");
+var go=$('.go');
 var cutflag=false;
 var iscut=true;
 var color="#000"; //默认都为黑色
@@ -39,6 +40,7 @@ var n=3; //默认是三边形
 var linewidth="1"; //默认线条宽度为1
 var style="stroke";  //默认描边
 var arr=[];
+var arrRecord=[];
 var eraserWidth=20; //默认橡皮擦宽度
 $(".fill").css({display:"none"}); //默认不显示填充
 // 多边形
@@ -98,13 +100,36 @@ shezhi.each(function(index,ele){
     })
   }
 });
-// 撤销
+// 后退
 back.click(function(){
   arr.pop();
+  arrRecord.push(arr[arr.length-1]);
+  console.log(arrRecord+'backarrRecord');
+  console.log(arr+'backarr');
   obj.clearRect(0,0,width,height);
   if(arr.length>0){
     obj.putImageData(arr[arr.length-1],0,0,0,0,width,height);
   }
+});
+// 前进
+go.click(function(){
+  if(arrRecord.length>0){
+    arrRecord.pop();
+    arr.push(arrRecord[arrRecord.length-1]);
+    console.log(arrRecord+'goarrRecord');
+    console.log(arr+'goarr');
+    obj.clearRect(0,0,width,height);
+    if(arr.length>0){
+      obj.putImageData(arr[arr.length-1],0,0,0,0,width,height);
+    }
+
+  }
+  else {
+    $(go).prop('disabled',false);
+  }
+
+
+
 });
 // 清除
 clear.click(function(){
@@ -196,7 +221,7 @@ canvas.onmousedown=function(e){
       obj.clearRect(0,0,width,height);
       if(arr.length!=0){
         obj.putImageData(arr[arr.length-1],0,0,0,0,width,height);
-        console.log(obj);
+
       }
     }
     if(cutflag&&type=="cut"){
@@ -220,8 +245,8 @@ canvas.onmousedown=function(e){
       if(!cutflag){
         cutflag=true;
         cutdata=obj.getImageData(x+1,y+1,w-x-2,h-y-2);
-        console.log('cutdata');
-        console.log(cutdata);
+       /* console.log('cutdata');
+        console.log(cutdata);*/
         lx=x;ly=y;lw=w;lh=h;
         //container.css({display:"none"});
       }else{

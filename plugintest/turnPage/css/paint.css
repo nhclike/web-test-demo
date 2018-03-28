@@ -186,7 +186,7 @@ canvas{
 	box-shadow:0 0 0 4px #fff inset;
 	transition:all 0.7s;
 }
-.cut,.create,.back{
+/*.cut,.create,.back{
 	float:left;
 	width:90px;
 	height:45px;
@@ -200,7 +200,10 @@ canvas{
 	border-radius:5px;
 	cursor:pointer;
 }
-.copy,.clear,.save{
+{
+
+}*/
+.shezhi{
 	float:left;
 	width:90px;
 	height:45px;
@@ -213,8 +216,6 @@ canvas{
 	text-align:center;
 	border-radius:5px;
 	cursor:pointer;
-}
-.shezhi{
 	transition:all 0.7s;
 }
 .shezhistyle{
