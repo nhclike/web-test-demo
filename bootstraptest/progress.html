@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+	<meta charset="UTF-8">
+	<!--2 viewport-->
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<!--3、x-ua-compatible-->
+	<meta http-equiv="X-UA-Compatible" content="IE=10" />
+	<title></title>
+	<!--4、引入两个兼容文件-->
+	<!--[if lt IE 9]>
+	<script src="../src/bootstrap/js/html5shiv.min.js"></script>
+	<script src="../src/bootstrap/js/respond.min.js"></script>
+	<![endif]-->
+	<!--6、引入 bootstrap.css-->
+	<link rel="stylesheet" href="../src/bootstrap/css/bootstrap.min.css">
+
+</head>
+<body>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" id="btn">
+	Launch demo modal
+</button>
+
+
+<div class="modal fade" id="progressModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+			</div>
+			<div class="modal-body">
+				<div class="progress"  style="margin-top:10px">
+					<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" id="progressShow" style="width: 1%">
+
+					</div>
+				</div>
+				<h5>正在下载，请稍后...<span id="progressText">1%</span></h5>
+			</div>
+
+		</div>
+	</div>
+</div>
+<!--5、引入 jquery，bootstrap js-->
+<script src="../src/bootstrap/js/jquery-1.11.3.js"></script>
+<script src="../src/bootstrap/js/bootstrap.min.js"></script>
+<script>
+  var  progressTime=null;
+  var prenct=10;
+	$('#btn').click(function () {
+	  $('#progressModal').modal('show');
+		  progressTime=setInterval(function startProgerss(){
+        prenct+=10;
+        updataProgerss(prenct);
+			},1000);
+  });
+
+  //进度条的控制
+  function updataProgerss(prenct){
+
+
+		$('#progressShow').css('width',prenct+'%');
+		$('#progressText').text(prenct+'%');
+		if(prenct===100){
+		  clearInterval(progressTime);
+      progressTime=null;
+      $('#progressModal').modal('hide');
+      alert('下载成功')
+		}
+  }
+</script>
+</body>
+</html>

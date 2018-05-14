@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=10">
+	<title>onbeforeunload Demo</title>
+	<link rel="stylesheet" type="text/css" href="../src/easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../src/easyui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../src/easyui/themes/color.css">
+	<link rel="stylesheet" type="text/css" href="../src/easyui/demo/demo.css">
+	<script type="text/javascript" src="../src/jquery-easyui-1.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../src/jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
+</head>
+<body>
+<h2>Alert Messager</h2>
+<p>Click on each button to display different alert message box.</p>
+<a href="../ierightclick.html">跳转到其他页面</a>
+<div style="margin:20px 0;">
+	<button class="easyui-linkbutton" onclick="$('#w').window('open')">Open</button>
+	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="$('#w').window('close')">Close</a>
+</div>
+<div id="w" class="easyui-window" title="Modal Window" data-options="modal:true,closed:true,iconCls:'icon-save'" style="width:500px;height:200px;padding:10px;">
+	The window content.
+</div>
+
+
+<div class="easyui-window" title="Window" data-options="width:300,height:150,left:10,top:10,inline:true">
+	<p class="w-content">Window content</p>
+</div>
+<div class="easyui-window" title="Window" data-options="width:300,height:150,left:320,top:10,inline:true,cls:'c1'">
+	<p class="w-content">Window content</p>
+</div>
+<div class="easyui-window" title="Window" data-options="width:300,height:150,left:630,top:10,inline:true,cls:'c2'">
+	<p class="w-content">Window content</p>
+</div>
+<div class="easyui-window" title="Window" data-options="width:300,height:150,left:10,top:180,inline:true,border:'thin',cls:'c5'">
+	<p class="w-content">Window content</p>
+</div>
+<div class="easyui-window" title="Window" data-options="width:300,height:150,left:320,top:180,inline:true,border:'thin',cls:'c6'">
+	<p class="w-content">Window content</p>
+</div>
+<div class="easyui-window" title="Window" data-options="width:300,height:150,left:630,top:180,inline:true,border:'thin',cls:'c7'">
+	<p class="w-content">Window content</p>
+</div>
+
+
+
+<button>点击按钮</button>
+<div style="margin:20px 0;">
+	<div style="margin:20px 0;">
+		<a href="#" class="easyui-linkbutton" onclick="alert1()">Alert</a>
+		<a href="#" class="easyui-linkbutton" onclick="confirm1();">Confirm</a>
+	</div>
+</div>
+<script>
+	//修改easyui源码加入一个独有的全局变量，只有当点击的是easyui的弹出框才能拿到这个变量，控制onbeforeunload的开关,
+	var status=true;
+	//easyui源码中已经将status设为false
+	window.onbeforeunload=function(event){
+	  if(status){
+
+      event = event || window.event;
+      event.returnValue = '确定离开此页面';
+      console.log(event);
+		}
+    else{
+      status=true;
+      return ;
+		}
+
+	};
+	//确认离开此页，点击确认时触发的事件
+	window.onunload=function(){
+	  //用户确定离开此页后需要执行的代码
+		alert('您已经离开此页')
+	};
+	function alert1(){
+		$.messager.alert('My Title','Here is a message!');
+	}
+	function confirm1() {
+      $.messager.confirm('My Title', 'Are you confirm this?', function (r) {
+          if (r) {
+              alert('confirmed: ' + r);
+          }
+      });
+	}
+
+  $('.easyui-window').window({
+    collapsible: false,
+    minimizable: false,
+    maximizable: false,
+    closable: false
+  });
+</script>
+</body>
+</html>

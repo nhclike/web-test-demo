@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title></title>
+
+</head>
+<body >
+<button id="danbin1_start" >单兵1播放</button>
+<button id="danbin1_stop" >单兵1停止</button>
+
+<button id="danbin2_start">单兵2播放</button>
+<button id="danbin2_stop">单兵2停止</button>
+
+<object classid="CLSID:22A0C36F-457B-469D-88D7-3C76D0EB4BD7" id="recordVideoOcx" style="width:500px;height:500px;"></object>
+<script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+  var playwno=-1;
+  var stopwno=-1;
+  var ocxInstance={
+    ocx:recordVideoOcx
+  };
+  var ocx=null;
+  var winPlayInstance=[];
+    $(function () {
+      ocx=ocxInstance.ocx;
+      init(ocx);
+
+      winPlayInstance=ocx.playInstance;
+
+      $('#danbin1_start').click(function () {
+          var devdata={
+            devId:'1111_fds',
+            devType:'1', //1单兵 2ipc4车载
+            devStatus:'1',// 1. 离线 2 在线空闲 3. 在线执行
+            name:'高院单兵1', //用于显示
+            telphone:'1', //用于打电话
+            Lon:'120.156186000', //用于定位
+            Lat:'30.298418',
+            chnInfo:{  //用于视频播放
+              chncode:'1213213',
+              domid:'1231231'
+            }
+          };
+          play(devdata);
+        }
+      );
+      $('#danbin1_stop').click(function () {
+          stop(0)
+        }
+      );
+      ocx.attachEvent("OnClickDisplayWindow", function() {
+        // alert('OnClickDisplayWindow');
+        var curindex=ocx.CurrentWindowIndex;
+      });
+      ocx.attachEvent("CurrentWindowChanged", function() {
+        //alert('CurrentWindowChanged');
+        var curindex=ocx.CurrentWindowIndex;
+        stopwno=curindex;
+
+      });
+      ocx.attachEvent("OnCloseVideo", function() {
+
+        stop(stopwno)
+      });
+
+
+    });
+
+  function init(ocx){
+    ocx.SetWindowLayout(1, 0);
+    ocx.playInstance=[]
+  }
+
+  function play(devdata){
+
+
+    playwno=getPlayWno(winPlayInstance,ocx);
+    //console.log('playwno'+playwno);
+    var file = "e://test.mp4";
+    if(ocx.PlayFile(playwno,4, file)){
+
+      ocx.SetInfo(playwno, "0");
+      //打开声音
+      ocx.StartAudio(playwno);
+
+      ocx.playInstance[playwno]=devdata
+    }
+
+  }
+  function stop(stopwno){
+
+    ocx.SetVideoWndHandle(stopwno, -1);
+    ocx.Stop(stopwno);
+    ocx.playInstance.splice(stopwno,1,null);
+    console.log(ocx.playInstance)
+  }
+
+  //拿到播放窗口
+    function getPlayWno(winPlayInstance,ocx) {
+     var playwno=-1;
+      if(winPlayInstance.length>0){ //已经有一个在播放
+        if((winPlayInstance.length==1)&&(winPlayInstance[0]==null)){ //只有一个视屏播放被关闭置为null，下次再播放还是一个窗口
+          ocx.SetWindowLayout(1, 0); //设置1个窗口
+          playwno=0;
+          return playwno
+        }
+        ocx.SetWindowLayout(4, 0); //设置4个窗口
+        if(winPlayInstance.length<=4){
+          for(var i=0;i<winPlayInstance.length;i++){
+            var instance=winPlayInstance[i];
+
+            if(instance==null){ //闲置的ocx
+              playwno=i;
+              return playwno;
+            }
+            else{
+              playwno=i+1;
+              if(playwno==4){
+                playwno=-1;
+                return playwno;
+              }
+            }
+          }
+        }
+
+      }
+      else{ //当前没有播放
+        ocx.SetWindowLayout(1, 0); //设置4个窗口
+        playwno=0;
+      }
+      return playwno
+    }
+</script>
+</body>
+</html>

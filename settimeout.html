@@ -27,13 +27,12 @@
 <script>
   //任务函数
   function task(){
-    var timestr="2018-1-01 17:00:00";
+    var timestr="2018-10-01 17:00:00";
     var end=new Date(Date.parse(timestr.replace(/-/g,"/"))).getTime();
     var now=new Date().getTime();
-    console.log(end);
+   document.write(end);
     var s=parseInt((end-now)/1000);
-    var span=
-      document.getElementById("time");
+    var span=document.getElementById("time");
     if(s>0){
       var d=parseInt(s/3600/24);
       if(d<10) d="0"+d;

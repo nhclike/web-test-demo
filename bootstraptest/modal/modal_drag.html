@@ -1,0 +1,169 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+ <link rel="stylesheet" href="../../src/bootstrap/css/bootstrap.min.css">
+  <script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
+  <script src="../../src/bootstrap/js/bootstrap.min.js"></script>
+  <!--<script src="https://cdn.bootcss.com/jquery/1.12.1/jquery.js"></script>
+ <script src='https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.js'></script>
+ <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/3.0.2/css/bootstrap.css">-->
+ <style type="text/css">
+	 .select{
+		 -moz-user-select:none;/*火狐*/
+		 -webkit-user-select:none;/*webkit浏览器*/
+		 -ms-user-select:none;/*IE10*/
+		 -khtml-user-select:none;/*早期浏览器*/
+		 user-select:none;
+	 }
+	 .modal-header{
+		 cursor:move;
+	 }
+ </style>
+</head>
+<body>
+<div class="container-fluid">
+
+ <!-- Button trigger modal -->
+  <button id="devList" type="button" style="z-index: 1200">设备列表</button>
+  <button id="caseList" type="button" style="z-index: 1200">案件列表</button>
+  <div id="map" style="width: 100%;height: 600px;"></div>
+  <!-- Modal -->
+  <div style="position:relative;bottom:20px;left:20px;border: 1px solid red;width: 300px;height: 500px" class="modal fade" id="device_list_panel" role="dialog" aria-labelledby="myModalLabel"  data-backdrop="static">
+    <div class="modal-dialog" role="document" style="position:absolute;width:300px;bottom:20px;left:20px">
+      <div class="modal-content">
+        <div class="modal-header"
+             style="background: #237ae5; border-radius: 4px 4px 0px 0px;">
+          <button type="button" class="close" data-dismiss="modal"
+                  aria-label="Close">
+            <span aria-hidden="true" class="glyphicon glyphicon-remove"></span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel" style="color: #ffffff">设备列表</h4>
+        </div>
+        <div class="modal-body" style="height: 400px">
+          <ul class="case_list">
+            <li class="danbin">
+              <div class="case_info">
+                <div class="name">单兵1_单兵通道1</div>
+                <div class="icon">
+                  <i class="fa fa-play-circle fa-lg blue"></i>
+                  <i class="fa fa-phone fa-lg blue"></i>
+                </div>
+              </div>
+              <div class="select">
+                <input type='checkbox' id='1' name='1111' value='111' />
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" style="top:auto;right: auto;bottom:20px;left:420px" id="case_list_panel" role="dialog" aria-labelledby="myModalLabel"  data-backdrop="static">
+    <div class="modal-dialog" role="document" style="width:300px;position: fixed;bottom:20px;left:420px">
+      <div class="modal-content">
+        <div class="modal-header" style="background: #237ae5; border-radius: 4px 4px 0px 0px;">
+          <button type="button" class="close" data-dismiss="modal"
+                  aria-label="Close">
+            <span aria-hidden="true" class="glyphicon glyphicon-remove"></span>
+          </button>
+          <h4 class="modal-title" id="" style="color: #ffffff">案件列表</h4>
+        </div>
+        <div class="modal-body" style="height: 400px">
+          <ul class="case_list">
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+<script>
+  $(function () {
+
+    $('#devList').click(function() {
+      //alert(11)
+      $('#device_list_panel').modal('show');
+      console.log($(".modal-backdrop"));
+      $(".modal-backdrop").css('display','none');
+      //$(".modal-backdrop.in").remove();
+
+    });
+    $('#caseList').click(function() {
+      alert('caseList')
+      $('#case_list_panel').modal('show');
+
+      console.log($(".modal-backdrop"));
+      $(".modal-backdrop").css('display','none');
+    })
+
+  })
+
+  var dragModal={
+    mouseStartPoint:{"left":0,"top":  0},
+    mouseEndPoint : {"left":0,"top":  0},
+    mouseDragDown : false,
+    basePoint : {"left":0,"top":  0},
+    moveTarget:null,
+    topleng:0
+  }
+  $(document).on("mousedown",".modal-header",function(e){
+    //webkit内核和火狐禁止文字被选中
+    $('body').addClass('select')
+    //ie浏览器禁止文字选中
+    document.body.onselectstart=document.body.ondrag=function(){
+      return false;
+    }
+    if($(e.target).hasClass("close"))//点关闭按钮不能移动对话框
+      return;
+    dragModal.mouseDragDown = true;
+    dragModal.moveTarget = $(this).parent().parent();
+    dragModal.mouseStartPoint = {"left":e.clientX,"top":  e.pageY};
+    dragModal.basePoint = dragModal.moveTarget.offset();
+    dragModal.topLeng=e.pageY-e.clientY;
+  });
+  $(document).on("mouseup",function(e){
+    dragModal.mouseDragDown = false;
+    dragModal.moveTarget = undefined;
+    dragModal.mouseStartPoint = {"left":0,"top":  0};
+    dragModal.basePoint = {"left":0,"top":  0};
+  });
+  $(document).on("mousemove",function(e){
+    if(!dragModal.mouseDragDown || dragModal.moveTarget == undefined)return;
+    var mousX = e.clientX;
+    var mousY = e.pageY;
+    if(mousX < 0)mousX = 0;
+    if(mousY < 0)mousY = 25;
+    dragModal.mouseEndPoint = {"left":mousX,"top": mousY};
+    var width = dragModal.moveTarget.width();
+    var height = dragModal.moveTarget.height();
+    var clientWidth=document.body.clientWidth
+    var clientHeight=document.body.clientHeight;
+    if(dragModal.mouseEndPoint.left<dragModal.mouseStartPoint.left - dragModal.basePoint.left){
+      dragModal.mouseEndPoint.left=0;
+    }
+    else if(dragModal.mouseEndPoint.left>=clientWidth-width+dragModal.mouseStartPoint.left - dragModal.basePoint.left){
+      dragModal.mouseEndPoint.left=clientWidth-width-38;
+    }else{
+      dragModal.mouseEndPoint.left =dragModal.mouseEndPoint.left-(dragModal.mouseStartPoint.left - dragModal.basePoint.left);//移动修正，更平滑
+
+    }
+    if(dragModal.mouseEndPoint.top-(dragModal.mouseStartPoint.top - dragModal.basePoint.top)<dragModal.topLeng){
+      dragModal.mouseEndPoint.top=dragModal.topLeng;
+    }else if(dragModal.mouseEndPoint.top-dragModal.topLeng>clientHeight-height+dragModal.mouseStartPoint.top - dragModal.basePoint.top){
+      dragModal.mouseEndPoint.top=clientHeight-height-38+dragModal.topLeng;
+    }
+    else{
+      dragModal.mouseEndPoint.top = dragModal.mouseEndPoint.top - (dragModal.mouseStartPoint.top - dragModal.basePoint.top);
+    }
+    dragModal.moveTarget.offset(dragModal.mouseEndPoint);
+  });
+  $(document).on('hidden.bs.modal','.modal',function(e){
+    $('.modal-dialog').css({'top': '0px','left': '0px'})
+    $('body').removeClass('select')
+    document.body.onselectstart=document.body.ondrag=null;
+  })
+</script>
+</html>

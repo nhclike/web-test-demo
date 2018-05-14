@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=10" />
+
+	<title>Title</title>
+</head>
+<body>
+
+<script type="text/javascript">
+  var filePath='c://case.sql';
+  getFileSize(filePath);
+  function getFileSize(filePath)
+  {
+    var fso = new ActiveXObject("Scripting.FileSystemObject");
+    alert("文件大小为："+fso.GetFile(filePath).size);
+  }
+</script>
+</body>
+</html>

@@ -7,95 +7,94 @@
 	<link rel="stylesheet" href="css/dial.css">
 </head>
 <body>
-	<div id="tel_container">
-		<!-- tabs title -->
-		<ul id="contactTab" class="nav nav-pills" role="tablist">
-			<li role="presentation" class="active">
-				<a href="#contact-meeting" aria-controls="contact-meeting" role="tab" data-toggle="tab">联系人</a>
-			</li>
-			<li role="presentation">
-				<a href="#dial-meeting" aria-controls="dial-meeting" role="tab" data-toggle="tab">拨号</a>
-			</li>
-		</ul>
-		<!-- tabs content -->
-		<div class="tab-content">
-			<!-- 联系人 -->
-			<div role="tabpanel" class="tab-pane active" id="contact-meeting">
-				<form class="form-inline" onkeydown="if(event.keyCode==13)return false;">
-					<div class="form-group">
-						<label class="sr-only" for="exampleInputAmount">search</label>
-						<!-- 搜索 -->
-						<div class="input-group" style="margin:0 30px">
-							<input type="text" class="form-control" id="searchPhone" placeholder="请输入号码" onkeydown="keyDown(event)">
+<div id="tel_container">
+	<!-- tabs title -->
+	<ul id="contactTab" class="nav nav-pills" role="tablist">
+		<li role="presentation" class="active">
+			<a href="#record-call" aria-controls="record-call" role="tab" data-toggle="tab">通话记录</a>
+		</li>
+		<li role="presentation">
+			<a href="#contact-call" aria-controls="contact-call" role="tab" data-toggle="tab">联系人</a>
+		</li>
+		<li role="presentation">
+			<a href="#dial-call" aria-controls="dial-call" role="tab" data-toggle="tab">拨号</a>
+		</li>
+	</ul>
+	<!-- tabs content -->
+	<div class="tab-content">
+		<!-- 通话记录列表 -->
+		<div role="tabpanel" class="tab-pane active" id="record-call">
+			<ul class="contact-list">
+				<li>
+					<!-- 联系人信息 -->
+					<div class="contact-info" ondblclick="doubleClickDial(this)">
+						<div class="glyphicon glyphicon-user contact-img"></div>
+						<div class="contact-name">
+							<p class="info-name">单兵1</p>
+							<p class="info-phone">133333333333</p>
 						</div>
 					</div>
-				</form>
-				<!-- 联系人列表 -->
-				<ul id="contact-list" class="contact-list">
-					<li>
-						<!-- 联系人信息 -->
-						<div class="contact-info" ondblclick="doubleClickDial(this)">
-							<div class="glyphicon glyphicon-user icon-size contact-img"></div>
-							<div class="contact-name">
-								<p class="info-name">单兵1</p>
-								<p class="info-phone">133333333333</p>
-							</div>
+				</li>
+				<li>
+					<!-- 联系人信息 -->
+					<div class="contact-info" ondblclick="doubleClickDial(this)">
+						<div class="glyphicon glyphicon-user contact-img"></div>
+						<div class="contact-name">
+							<p class="info-name">单兵2</p>
+							<p class="info-phone">13300005555555</p>
 						</div>
-					</li>
-					<li>
-						<!-- 联系人信息 -->
-						<div class="contact-info" ondblclick="doubleClickDial(this)">
-							<div class="glyphicon glyphicon-user icon-size contact-img"></div>
-							<div class="contact-name">
-								<p class="info-name">单兵2</p>
-								<p class="info-phone">13300005555555</p>
-							</div>
-						</div>
-					</li>
-				</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- 联系人-->
+		<div role="tabpanel" class="tab-pane" id="contact-call">
+			<div>
+				联系人
 			</div>
-			<!-- 拨号 -->
-			<div role="tabpanel" class="tab-pane" id="dial-meeting">
-				<div class="nexus">
-					<div class="phone-tab-contents">
-							<div class="number-area">
-								<!-- 显示拨号数字 -->
-								<input type='text' value='' class="numbers" style="ime-mode:disabled"  >
-								<!-- 删除数字 -->
-								<div class="btn-del"></div>
-								<!-- 拨号信息提示 -->
-								<span class="phone-pic" >正在呼叫</span>
-							</div>
-
-							<!-- 拨号键盘 -->
-							<div class="numbers-container">
-								<span class="pushed1">1</span>
-								<span class="pushed2">2</span>
-								<span class="pushed3">3</span>
-								<span class="pushed4">4</span>
-								<span class="pushed5">5</span>
-								<span class="pushed6">6</span>
-								<span class="pushed7">7</span>
-								<span class="pushed8">8</span>
-								<span class="pushed9">9</span>
-								<span class="pushedasterisk">*</span>
-								<span class="pushed0">0</span>
-								<span class="pushednumber">#</span>
-							</div>
-							<p class="cover"></p>
+		</div>
+		<!-- 拨号 -->
+		<div role="tabpanel" class="tab-pane" id="dial-call">
+			<div class="nexus">
+				<div class="phone-tab-contents">
+					<div class="number-area">
+						<!-- 显示拨号数字 -->
+						<input type='text' value='' class="numbers" style="ime-mode:disabled"  >
+						<!-- 删除数字 -->
+						<div class="btn-del"></div>
+						<!-- 拨号信息提示 -->
+						<span class="phone-pic" >正在呼叫</span>
 					</div>
-					<!-- 拨号操作 -->
-					<div class="main-btns" id="call-meeting">
-						<!-- 拨号 -->
-						<div class="btn-dial" onclick="call(this)"></div>
-						<!-- 挂断 -->
-						<div class="btn-hang-up" id="hangupbtn" onclick="hangup(this)"></div>
 
+					<!-- 拨号键盘 -->
+					<div class="numbers-container">
+						<span class="pushed1">1</span>
+						<span class="pushed2">2</span>
+						<span class="pushed3">3</span>
+						<span class="pushed4">4</span>
+						<span class="pushed5">5</span>
+						<span class="pushed6">6</span>
+						<span class="pushed7">7</span>
+						<span class="pushed8">8</span>
+						<span class="pushed9">9</span>
+						<span class="pushedasterisk">*</span>
+						<span class="pushed0">0</span>
+						<span class="pushednumber">#</span>
 					</div>
+					<p class="cover"></p>
+				</div>
+				<!-- 拨号操作 -->
+				<div class="main-btns" id="call-meeting">
+					<!-- 拨号 -->
+					<div class="btn-dial" onclick="call(this)"></div>
+					<!-- 挂断 -->
+					<div class="btn-hang-up" id="hangupbtn" onclick="hangup(this)"></div>
+
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 <script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
 <script src="../../src/bootstrap/js/bootstrap.min.js"></script>
 <script src="js/dial.js"></script>

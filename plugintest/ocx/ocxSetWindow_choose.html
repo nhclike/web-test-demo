@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title></title>
+    <style>
+        .selectScreen{
+            color:red;
+        }
+    </style>
+</head>
+<body >
+<button id="danbin1_start" >单兵1播放</button>
+<button id="danbin1_stop" >单兵1停止</button>
+
+<button id="oneScreen" data-screen="1">单屏</button>
+<button id="fourScreen" data-screen="4">4分屏</button>
+<button id="nineScreen" data-screen="9">9分屏</button>
+
+<object classid="CLSID:22A0C36F-457B-469D-88D7-3C76D0EB4BD7" id="recordVideoOcx" style="width:500px;height:500px;"></object>
+<script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+
+  var stopwno=-1;
+  var ocxInstance={
+    ocx:recordVideoOcx,
+    wno:0
+  };
+  var ocx=null;
+
+    $(function () {
+      ocx=ocxInstance.ocx;
+
+      $('#oneScreen').click(function () {
+        ocxInstance.ocx.CurrentWindowIndex=0;
+
+        ocx.SetWindowLayout(1,0);
+        //停止当前窗口视频
+        stopCurreWno(1);
+        ocxInstance.ocx.winPlayInstance=[];
+
+
+        $(this).addClass('selectScreen').siblings('.selectScreen').removeClass('selectScreen')
+      })
+      $('#fourScreen').click(function () {
+        ocxInstance.ocx.CurrentWindowIndex=0;
+        ocx.SetWindowLayout(4,0);
+        //停止当前窗口视频
+        stopCurreWno(4);
+        ocxInstance.ocx.winPlayInstance=[];
+
+        $(this).addClass('selectScreen').siblings('.selectScreen').removeClass('selectScreen')
+
+      })
+      $('#nineScreen').click(function () {
+        ocxInstance.ocx.CurrentWindowIndex=0;
+        ocx.SetWindowLayout(9,0);
+        //停止当前窗口视频
+        stopCurreWno(9);
+        ocxInstance.ocx.winPlayInstance=[];
+
+
+        $(this).addClass('selectScreen').siblings('.selectScreen').removeClass('selectScreen')
+
+      })
+      $('#danbin1_start').click(function () {
+          var devdata={
+            devId:'1111_fds',
+            devType:'1', //1单兵 2ipc4车载
+            devStatus:'1',// 1. 离线 2 在线空闲 3. 在线执行
+            name:'高院单兵1', //用于显示
+            telphone:'1', //用于打电话
+            Lon:'120.156186000', //用于定位
+            Lat:'30.298418',
+            chnInfo:{  //用于视频播放
+              chncode:'1213213',
+              domid:'1231231'
+            }
+          };
+          play(devdata,ocxInstance);
+        }
+      );
+      $('#danbin1_stop').click(function () {
+          stop(0)
+        }
+      );
+
+      ocx.attachEvent("OnCloseVideo", function() {
+        stopwno=ocx.CurrentWindowIndex;
+        stop(stopwno)
+      });
+
+
+    });
+
+
+  function stopCurreWno(wno){
+    for(var i=0;i<wno;i++){
+      stop(i);
+    }
+  }
+  function play(devdata,ocxInstance){
+    console.log(ocxInstance.ocx.CurrentWindowIndex())
+    if(ocxInstance.ocx.winPlayInstance==undefined){ //第一次还没有数据在播放
+      ocxInstance.ocx.winPlayInstance=[]
+    }
+    var playwno=getPlayWno(ocxInstance);
+
+    var file = "e://test.mp4";
+    if(ocx.PlayFile(playwno,4, file)){
+
+      ocx.SetInfo(playwno, "0");
+      //打开声音
+      ocx.StartAudio(playwno);
+
+      ocx.winPlayInstance[playwno]=devdata
+    }
+
+  }
+  function stop(stopwno){
+
+    ocx.SetVideoWndHandle(stopwno, -1);
+    ocx.Stop(stopwno);
+    if(ocx.winPlayInstance!=undefined){
+      ocx.winPlayInstance.splice(stopwno,1,null);
+    }
+
+    console.log(ocx.winPlayInstance)
+  }
+function getPlayWno(ocxInstance){
+     playwno=ocxInstance.wno;
+    //确定当前选择几分屏
+    var screenNum=$('.selectScreen').attr('data-screen');
+    if(screenNum==1){
+      playwno=0;
+      return playwno;
+    }
+    if(screenNum==4) {
+      var winPlayInstance = ocxInstance.ocx.winPlayInstance;
+      if (winPlayInstance.length == 0) { //初次使用四分屏播放
+        playwno = 0;
+        return playwno
+      }
+      else {
+        if(winPlayInstance.length>4){ //超过4频
+          playwno =-1;
+          return playwno
+        }
+        else{
+          for(var i=0;i<winPlayInstance.length;i++){
+            var winInstance=winPlayInstance[i];
+            if(winInstance==null){ //闲置的ocx
+              playwno=i;
+              return playwno;
+            }
+            else{
+              playwno=i+1; //没有闲置的直接掉后面一个空的
+
+              if(playwno==4){
+                playwno=-1;
+                return playwno;
+              }
+            }
+          }
+          return playwno;
+        }
+      }
+    }
+      if(screenNum==9) {
+        var winPlayInstance = ocxInstance.ocx.winPlayInstance;
+        if (winPlayInstance.length == 0) { //初次使用四分屏播放
+          playwno = 0;
+          return playwno
+        }
+        else {
+          if(winPlayInstance.length>9){ //超过4频
+            playwno =-1;
+            return playwno
+          }
+          else{
+            for(var i=0;i<winPlayInstance.length;i++){
+              var winInstance=winPlayInstance[i];
+              if(winInstance==null){ //闲置的ocx
+                playwno=i;
+                return playwno;
+              }
+              else{
+                playwno=i+1; //没有闲置的直接掉后面一个空的
+
+                if(playwno==9){
+                  playwno=-1;
+                  return playwno;
+                }
+              }
+            }
+            return playwno;
+          }
+        }
+      }
+}
+
+</script>
+</body>
+</html>

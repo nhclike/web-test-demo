@@ -13,32 +13,24 @@
 <script src="../../src/jquery-1.11.3.js"></script>
 <script src="Jquery.base64.js"></script>
 <script>
-  //点击导入按钮,使files触发点击事件,然后完成读取文件的操作
-  $("#fileImport").click(function () {
-    $("#files").click();
-  })
-  function fileImport() {
-    //获取读取我文件的File对象
-    var selectedFile = document.getElementById('files').files[0];
-    var name = selectedFile.name;//读取选中文件的文件名
-    var size = selectedFile.size;//读取选中文件的大小
-    console.log("文件名:"+name+"大小:"+size);
-
-    var reader = new FileReader();//这是核心,读取操作就是由它完成.
-    //reader.readAsText(selectedFile);//读取文件的内容,也可以读取文件的URL
-    //reader.readAsArrayBuffer(selectedFile);
-    //用于图片显示不需要传入后台，reader.result的结果是base64编码数据，直接放入img的src中即可
-    reader.readAsDataURL(selectedFile);
-    reader.onload = function () {
-      //当读取完成后回调这个函数,然后此时文件的内容存储到了result中,直接操作即可
-      console.log(this.result);
-      var res=this.result;
-      $.base64.decode(this.result.split(',')[1]);
-      console.log(this.result);
-
-
-    }
-  }
+  var fso, f1, ts, s;
+  var ForReading = 1;
+  fso = new ActiveXObject("Scripting.FileSystemObject");
+  // 创建文件
+  f1 = fso.CreateTextFile("c:\\testfile.txt", true);
+  // 填写一行数据
+  f1.WriteLine("Hello World");
+  f1.WriteBlankLines(1);
+  // 关闭文件
+  f1.Close();
+  // 打开文件
+  ts = fso.OpenTextFile("c:\\testfile.txt", ForReading);
+  // 读取文件一行内容到字符串
+  s = ts.ReadLine();
+  // 显示字符串信息
+  alert("File contents = '" + s + "'");
+  // 关闭文件
+  ts.Close();
 </script>
 </body>
 </html>
