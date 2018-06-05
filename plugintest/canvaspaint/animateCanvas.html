@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+
+<script>
+	$(function () {
+		paints.createCanvas();
+		paints.createImage(800,0,200,300,'Image/html5.jpg');
+    paints.createImage(0,0,200,300,'Image/html5.jpg');
+
+    paints.createImage(400,400,200,300,'Image/html5.jpg');
+    paints.drawPointLine(200,150,300,150,500,550);
+    paints.drawPointLine(800,150,700,150,500,550);
+
+  });
+	var paints={
+	  width:document.documentElement.clientWidth,
+		height:document.documentElement.clientHeight,
+		lineColor:'#000'
+
+	};
+	//动态创建canvas
+	paints.createCanvas=function (id,width,height) {
+	 var cid= id?id:'canvas';
+	 var width=width?width:this.width;
+	 var height=height?height:this.height;
+    var oCanvas = document.createElement("canvas");
+    oCanvas.setAttribute('id', cid);
+    oCanvas.width = width;
+    oCanvas.height = height;
+    document.body.appendChild(oCanvas);
+  };
+	//绘制图片
+  paints.createImage=function (cx,cy,w,h,src,id) {
+    var image = new Image();
+
+    image.src = src;
+    var id=id?id:'canvas';
+    var canvas = document.getElementById(id);
+
+    if (canvas == null)
+      return false;
+    var context = canvas.getContext("2d");
+
+    image.onload = function () {
+      context.drawImage(image,cx,cy,w,h);
+    }
+  }
+  //绘制线
+	paints.drawPointLine=function (sx,sy,px,py,ex,ey,id) {
+    var id=id?id:'canvas';
+    var canvas = document.getElementById(id);
+    if (canvas == null) {
+      return false;
+    }
+    var context = canvas.getContext("2d");
+
+    context.strokeStyle = this.lineColor;
+    context.fillStyle = this.lineColor;
+    //实验证明第一次lineTo的时候和moveTo功能一样
+    context.moveTo(sx, sy);
+    context.lineTo(px, py);
+    context.lineTo(ex,ey);
+    context.stroke();
+  }
+</script>
+</body>
+</html>

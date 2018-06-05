@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<div style="border: 1px solid #ddd">
+	<canvas id="bargraphCanvas" width="600" height="600" style="background-color: #ddd"></canvas>
+
+</div>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script>
+  var canvas, context;
+  var img,//图片对象
+    imgX = 0,
+    imgY = 0,
+    imgScale = 1,
+		lastX=0,
+		lastY=0,
+		mouseLock=false;
+  (function int() {
+    canvas = document.getElementById('bargraphCanvas'); //画布对象
+    context = canvas.getContext('2d');//画布显示二维图片
+    mouseLock=false;
+    imgX = 0;
+      imgY = 0;
+      lastX=0;
+      lastY=0;
+    loadImg();
+    canvasEventsInit();
+  })();
+  function loadImg() {
+    img = new Image();
+    img.src = "Image/html5.jpg";
+    img.onload = function () {
+      drawImage();
+    };
+
+  }
+  function drawImage() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(
+      img, //规定要使用的图像、画布或视频。
+      0, 0, //开始剪切的 x 坐标位置。
+      img.width, img.height,  //被剪切图像的高度。
+      imgX, imgY,//在画布上放置图像的 x 、y坐标位置。
+      img.width * imgScale, img.height * imgScale  //要使用的图像的宽度、高度
+    );
+  }
+	/*事件注册*/
+  function canvasEventsInit() {
+    var  pos=null;
+    canvas.onmousedown = function (event) {
+      mouseLock=true;
+      pos = windowToCanvas(event.clientX, event.clientY);  //坐标转换，将窗口坐标转换成canvas的坐标
+      console.log('onmousedown'+event.clientX+'x'+event.clientY+'y')
+    };
+
+    canvas.onmousemove = function (event) {  //移动
+			if(mouseLock){
+        canvas.style.cursor = 'move';
+        var posl = windowToCanvas(event.clientX, event.clientY);
+        var x = posl.x - pos.x;
+        var y = posl.y - pos.y;
+        imgX = x+lastX;
+        imgY = y+lastY;
+        drawImage();  //重新绘制图片
+        console.log('onmousemove'+posl.x+'x'+posl.y+'y');
+			}
+    };
+    canvas.onmouseup = function () {
+      mouseLock=false;
+      pos=null;
+      lastX=imgX;
+      lastY=imgY;
+      canvas.style.cursor = 'default';
+      console.log('onmouseup'+mouseLock)
+    };
+  }
+
+
+	/*坐标转换*/
+  function windowToCanvas(x,y) {
+    var box = canvas.getBoundingClientRect();  //这个方法返回一个矩形对象，包含四个属性：left、top、right和bottom。分别表示元素各边与页面上边和左边的距离
+    console.log(box);
+		return {
+      x: x - box.left,
+      y: y - box.top
+    };
+  }
+</script>
+</body>
+</html>
