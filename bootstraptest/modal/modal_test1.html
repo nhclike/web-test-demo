@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+  <meta charset="UTF-8">
+  <!--2 viewport-->
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <!--3、x-ua-compatible-->
+  <meta http-equiv="X-UA-Compatible" content="IE=10" />
+  <title></title>
+  <!--4、引入两个兼容文件-->
+  <!--[if lt IE 9]>
+  <script src="../../src/bootstrap/js/html5shiv.min.js"></script>
+  <script src="../../src/bootstrap/js/respond.min.js"></script>
+  <![endif]-->
+  <!--6、引入 bootstrap.css-->
+  <link rel="stylesheet" href="../../src/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/alarm_modal.css">
+  <link rel="stylesheet" href="../css/call.css">
+</head>
+<body>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <span>是否关联案件</span>
+          <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="no"> 否
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="yes"> 是
+          </label>
+        </div>
+        <div class="row">
+          <span class="col-xs-2">关联案件</span>
+          <div class="col-xs-10">
+            <select class="form-control select2"  name ="caseInfo" id="caseInfo" multiple>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <span class="col-xs-2">执行类型</span>
+          <div class="col-xs-10">
+            <select class="form-control" name="execute_type" id="execute_type" ></select>
+
+          </div>
+        </div>
+        <div class="row">
+							<span class="col-xs-2">描述</span>
+            <div class="col-xs-10">
+              <textarea class="form-control" id="descr" name="descr"></textarea>
+
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div><!--5、引入 jquery，bootstrap js-->
+<script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
+<script src="../../src/bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/dial.js"></script>
+<script>
+  //让模态框可拖动
+/*  $(document).on("show.bs.modal", ".modal", function(){
+    $(this).draggable({
+//            handle: ".modal-header"   // 只能点击头部拖动
+    });
+    $(this).css("overflow", "hidden"); // 防止出现滚动条，出现的话，你会把滚动条一起拖着走的
+  });*/
+
+</script>
+</body>
+</html>
