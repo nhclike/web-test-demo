@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>padding layout demo</title>
+	<style type="text/css">
+		* html #container{
+			height:1%; /* So IE plays nice */
+		}
+		html{
+			height: 100%;
+
+		}
+		body{
+			height: 100%;
+			margin:0;
+		}
+		#container{
+			background-color:#0ff;
+			overflow:hidden;
+			height: 100%;
+			padding-right:220px; /* 宽度大小等与边栏宽度大小*/
+		}
+		#content{
+			background-color:yellow;
+			width:100%;
+			float:left;
+			height: 100%;
+
+		}
+		#sidebar{
+			background-color:#f00;
+			width:220px;
+			float:left;
+			height: 100%;
+
+			margin-right:-220px;
+		}
+	</style>
+</head>
+<body>
+<div id="container">
+	<div id="content">Main content section
+
+	</div>
+	<div id="sidebar">Right Sidebar </div>
+</div>
+</body>
+</html>
