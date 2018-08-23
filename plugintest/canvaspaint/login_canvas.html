@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.bg{
+			position: fixed;
+			top:0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+		.canvas-box{
+			width: 100%;
+			height: 100%;
+			background: #000;
+		}
+	</style>
+</head>
+<body>
+		<div class="bg">
+			<div class="canvas-box">
+				<canvas id="canvas" ></canvas>
+				<img src="./Image/index_bg.png" width="1920" height="949" border="0" usemap="#Map" />
+				<map name="Map" id="Map">
+					<area shape="poly" coords="828,564,826,703,960,768,1094,702,1093,563,962,493" href="https://www.baidu.com/?tn=93006350_hao_pg" />
+					<area shape="poly" coords="409,348,412,489,549,558,682,486,683,352,540,283,539,286" href="#" />
+					<area shape="poly" coords="1243,353,1241,488,1379,554,1517,486,1514,353,1381,285" href="#" />
+				</map>
+			</div>
+		</div>
+</body>
+<script>
+  var canvas = document.getElementById('canvas'); //画布对象
+  var context = canvas.getContext('2d');//画布显示二维图片
+  layout();
+  window.onresize=function () {
+    layout();
+  }
+  function drawImage(img,wWidth,wHeight) {
+
+    context.drawImage(
+      img, //规定要使用的图像、画布或视频。
+      0, 0, //开始剪切的 x 坐标位置。
+
+      wWidth, wHeight  //要使用的图像的宽度、高度
+    );
+  }
+  function drawText(x,y,text,wWidth,wHeight,size) {
+    var txtX=(wWidth/10)*x;
+    var txtY=(wHeight/10)*y;
+    var size=(wWidth/100)*size;
+    context.fillStyle = "#FFF";
+    var font="normal "+size+"px sans-serif";
+    console.log(font);
+    context.font = font;
+    context.textBaseline = 'top';
+    //填充字符串
+    var txt=text;
+    context.fillText(txt,txtX,txtY);
+  }
+  function layout() {
+    var wHeight=document.documentElement.clientHeight || document.body.clientHeight;
+    var wWidth=document.documentElement.clientWidth || document.body.clientWidth;
+    console.log('wHeight'+wHeight);
+    console.log('wWidth'+wWidth);
+    canvas.height=wHeight;
+    canvas.width=wWidth;
+    var img = new Image();
+    img.src = "Image/index_bg.png";
+    img.onload = function () {
+      drawImage(img,wWidth,wHeight);
+      drawText(2.25,6,'科技法庭系统',wWidth,wHeight,2);
+      drawText(6.80,6,'运维系统',wWidth,wHeight,2);
+      drawText(4.62,8.2,'视频系统',wWidth,wHeight,2);
+      drawText(2.2,1,'贵州省最高人民法院视频汇聚平台',wWidth,wHeight,4);
+
+      //context.fillRect(txtX,txtY,400,300);
+
+    };
+  }
+
+</script>
+</html>

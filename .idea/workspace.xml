@@ -2,188 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8cf9de38-ef71-4c88-88ea-1feabee0bc64" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/page-jump/demo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/table.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/bootstrap-table/table_basic.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/threejs/basic-demo1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/bootstrap-editable.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/bootstrap-editable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/bootstrap-editable.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/bootstrap-table-editable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/bootstrap-table-locale-all.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/bootstrap-table-locale-all.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/bootstrap-table.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/bootstrap-table.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/bootstrap-table.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/bootstrap-table.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/accent-neutralise/bootstrap-table-accent-neutralise.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/accent-neutralise/bootstrap-table-accent-neutralise.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/angular/bootstrap-table-angular.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/angular/bootstrap-table-angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/auto-refresh/bootstrap-table-auto-refresh.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/auto-refresh/bootstrap-table-auto-refresh.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/auto-refresh/bootstrap-table-auto-refresh.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/click-edit-row/bootstrap-table-click-edit-row.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/click-edit-row/bootstrap-table-click-edit-row.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/click-edit-row/bootstrap-table-click-edit-row.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/cookie/bootstrap-table-cookie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/cookie/bootstrap-table-cookie.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/copy-rows/bootstrap-table-copy-rows.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/copy-rows/bootstrap-table-copy-rows.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/editable/bootstrap-table-editable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/editable/bootstrap-table-editable.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/export/bootstrap-table-export.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/export/bootstrap-table-export.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/filter-control/bootstrap-table-filter-control.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/filter-control/bootstrap-table-filter-control.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/filter-control/bootstrap-table-filter-control.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/filter/bootstrap-table-filter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/filter/bootstrap-table-filter.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/flat-json/bootstrap-table-flat-json.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/flat-json/bootstrap-table-flat-json.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/group-by-v2/bootstrap-table-group-by.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/group-by-v2/bootstrap-table-group-by.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/group-by-v2/bootstrap-table-group-by.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/group-by/bootstrap-table-group-by.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/group-by/bootstrap-table-group-by.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/group-by/bootstrap-table-group-by.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/i18n-enhance/bootstrap-table-i18n-enhance.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/i18n-enhance/bootstrap-table-i18n-enhance.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/key-events/bootstrap-table-key-events.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/key-events/bootstrap-table-key-events.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/mobile/bootstrap-table-mobile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/mobile/bootstrap-table-mobile.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/multi-column-toggle/bootstrap-table-multi-toggle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/multi-column-toggle/bootstrap-table-multi-toggle.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/multiple-search/bootstrap-table-multiple-search.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/multiple-search/bootstrap-table-multiple-search.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/multiple-selection-row/bootstrap-table-multiple-selection-row.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/multiple-selection-row/bootstrap-table-multiple-selection-row.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/multiple-selection-row/bootstrap-table-multiple-selection-row.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/multiple-sort/bootstrap-table-multiple-sort.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/multiple-sort/bootstrap-table-multiple-sort.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/natural-sorting/bootstrap-table-natural-sorting.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/natural-sorting/bootstrap-table-natural-sorting.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/page-jump/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/page-jump/bootstrap-table-pagejump.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/page-jump/bootstrap-table-pagejump.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/page-jump/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/print/bootstrap-table-print.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/print/bootstrap-table-print.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/reorder-columns/bootstrap-table-reorder-columns.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/reorder-columns/bootstrap-table-reorder-columns.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/reorder-rows/bootstrap-table-reorder-rows.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/reorder-rows/bootstrap-table-reorder-rows.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/reorder-rows/bootstrap-table-reorder-rows.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/resizable/bootstrap-table-resizable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/resizable/bootstrap-table-resizable.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/select2-filter/bootstrap-table-select2-filter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/select2-filter/bootstrap-table-select2-filter.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/sticky-header/bootstrap-table-sticky-header.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/sticky-header/bootstrap-table-sticky-header.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/sticky-header/bootstrap-table-sticky-header.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/toolbar/bootstrap-table-toolbar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/toolbar/bootstrap-table-toolbar.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/tree-column/bootstrap-table-tree-column.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/tree-column/bootstrap-table-tree-column.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/extensions/tree-column/bootstrap-table-tree-column.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-af-ZA.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-af-ZA.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-ar-SA.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-ar-SA.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-ca-ES.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-ca-ES.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-cs-CZ.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-cs-CZ.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-da-DK.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-da-DK.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-de-DE.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-de-DE.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-el-GR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-el-GR.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-en-US.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-en-US.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-es-AR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-es-AR.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-es-CL.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-es-CL.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-es-CR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-es-CR.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-es-ES.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-es-ES.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-es-MX.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-es-MX.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-es-NI.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-es-NI.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-es-SP.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-es-SP.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-et-EE.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-et-EE.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-fa-IR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-fa-IR.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-fr-BE.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-fr-BE.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-fr-FR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-fr-FR.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-he-IL.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-he-IL.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-hr-HR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-hr-HR.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-hu-HU.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-hu-HU.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-id-ID.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-id-ID.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-it-IT.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-it-IT.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-ja-JP.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-ja-JP.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-ka-GE.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-ka-GE.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-ko-KR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-ko-KR.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-ms-MY.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-ms-MY.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-nb-NO.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-nb-NO.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-nl-NL.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-nl-NL.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-pl-PL.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-pl-PL.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-pt-BR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-pt-BR.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-pt-PT.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-pt-PT.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-ro-RO.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-ro-RO.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-ru-RU.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-ru-RU.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-sk-SK.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-sk-SK.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-sv-SE.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-sv-SE.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-th-TH.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-th-TH.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-tr-TR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-tr-TR.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-uk-UA.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-uk-UA.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-ur-PK.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-ur-PK.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-uz-Latn-UZ.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-uz-Latn-UZ.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-vi-VN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-vi-VN.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-zh-CN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-zh-CN.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-zh-TW.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bootstrap-table-1.11.1/locale/bootstrap-table-zh-TW.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/swiper/css/swiper.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/swiper/js/swiper.jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/swiper/js/swiper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/swiper/swiper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/canvaspaint/Image/index_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/canvaspaint/login_canvas.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugintest/video/vlc_play.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/layout/left_right_height1.html" afterPath="$PROJECT_DIR$/layout/left_right_height1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugintest/threejs/chapter-07/03-basic-point-cloud.html" afterPath="$PROJECT_DIR$/plugintest/threejs/chapter-07/03-basic-point-cloud.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstraptest/carousel.html" afterPath="$PROJECT_DIR$/bootstraptest/carousel.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/plugintest/video/aviplay.html" afterPath="$PROJECT_DIR$/plugintest/video/avi_play.html" />
     </list>
     <ignored path="zxzhtest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -202,29 +26,100 @@
     <favorites_list name="zxzhtest" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="left_right_height1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/layout/left_right_height1.html">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="avi_play.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugintest/video/avi_play.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+            <state relative-caret-position="247">
+              <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="table_basic.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/plugintest/bootstrap-table/table_basic.html">
+      <file leaf-file-name="vlc_play.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugintest/video/vlc_play.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="777">
-              <caret line="200" column="21" lean-forward="true" selection-start-line="200" selection-start-column="21" selection-end-line="200" selection-end-column="21" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="55">
+              <caret line="89" column="45" lean-forward="true" selection-start-line="89" selection-start-column="45" selection-end-line="89" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dragCanvasImage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/dragCanvasImage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="798">
+              <caret line="48" column="6" lean-forward="true" selection-start-line="42" selection-start-column="3" selection-end-line="48" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="animateCanvas.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/animateCanvas.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="saveToImage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/saveToImage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HTML5CanvasAPI.htm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/HTML5CanvasAPI.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="689" column="40" lean-forward="true" selection-start-line="682" selection-start-column="11" selection-end-line="689" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_canvas.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/login_canvas.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="39" column="3" lean-forward="true" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_bg.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/Image/index_bg.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="paint.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/paint.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7467">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="carousel.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bootstraptest/carousel.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="35" column="29" lean-forward="false" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -238,8 +133,8 @@
         <option value="JavaScript File" />
         <option value="Less File" />
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="tsconfig.json" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -298,12 +193,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/plugintest/ocx/ocxControl.html" />
-        <option value="$PROJECT_DIR$/plugintest/file/filelist.html" />
-        <option value="$PROJECT_DIR$/plugintest/file/getFileUrl.html" />
-        <option value="$PROJECT_DIR$/plugintest/video/videojs.html" />
-        <option value="$PROJECT_DIR$/plugintest/video/audio_k.html" />
-        <option value="$PROJECT_DIR$/plugintest/video/videojs1.html" />
         <option value="$PROJECT_DIR$/plugintest/ocx/ocxlocalplay.html" />
         <option value="$PROJECT_DIR$/plugintest/ocx/ocxtest.html" />
         <option value="$PROJECT_DIR$/plugintest/ocx/ocxChooseLocalPlay1.html" />
@@ -347,8 +236,14 @@
         <option value="$PROJECT_DIR$/plugintest/threejs/basic-demo.html" />
         <option value="$PROJECT_DIR$/plugintest/threejs/basic-demo1.html" />
         <option value="$PROJECT_DIR$/data/tsconfig.json" />
-        <option value="$PROJECT_DIR$/layout/left_right_height1.html" />
+        <option value="$PROJECT_DIR$/plugintest/video/videojs.html" />
+        <option value="$PROJECT_DIR$/plugintest/video/1.html" />
+        <option value="$PROJECT_DIR$/plugintest/video/2.html" />
         <option value="$PROJECT_DIR$/plugintest/bootstrap-table/table_basic.html" />
+        <option value="$PROJECT_DIR$/layout/left_right_height1.html" />
+        <option value="$PROJECT_DIR$/bootstraptest/carousel.html" />
+        <option value="$PROJECT_DIR$/plugintest/video/vlc_play.html" />
+        <option value="$PROJECT_DIR$/plugintest/canvaspaint/login_canvas.html" />
       </list>
     </option>
   </component>
@@ -360,7 +255,6 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1352" />
-    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -381,8 +275,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -419,29 +311,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="plugintest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-table-1.11.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zxzhtest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webtest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
+              <option name="myItemId" value="video" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -473,7 +347,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="select" />
+              <option name="myItemId" value="canvaspaint" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -491,29 +365,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="select" />
+              <option name="myItemId" value="canvaspaint" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="select2-4.0.3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zxzhtest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webtest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugintest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-table" />
+              <option name="myItemId" value="Image" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -541,12 +397,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
+              <option name="myItemId" value="bootstraptest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -562,19 +420,19 @@
     <property name="nodejs_interpreter_path" value="D:/node.js/node" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\GitHub\webtest\src\bootstrap-table-1.11.1" />
-      <recent name="E:\GitHub\webtest\src" />
-      <recent name="E:\GitHub\webtest\plugintest\threejs" />
-      <recent name="E:\GitHub\webtest\plugintest\threejs\chapter-06" />
-      <recent name="E:\GitHub\webtest\plugintest\threejs\chapter-07" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\GitHub\webtest\plugintest\threejs\chapter-01" />
       <recent name="E:\GitHub\webtest\plugintest\canvaspaint\js" />
       <recent name="E:\GitHub\webtest\plugintest\canvaspaint\Image" />
       <recent name="E:\GitHub\webtest\plugintest\file" />
       <recent name="E:\GitHub\webtest\plugintest\ocx" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\GitHub\webtest\plugintest\canvaspaint\Image" />
+      <recent name="E:\GitHub\webtest\src\bootstrap\css" />
+      <recent name="E:\GitHub\webtest\plugintest\video" />
+      <recent name="E:\GitHub\webtest\plugintest\video\src" />
+      <recent name="E:\GitHub\webtest\src\bootstrap-table-1.11.1" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1182,7 +1040,21 @@
       <workItem from="1531451274985" duration="1417000" />
       <workItem from="1531452711610" duration="4586000" />
       <workItem from="1531710776805" duration="1218000" />
-      <workItem from="1531876572585" duration="1009000" />
+      <workItem from="1531876572585" duration="4642000" />
+      <workItem from="1532074129678" duration="283000" />
+      <workItem from="1533520178962" duration="71000" />
+      <workItem from="1533607846228" duration="2204000" />
+      <workItem from="1533693832405" duration="1334000" />
+      <workItem from="1533717825850" duration="626000" />
+      <workItem from="1533781535402" duration="1997000" />
+      <workItem from="1533784498853" duration="1293000" />
+      <workItem from="1534237414556" duration="15000" />
+      <workItem from="1534744224700" duration="787000" />
+      <workItem from="1534837027527" duration="663000" />
+      <workItem from="1534840414826" duration="2815000" />
+      <workItem from="1534985633930" duration="1172000" />
+      <workItem from="1535001771365" duration="1219000" />
+      <workItem from="1535010649919" duration="7320000" />
     </task>
     <task id="LOCAL-00001" summary="重新整理文件夹">
       <created>1502862553809</created>
@@ -1338,14 +1210,28 @@
       <option name="project" value="LOCAL" />
       <updated>1528197582574</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="1完善一边固定一边自适应布局&#10;2增加bootstrap-table加x-editable的demo">
+      <created>1531877809691</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1531877809691</updated>
+    </task>
+    <task id="LOCAL-00024" summary="1完善布局module中的利用float,padding,margin实现侧边固定中间自适应的布局">
+      <created>1533785752785</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1533785752785</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="607283000" />
+    <option name="totallyTimeSpent" value="632715000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1352" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1352" y="0" width="1936" height="1056" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1355,20 +1241,20 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22010583" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22010583" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23507462" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19616205" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24355084" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0836887" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.058102347" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1442,7 +1328,9 @@
     <MESSAGE value="1增加选择本地文件存放功能demo" />
     <MESSAGE value="demo完善" />
     <MESSAGE value="增加拖拽canvas中图片的demo，利用重绘实现假拖拽效果" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加拖拽canvas中图片的demo，利用重绘实现假拖拽效果" />
+    <MESSAGE value="1完善一边固定一边自适应布局&#10;2增加bootstrap-table加x-editable的demo" />
+    <MESSAGE value="1完善布局module中的利用float,padding,margin实现侧边固定中间自适应的布局" />
+    <option name="LAST_COMMIT_MESSAGE" value="1完善布局module中的利用float,padding,margin实现侧边固定中间自适应的布局" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1455,168 +1343,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/dragCanvasImage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="46" column="38" lean-forward="false" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/animateCanvas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="53" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/HTML5CanvasAPI.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7676">
-          <caret line="404" column="29" lean-forward="false" selection-start-line="395" selection-start-column="12" selection-end-line="404" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/Image/wordslogo.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/paint.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8132">
-          <caret line="428" column="25" lean-forward="false" selection-start-line="428" selection-start-column="25" selection-end-line="428" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/saveToImage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/three.js-master/three.js-master/examples/canvas_camera_orthographic.html" />
-    <entry file="file://$PROJECT_DIR$/plugintest/three.js-master/three.js-master/examples/canvas_geometry_birds.html" />
-    <entry file="file://$PROJECT_DIR$/plugintest/three.js-master/three.js-master/build/three.module.js" />
-    <entry file="file://$PROJECT_DIR$/plugintest/three.js-master/three.js-master/docs/api/animation/AnimationAction.html" />
-    <entry file="file://$PROJECT_DIR$/plugintest/three.js-master/three.js-master/src/animation/AnimationAction.js" />
-    <entry file="file://$PROJECT_DIR$/plugintest/three.js-master/three.js-master/examples/scenes/robo_pigeon.js" />
-    <entry file="file://$PROJECT_DIR$/plugintest/three.js-master/three.js-master/examples/canvas_ascii_effect.html" />
-    <entry file="file://$PROJECT_DIR$/plugintest/threejs/simple-demo.html" />
-    <entry file="file://$PROJECT_DIR$/plugintest/three.js-master/three.js-master/src/Three.js" />
-    <entry file="file://$PROJECT_DIR$/plugintest/three.js-master/three.js-master/src/Three.Legacy.js" />
-    <entry file="file://$PROJECT_DIR$/plugintest/three.js-master/three.js-master/build/three.js" />
-    <entry file="file://$PROJECT_DIR$/plugintest/threejs/2.html" />
-    <entry file="file://$PROJECT_DIR$/plugintest/threejs/1.html" />
-    <entry file="file://$PROJECT_DIR$/plugintest/threejs/libs/ctm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/threejs/chapter-06/07-text-geometry.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1387">
-          <caret line="73" column="18" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="73" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/threejs/js/three.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/video/audio_k.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/video/k-audio.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/video/audio_self_drag.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="39" column="26" lean-forward="false" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/video/audio_self.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/threejs/basic-demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1102">
-          <caret line="58" column="6" lean-forward="false" selection-start-line="56" selection-start-column="2" selection-end-line="58" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/threejs/chapter-02/06-mesh-properties.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2166">
-          <caret line="114" column="31" lean-forward="false" selection-start-line="114" selection-start-column="31" selection-end-line="114" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/threejs/chapter-01/06-screen-size-change.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/threejs/chapter-01/01-first-scene.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1596">
-          <caret line="84" column="31" lean-forward="false" selection-start-line="84" selection-start-column="28" selection-end-line="84" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/threejs/chapter-07/03-basic-point-cloud.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4199">
-          <caret line="221" column="40" lean-forward="false" selection-start-line="221" selection-start-column="40" selection-end-line="221" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugintest/threejs/basic-demo1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1634">
           <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/select/select.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/video/videojs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugintest/video/videojs_jsadd.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="37" column="7" lean-forward="false" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1662,13 +1392,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/table.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugintest/select/select2-4.0.3/select_test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -1687,7 +1410,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1695,18 +1417,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1472" column="49" lean-forward="false" selection-start-line="1472" selection-start-column="41" selection-end-line="1472" selection-end-column="49" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1531452619380" expanded="true" signature="124882:124916" ph="..." />
-            <marker date="1531452619380" expanded="true" signature="183242:183248" ph="&amp;nbsp;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout/head_foot_fix.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-342">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1717,32 +1427,293 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/layout/left_right_height.html">
+    <entry file="file://$PROJECT_DIR$/plugintest/echart/map.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-147">
+        <state relative-caret-position="3496">
+          <caret line="184" column="29" lean-forward="false" selection-start-line="184" selection-start-column="29" selection-end-line="184" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/select/select.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="102" lean-forward="false" selection-start-line="13" selection-start-column="102" selection-end-line="13" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bootstrap/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="4" column="776" lean-forward="false" selection-start-line="4" selection-start-column="776" selection-end-line="4" selection-end-column="776" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstraptest/progress.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/layout/left_right_height1.html">
+    <entry file="file://$PROJECT_DIR$/data/table.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/paintDemo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="56" lean-forward="false" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/turnPage/turnPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugintest/bootstrap-table/table_basic.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="777">
-          <caret line="200" column="21" lean-forward="true" selection-start-line="200" selection-start-column="21" selection-end-line="200" selection-end-column="21" />
+        <state relative-caret-position="608">
+          <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout/left_right_height.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout/head_foot_fix.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout/padding_float.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/video/videojs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/video/mp4videoPlay.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/ocx/ocxSetWindow.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/ocx/ocxSetWindow_choose.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/video/videojs_jsadd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="37" column="7" lean-forward="false" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/video/audio_chajian.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/video/audio_k.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/video/audio_self.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstraptest/form_inquire.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstraptest/media_query.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="62" lean-forward="true" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/file/imglook.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1501650808000" expanded="true" signature="1508:1599" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selectLocalFile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/file/jsGetFileSize.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/file/Jquery.base64.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/file/ie10fileLocalUrl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/file/getFileUrl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/ocx/ocxChooseLocalPlay.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/timerChoose/time.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/animateCanvas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/saveToImage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/paint.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7467">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/HTML5CanvasAPI.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="689" column="40" lean-forward="true" selection-start-line="682" selection-start-column="11" selection-end-line="689" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/login_canvas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="39" column="3" lean-forward="true" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/Image/index_bg.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/canvaspaint/dragCanvasImage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="48" column="6" lean-forward="true" selection-start-line="42" selection-start-column="3" selection-end-line="48" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/video/avi_play.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugintest/video/vlc_play.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="89" column="45" lean-forward="true" selection-start-line="89" selection-start-column="45" selection-end-line="89" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstraptest/carousel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="35" column="29" lean-forward="false" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
