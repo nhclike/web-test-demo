@@ -16,13 +16,19 @@
 			height: 100%;
 			background: #000;
 		}
+		img{
+			position: absolute;
+			top:0;
+			left: 0;
+			z-index: 9999;
+		}
 	</style>
 </head>
 <body>
 		<div class="bg">
 			<div class="canvas-box">
-				<canvas id="canvas" ></canvas>
-				<img src="./Image/index_bg.png" width="1920" height="949" border="0" usemap="#Map" />
+				<canvas id="canvas"></canvas >
+				<img id="mapImg" class="mapImg" src="./Image/index_bg.png" width="1920" height="949" border="0" usemap="#Map" style="opacity: 0" />
 				<map name="Map" id="Map">
 					<area shape="poly" coords="828,564,826,703,960,768,1094,702,1093,563,962,493" href="https://www.baidu.com/?tn=93006350_hao_pg" />
 					<area shape="poly" coords="409,348,412,489,549,558,682,486,683,352,540,283,539,286" href="#" />
@@ -33,6 +39,7 @@
 </body>
 <script>
   var canvas = document.getElementById('canvas'); //画布对象
+	var mapImg=document.getElementById('mapImg');
   var context = canvas.getContext('2d');//画布显示二维图片
   layout();
   window.onresize=function () {
@@ -52,7 +59,7 @@
     var txtY=(wHeight/10)*y;
     var size=(wWidth/100)*size;
     context.fillStyle = "#FFF";
-    var font="normal "+size+"px sans-serif";
+    var font="normal "+size+"px Microsoft YaHei";
     console.log(font);
     context.font = font;
     context.textBaseline = 'top';
@@ -67,6 +74,9 @@
     console.log('wWidth'+wWidth);
     canvas.height=wHeight;
     canvas.width=wWidth;
+    mapImg.height=wHeight;
+    mapImg.width=wWidth;
+    adjust('Map','mapImg',1920,949);
     var img = new Image();
     img.src = "Image/index_bg.png";
     img.onload = function () {
@@ -74,12 +84,48 @@
       drawText(2.25,6,'科技法庭系统',wWidth,wHeight,2);
       drawText(6.80,6,'运维系统',wWidth,wHeight,2);
       drawText(4.62,8.2,'视频系统',wWidth,wHeight,2);
-      drawText(2.2,1,'贵州省最高人民法院视频汇聚平台',wWidth,wHeight,4);
+      drawText(2.4,1,'贵州省最高人民法院视频汇聚平台',wWidth,wHeight,3.5);
 
       //context.fillRect(txtX,txtY,400,300);
 
     };
   }
+  //图片map自适应
+  //获取map中元素属性
+  function adjust(mapId,imgClass,imgWidth,imgHeight) {
+    var map = document.getElementById(mapId);
+    var element = map.children;
+    var itemNumber = element.length;
+    for (var i = 0; i < itemNumber; i++) {
+      var oldCoords = element[i].coords;
+      var newcoords = adjustPosition(oldCoords,imgClass,imgWidth,imgHeight);
+      element[i].setAttribute("coords", newcoords);
+    }
+  }
 
+  //调整map中坐标
+  function adjustPosition(position,imgClass,imgWidth,imgHeight) {
+    var image = document.getElementsByClassName(imgClass);
+    var currentWidth = image[0].clientWidth,//图片的现宽高
+      currentHeith = image[0].clientHeight;
+    var percentW = currentWidth / imgWidth,
+      percentH = currentHeith / imgHeight;
+    var each = position.split(",");
+    //获取每个坐标点
+    for (var i = 0; i < each.length; i++) {
+      each[i] = Math.round(each[i] * percentW).toString();//x坐标
+      i++;
+      each[i] = Math.round(each[i] * percentH).toString();//y坐标
+    }
+    //生成新的坐标点
+    var newPosition = "";
+    for (var i = 0; i < each.length; i++) {
+      newPosition += each[i];
+      if (i < each.length - 1) {
+        newPosition += ",";
+      }
+    }
+    return newPosition;
+  }
 </script>
 </html>
