@@ -18,13 +18,13 @@
     console.log(arr1); // [ 1, 2, 3 ]
     console.log(arr2); // [ 1, 4, 9 ]*/
 
-		let a=[{id:1,name:'lili'},{id:2,name:'wewe'},{id:3,name:'trtt'},{id:4,name:'wtre'}];
+		let a=[{id:1,name:'lili'},{id:2,name:'wewe'},{id:3,name:'trtt'},{id:6,name:'wtre'}];
     let ids=a.map((value,key,arr) => {
       console.log(value)
       console.log(key)
-      return value.name;
+      return value.id;
     })
-		console.log(ids)
+		console.log(ids) //[1,2,3,6]
 	</script>
 </body>
 </html>
