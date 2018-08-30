@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <script>
+    function checkBrowser(){
+      var is=isInsalledIEVLC()
+      if(is){
+        //alert('this is vlcObj')
+      }
+      else{
+        //alert('this is not vlc')
+      }
+    }
+    var itemId = 0;
+    function getVLC(name)
+    {
+      if (window.document[name])
+      {
+        return window.document[name];
+      }
+      if (navigator.appName.indexOf("Microsoft Internet")==-1)
+      {
+        if (document.embeds && document.embeds[name])
+          return document.embeds[name];
+      }
+      else
+      {
+        return document.getElementById(name);
+      }
+    }
+
+
+
+    function doGo(mrl,id)
+    {
+      //var isInsalledIEVLC=isInsalledIEVLC();
+      var isInsalledIEVLC=true;
+      if(isInsalledIEVLC){
+        var vlc = getVLC(id);
+        console.log(vlc);
+        console.log(vlc.playlist);
+        itemId=vlc.playlist.add(mrl);
+        vlc.playlist.playItem(itemId);
+      }
+      else{
+        console.log('vlc加载失败')
+      }
+
+    }
+    function isInsalledIEVLC(){
+      try {
+        var vlcObj = new ActiveXObject("VideoLAN.Vlcplugin.2");
+        if(vlcObj != null) {
+          return true;
+        }
+      } catch (e) {
+        return false;
+      }
+    }
+
+
+  </script>
+</head>
+<body onload="checkBrowser();">
+  <div style="float: left">
+    <div style="margin: 50px">
+      <a title="rtsp://184.72.239.149/vod/mp4://BigBuckBunny_175k.mov" href="#" onclick="doGo(this.title,'vlc');return false;">实时视频流</a>
+      <a title="http://yun.it7090.com/video/XHLaunchAd/video01.mp4" href="#" onclick="doGo(this.title,'vlc');return false;">http流</a>
+
+    </div>
+    <div>
+      <OBJECT classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921" id="vlc"
+              codebase=""
+              width="600" height="480" events="True">
+        <param name="MRL" value="" />
+        <param name="Src" value="" />
+        <param name="ShowDisplay" value="True" />
+        <param name="AutoLoop" value="False" />
+        <param name="AutoPlay" value="False" />
+        <param name="Time" value="True"/>
+        <EMBED pluginspage="http://www.videolan.org"
+               type="application/x-vlc-plugin"
+               version="VideoLAN.VLCPlugin.2"
+               width="600"
+               height="480"
+               text="Waiting for video"
+               name="vlc"
+        ></EMBED>
+      </OBJECT>
+    </div>
+  </div>
+  <div style="float: left">
+    <div style="margin: 50px">
+      <a title="rtsp://184.72.239.149/vod/mp4://BigBuckBunny_175k.mov" href="#" onclick="doGo(this.title,'vlc1');return false;">实时视频流</a>
+      <a title="http://yun.it7090.com/video/XHLaunchAd/video01.mp4" href="#" onclick="doGo(this.title,'vlc1');return false;">http流</a>
+
+    </div>
+    <div>
+      <OBJECT classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921" id="vlc1"
+              codebase=""
+              width="600" height="480"  events="True">
+        <param name="MRL" value="" />
+        <param name="Src" value="" />
+        <param name="ShowDisplay" value="True" />
+        <param name="AutoLoop" value="False" />
+        <param name="AutoPlay" value="False" />
+        <param name="Time" value="True"/>
+        <EMBED pluginspage="http://www.videolan.org"
+               type="application/x-vlc-plugin"
+               version="VideoLAN.VLCPlugin.2"
+               width="600"
+               height="480"
+               text="Waiting for video"
+               name="vlc"
+        ></EMBED>
+      </OBJECT>
+    </div>
+  </div>
+  <div style="float: left">
+    <div style="margin: 50px">
+      <a title="rtsp://184.72.239.149/vod/mp4://BigBuckBunny_175k.mov" href="#" onclick="doGo(this.title,'vlc2');return false;">实时视频流</a>
+      <a title="http://yun.it7090.com/video/XHLaunchAd/video01.mp4" href="#" onclick="doGo(this.title,'vlc2');return false;">http流</a>
+
+    </div>
+    <div>
+      <OBJECT classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921" id="vlc2"
+              codebase=""
+              width="600" height="480" events="True">
+        <param name="MRL" value="" />
+        <param name="Src" value="" />
+        <param name="ShowDisplay" value="True" />
+        <param name="AutoLoop" value="False" />
+        <param name="AutoPlay" value="False" />
+        <param name="Time" value="True"/>
+        <EMBED pluginspage="http://www.videolan.org"
+               type="application/x-vlc-plugin"
+               version="VideoLAN.VLCPlugin.2"
+               width="600"
+               height="480"
+               text="Waiting for video"
+               name="vlc"
+        ></EMBED>
+      </OBJECT>
+    </div>
+  </div>
+  <div style="float: left">
+    <div style="margin: 50px">
+      <a title="rtsp://184.72.239.149/vod/mp4://BigBuckBunny_175k.mov" href="#" onclick="doGo(this.title,'vlc3');return false;">实时视频流</a>
+      <a title="http://yun.it7090.com/video/XHLaunchAd/video01.mp4" href="#" onclick="doGo(this.title,'vlc3');return false;">http流</a>
+
+    </div>
+    <div>
+      <OBJECT classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921" id="vlc3"
+              codebase=""
+              width="600" height="480" events="True">
+        <param name="MRL" value="" />
+        <param name="Src" value="" />
+        <param name="ShowDisplay" value="True" />
+        <param name="AutoLoop" value="False" />
+        <param name="AutoPlay" value="False" />
+        <param name="Time" value="True"/>
+        <EMBED pluginspage="http://www.videolan.org"
+               type="application/x-vlc-plugin"
+               version="VideoLAN.VLCPlugin.2"
+               width="600"
+               height="480"
+               text="Waiting for video"
+               name="vlc"
+        ></EMBED>
+      </OBJECT>
+    </div>
+  </div>
+
+</body>
+</html>
