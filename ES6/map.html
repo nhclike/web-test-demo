@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<h1>this is a map demo</h1>
+	<script>
+
+   /* let arr1 = [1,2,3];
+    let arr2 = arr1.map((value,key,arr) => {
+      console.log(value)    // 1，2，3
+      console.log(key)      // 0，1，2
+      console.log(arr)      //[1,2,3] [1,2,3] [1,2,3]
+      return value * value;
+    })
+    console.log(arr1); // [ 1, 2, 3 ]
+    console.log(arr2); // [ 1, 4, 9 ]*/
+
+		let a=[{id:1,name:'lili'},{id:2,name:'wewe'},{id:3,name:'trtt'},{id:4,name:'wtre'}];
+    let ids=a.map((value,key,arr) => {
+      console.log(value)
+      console.log(key)
+      return value.name;
+    })
+		console.log(ids)
+	</script>
+</body>
+</html>

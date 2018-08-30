@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<h1>this is ... demo</h1>
+	<div></div>
+	<div></div>
+
+	<div></div>
+
+	<script>
+    console.log(...[1, 2, 3])
+    // 1 2 3
+    console.log(1, ...[2, 3, 4], 5)
+    // 1 2 3 4 5
+    console.log([...document.querySelectorAll('div')])
+    // [<div>, <div>, <div>]
+
+    function add(x, y) {
+      return x + y;
+    }
+    var numbers = [4, 38];
+    var r1=add(...numbers);
+		console.log(r1);   // 42
+
+		//数组中插入数组
+    function push(array, ...items) {
+      array.push(...items);
+    }
+		var a=[{id:'1'},{id:'2'},{id:'3'}];
+    var a1=[{id:'1'},{id:'2'},{id:'3'}];
+    var b=[{id:'w'},{id:'e'},{id:'r'}];
+    push(a1,b);
+    console.log(a+'console1');
+    console.log(a1+'console2');
+    push(a,...b);
+    console.log(a+'console3');
+	</script>
+</body>
+</html>
