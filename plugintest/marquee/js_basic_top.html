@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>使用Javascript实现文字信息无缝滚动</title>
+	<style type="text/css">
+		*{margin:0;padding:0;}
+		.box{
+			width:500px;
+			height:350px;
+			margin:100px auto;
+			border:1px solid #000;
+			border-radius:20px;
+			box-shadow:5px 5px 10px #333;
+			overflow:hidden;
+		}
+		h3{
+			height:50px;
+			line-height:50px;
+			text-align:center;
+			font-size:28px;
+			color:#fff;
+			background:green;
+		}
+		.content{
+			height:300px;
+			overflow:hidden;
+		}
+		ul li{
+			list-style:none;
+			height:40px;
+			line-height:40px;
+			text-align:left;
+			padding-left:20px;
+			font-size:18px;
+			color:#333;
+		}
+		li:hover{color:#f91;}
+	</style>
+</head>
+<body>
+<div class="box">
+	<h3>信息列表</h3>
+	<div class="content" id="content">
+		<ul class="msg1" id="msg1">
+			<li>考生走路甩手误将准考证扔河里 消防员跳河打捞</li>
+			<li>20余省公务员省考笔试放榜 作弊者特别惨</li>
+			<li>辟谷减肥：“大师”称意念发功可治病</li>
+			<li>2017公务员考试34万人报名 平均24人抢1个职位</li>
+			<li>钢票网与恒丰银行正式签订资金存管协议</li>
+			<li>男子送交警“胡乱作为 以权谋私”锦旗 被拘5日</li>
+			<li>美国会表决通过新驻华大使 月底有望赴华</li>
+			<li>英国曼彻斯特发生爆炸 事发地正举行演唱会</li>
+			<li>上海一家三口住9平米房间27年 儿子踩冰箱上床</li>
+			<li>女讲师称女孩最好嫁妆是贞操:没人愿娶堕过胎的</li>
+		</ul>
+		<ul id="msg2"></ul>
+	</div>
+</div>
+<script>
+  var content=document.getElementById("content");
+  var msg1=document.getElementById("msg1");
+  var msg2=document.getElementById("msg2");
+  msg2.innerHTML=msg1.innerHTML;
+  var timer=100;
+  content.scrollTop=0;
+  function myScrollTop(){
+    if(content.scrollTop>content.scrollHeight){
+      content.scrollTop=0;
+    }else{
+      content.scrollTop++
+    }
+    console.log(content.scrollTop);
+
+  }
+  console.log(content.scrollTop);
+  console.log(content.scrollHeight);
+  upScroll = setInterval('myScrollTop()',timer);
+  content.onmouseover=function(){
+    clearInterval(upScroll);
+  };
+  content.onmouseout=function(){
+    upScroll = setInterval('myScrollTop()',timer);
+  };
+</script>
+</body>
+</html>

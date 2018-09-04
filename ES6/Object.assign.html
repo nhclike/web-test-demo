@@ -7,11 +7,14 @@
 <body>
 	<h1>this is Object.assign</h1>
 	<script>
+		/*对象去重合并的两种方法*/
     let objOne = {a:1};
     let objTwo = {b:2};
     let objThree = {b:4,c:5};
     let obj = Object.assign(objOne,objTwo,objThree);
-    console.log(obj) // {a:1,b:4,c:5}
+    console.log(obj)    // {a:1,b:4,c:5}
+		let obj1={...objOne,...objTwo,...objThree};
+    console.log(obj1)   // {a:1,b:4,c:5}
 	</script>
 </body>
 </html>
