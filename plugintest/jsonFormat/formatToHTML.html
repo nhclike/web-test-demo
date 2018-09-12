@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>JSON格式化后展示</title>
+</head>
+<body>
+<div id="jsonData">
+
+</div>
+</body>
+<script>
+
+  //执行一个组件
+  window.onload = function(){
+    var data ={"errCode":0,"errMessage":"成功 ","resultInfo":[]};
+    var jsonData = JSON.stringify(data, null, 4);
+    document.getElementById('jsonData').innerHTML=formatJson(data);
+    alert(data);
+    console.log(jsonData);
+  }
+  function formatJson(msg) {
+    var rep = "~";
+    var jsonStr = JSON.stringify(msg, null, rep)
+    var str = "";
+    for (var i = 0; i < jsonStr.length; i++) {
+      var text2 = jsonStr.charAt(i)
+      if (i > 1) {
+        var text = jsonStr.charAt(i - 1)
+        if (rep != text && rep == text2) {
+          str += "<br/>"
+        }
+      }
+      str += text2;
+    }
+    jsonStr = "";
+    for (var i = 0; i < str.length; i++) {
+      var text = str.charAt(i);
+      if (rep == text)
+        jsonStr += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+      else {
+        jsonStr += text;
+      }
+      if (i == str.length - 2)
+        jsonStr += "<br/>"
+    }
+    return jsonStr;
+  }
+</script>
+
+</html>

@@ -1,0 +1,45 @@
+.tab-container{
+	margin: 0 auto;
+	width: 500px;
+	height: 40px;
+	overflow: hidden;
+	.prev{
+		width: 25px;
+		height: 25px;
+		background-color: #000;
+		float: left;
+	}
+	.scroll-list{
+		height: 100%;
+		width:450px;
+		border: 1px solid #ddd;
+		overflow: hidden;
+		float: left;
+		position: relative;
+		ul{
+			border: 1px solid red;
+			overflow: hidden;
+			padding: 0;
+			margin: 0;
+			position: absolute;
+			left: 0;
+			top:0;
+			transform: translateX(0);
+			transition: all 1s;
+			li{
+				float: left;
+				list-style: none;
+				height: 40px;
+				width: 150px;
+				border: 1px solid blue;
+			}
+		}
+	}
+	.next{
+		width: 25px;
+		height: 25px;
+		background-color: #000;
+		float: left;
+
+	}
+}
