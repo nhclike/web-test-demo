@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>号码地区分布/省市占比</title>
+	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/province/beijing.js"></script>
+	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+	//引入本地的各省市地图文件，可以使用绝对路径也可以使用相对路径，都可以，不过需要注意的是必须要引入这些地图，要不然是无法显示各省市地图的。
+	<script type="text/javascript" src="js\province\shanghai.js"></script>
+	<script type="text/javascript" src="js\province\neimenggu.js"></script>
+	<script type="text/javascript" src="js\province\taiwan.js"></script>
+	<script type="text/javascript" src="js\province\xianggang.js"></script>
+	<script type="text/javascript" src="js\province\aomen.js"></script>
+	<script type="text/javascript" src="js\province\chongqing.js"></script>
+	<script type="text/javascript" src="js\province\tianjin.js"></script>
+	<script type="text/javascript" src="js\province\xinjiang.js"></script>
+	<script type="text/javascript" src="js\province\beijing.js"></script>
+	<script type="text/javascript" src="js\province\ningxia.js"></script>
+	<script type="text/javascript" src="js\province\qinghai.js"></script>
+	<script type="text/javascript" src="js\province\gansu.js"></script>
+	<script type="text/javascript" src="js\province\guangxi.js"></script>
+	<script type="text/javascript" src="js\province\hainan.js"></script>
+	<script type="text/javascript" src="js\province\sichuan.js"></script>
+	<script type="text/javascript" src="js\province\guizhou.js"></script>
+	<script type="text/javascript" src="js\province\yunnan.js"></script>
+	<script type="text/javascript" src="js\province\xizang.js"></script>
+	<script type="text/javascript" src="js\province\shanxi1.js"></script>
+	<script type="text/javascript" src="js\province\guangdong.js"></script>
+	<script type="text/javascript" src="js\province\hunan.js"></script>
+	<script type="text/javascript" src="js\province\hubei.js"></script>
+	<script type="text/javascript" src="js\province\henan.js"></script>
+	<script type="text/javascript" src="js\province\shandong.js"></script>
+	<script type="text/javascript" src="js\province\jiangxi.js"></script>
+	<script type="text/javascript" src="js\province\fujian.js"></script>
+	<script type="text/javascript" src="js\province\liaoning.js"></script>
+	<script type="text/javascript" src="js\province\jilin.js"></script>
+	<script type="text/javascript" src="js\province\heilongjiang.js"></script>
+	<script type="text/javascript" src="js\province\jiangsu.js"></script>
+	<script type="text/javascript" src="js\province\zhejiang.js"></script>
+	<script type="text/javascript" src="json\province\zhejiang.json"></script>
+	<script type="text/javascript" src="js\province\anhui.js"></script>
+	<script type="text/javascript" src="js\province\shanxi.js"></script>
+	<script type="text/javascript" src="js\province\hebei.js"></script>
+</head>
+<body>
+<table>
+	<tr>
+		<td>
+			<div id="main" style="width: 800px;height:600px;"></div>
+			<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var map = echarts.init(document.getElementById('main'));
+        function randomData() {
+          return Math.round(Math.random()*1000);
+        }
+        option = {
+          tooltip: {
+            trigger: 'item'
+          },
+          series: [
+            {
+              name: '号码分布',
+              type: 'map',
+              mapType: 'china',
+              roam: false,
+              label: {
+                normal: {
+                  show: true
+                },
+                emphasis: {
+                  show: true
+                }
+              },
+            },
+          ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        map.setOption(option);
+			</script>
+		</td>
+		<td>
+			<div id="chart" style="width: 400px;height:600px;"></div>
+			<script type="text/javascript">
+        function showCity(city){
+          var pie = echarts.init(document.getElementById('chart'));
+          pie.setOption(option1 = {
+            backgroundColor: '#404a59',
+            series: [
+              {
+                type: 'map',
+                mapType: city,
+                label: {
+                  emphasis: {
+                    textStyle: {
+                      color: '#fff'
+                    }
+                  }
+                },
+                itemStyle: {
+                  normal: {
+                    borderColor: '#389BB7',
+                    areaColor: '#fff',
+                  },
+                  emphasis: {
+                    areaColor: '#389BB7',
+                    borderWidth: 0
+                  }
+                },
+              }
+            ]
+          });
+        }
+
+        showCity('上海');
+        map.on('click', function (params) {
+          city = params.name;
+          alert(city);
+          showCity(city);
+        });
+			</script>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

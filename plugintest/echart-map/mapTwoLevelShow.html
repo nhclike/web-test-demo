@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+<head >
+	<meta charset="utf-8">
+	<script type="text/javascript" src="echarts.js"></script>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="china-main-city-map.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+			<div id= "main" style="width:800px;height:400px;float: left;border:1px solid #ddd" ></div>
+
+
+			<div id= "child" style="width:750px;height:400px;float: left;border:1px solid #ddd"></div>
+
+
+
+<script type="text/javascript">
+
+  var myChart = echarts.init(document.getElementById('main'));
+  var child = echarts.init(document.getElementById('child'));
+
+  //存储切换的每一级地图信息
+  var mapStack = [];
+  var timeFn = null;
+  var curMap = {};
+  //初始化地图
+  loadMap('330000', '浙江',myChart);
+  loadMap('330100', '杭州',child);
+  myChart.on('mapselectchanged', function(params) {
+    console.log(params);
+    var name = params.batch[0].name;
+    var mapCode = cityMap[name];
+    if (!mapCode) {
+      alert('无此区域地图显示');
+      return;
+    }
+    loadMap(mapCode, name,child);
+    //将上一级地图信息压入mapStack
+    mapStack.push({
+      mapCode: curMap.mapCode,
+      mapName: curMap.mapName
+    });
+  });
+  /**
+   加载地图：根据地图所在省市的行政编号，
+   获取对应的json地图数据，然后向echarts注册该区域的地图
+   最后加载地图信息
+   @params {String} mapCode:地图行政编号,for example['中国':'100000', '湖南': '430000']
+   @params {String} mapName: 地图名称
+   */
+  function loadMap(mapCode, mapName,chart) {
+    $.getJSON('china-main-city/' + mapCode + '.json', function (data) {
+      if (data) {
+        echarts.registerMap(mapName, data);
+        var option = {
+          tooltip: {
+            trigger: 'item',
+            formatter: '{b}'
+          },
+          series: [
+            {
+              name: '',
+              type: 'map',
+              mapType: mapName,
+              selectedMode : 'single',
+              roam : true,
+              scaleLimit : {
+                max : 4,
+                min : .9
+              },
+              tooltip : {
+                show : true,
+                trigger : 'item',
+                formatter : "{b}: {设备数：} )"//"{b}: {案件数：888} ({666%})"
+              },
+
+              itemStyle : {
+                normal : {
+                  shadowOffsetY : 4,
+                  borderType : 'solid',
+                  shadowColor : '#348ac5',
+                  shadowBlur : -100,
+                  borderColor : '#d5eafb',
+                  areaColor : '#b4daf8',
+                  opacity : '1',
+                  label : {
+                    show : true,
+                    textStyle : {
+                      left : 'center',
+                      color : '#1164be',
+                      fontSize : 15
+
+                    }
+
+                  }
+                },
+                emphasis : {
+                  shadowOffsetY : 0,
+                  areaColor : '#89c5f5',
+                  borderWidth : 2,
+                  borderColor : '#b4daf8'
+
+                }
+
+              },
+              data:[
+              ]
+            }
+          ]
+        };
+        chart.setOption(option);
+        curMap = {
+          mapCode: mapCode,
+          mapName: mapName
+        };
+      } else {
+        alert('无法加载该地图');
+      }
+    });
+  }
+</script>
+</body>
+</html>

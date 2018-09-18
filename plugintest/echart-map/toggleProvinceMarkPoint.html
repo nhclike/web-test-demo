@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="echarts.js"></script>
+	<script type="text/javascript" src="js/province/zhejiang.js"></script>
+
+</head>
+<body style="height: 100%; margin: 0">
+<div id="main" style="height: 800px"></div>
+<br>
+<script type="text/javascript">
+  var chart = echarts.init(document.getElementById('main'));
+
+  var markData=[{
+    "value":20,
+    "coord" : [  120.156185000, 30.280461000 ],
+    "code" : "1300B00",
+    "courtName" : "高院",
+    "name" : "浙江省",
+    "serCode" : "330000"
+	}];
+  // 浙江省中级法院信息
+  var // 浙江省中级法院信息
+    proviceData = [ {
+      "value" : [ 20, 10 ],
+      "coord" : [ 120.156185000, 30.280461000 ],
+      "code" : "1300B00",
+      "courtName" : "高院",
+      "name" : "浙江省",
+      "serCode" : "330000",
+			"symbol":"image://pointbg.png"
+    }, {
+      "value" : [ 20, 10 ],
+      "coord" : [119.353576,29.807459 ],
+      "code" : "1301B10",
+      "courtName" : "杭州中院",
+      "name" : "杭州市",
+      "serCode" : "330100",
+      "symbol":"image://pointbg.png"
+    }, {
+      "value" : [ 20, 10 ],
+      "coord" : [ 121.618983000, 29.751842000 ],
+      "code" : "1315B20",
+      "courtName" : "宁波中院",
+      "name" : "宁波市",
+      "serCode" : "330200"
+    }, {
+      "value" : [ 20, 10 ],
+      "coord" : [ 120.672111,28.000575],
+      "code" : "1327B30",
+      "courtName" : "温州中院",
+      "name" : "温州市",
+      "serCode" : "330300"
+    }, {
+      "value" : [ 20, 10 ],
+      "coord" : [ 120.750865,30.762653 ],
+      "code" : "1339B40",
+      "courtName" : "嘉兴中院",
+      "name" : "嘉兴市",
+      "serCode" : "330400"
+    }, {
+      "value" : [ 20, 10 ],
+      "coord" : [ 119.902398,30.867198 ],
+      "code" : "1347B60",
+      "courtName" : "湖州中院",
+      "name" : "湖州市",
+      "serCode" : "330500"
+    }, {
+      "value" : [ 20, 10 ],
+      "coord" : [120.582112,29.897117],
+      "code" : "1352B70",
+      "courtName" : "绍兴中院",
+      "name" : "绍兴市",
+      "serCode" : "330600"
+    }, {
+      "value" : [ 20, 10 ],
+      "coord" : [119.859506,29.189524 ],
+      "code" : "1359B80",
+      "courtName" : "金华中院",
+      "name" : "金华市",
+      "serCode" : "330700"
+    }, {
+      "value" : [ 20, 10 ],
+      "coord" : [ 118.87263,28.941708 ],
+      "code" : "1370B90",
+      "courtName" : "衢州中院",
+      "name" : "衢州市",
+      "serCode" : "330800"
+    }, {
+      "value" : [ 20, 10 ],
+      "coord" : [ 122.106863,30.016028],
+      "code" : "1377BA0",
+      "courtName" : "舟山中院",
+      "name" : "舟山市",
+      "serCode" : "330900"
+    }, {
+      "value" : [ 20, 10 ],
+      "coord" : [121.228599,28.861378],
+      "code" : "1392BC0",
+      "courtName" : "台州中院",
+      "name" : "台州市",
+      "serCode" : "331000"
+    }, {
+      "value" : [ 20, 10 ],
+      "coord" : [ 119.421786,28.251993 ],
+      "code" : "1382BB0",
+      "courtName" : "丽水中院",
+      "name" : "丽水市",
+      "serCode" : "331100"
+    } ];
+	var data1=
+	[
+  {"name":"高院","value":"1000.00"},
+
+  ];
+  //因为数据比较多，这里只是举例参考
+  var data2 = [
+    {"name":"杭州中院","value":"1000.00"},
+    {"name":"宁波中院","value":"1804.76"},
+    {"name":"温州中院","value":"3000.00"},
+    {"name":"嘉兴中院","value":"1200.00"},
+    {"name":"湖州中院","value":"6000.00"},
+    {"name":"绍兴中院","value":"200.00"},
+    {"name":"金华中院","value":"1000.00"},
+    {"name":"衢州中院","value":"500.00"},
+    {"name":"舟山中院","value":"100.00"},
+    {"name":"台州中院","value":"500.00"}
+  ];
+  var data3=
+    [
+      {"name":"上城区人民法院","value":"1000.00"},
+      {"name":"下城区人民法院","value":"1804.76"},
+      {"name":"拱墅区人民法院","value":"3000.00"}
+
+    ];
+  var geoCoordMap =
+		{
+    '高院':[ 120.156185000, 30.280461000  ],
+    '杭州中院':[ 119.353576,29.807459  ],
+    '上城区人民法院':[119.200049000, 30.227217000 ],
+		'下城区人民法院':[ 119.187345000, 30.314338000 ],
+		'拱墅区人民法院':[ 119.147871000, 30.326146000],
+    '宁波中院':[121.618983000, 29.751842000],
+    '温州中院':[ 120.672111,28.000575],
+    '嘉兴中院': [ 120.750865,30.762653  ],
+    '湖州中院':[  119.902398,30.867198 ],
+    '绍兴中院':[ 120.582112,29.897117 ],
+    '金华中院':[ 119.859506,29.189524  ],
+    '衢州中院':[ 118.87263,28.941708 ],
+    '舟山中院':[ 122.106863,30.016028 ],
+    '台州中院':[ 121.228599,28.861378 ]
+  };
+
+  //获取数据和坐标
+  var convertData= function (data) {
+    var res = [];
+    for (var i = 0; i < data.length; i++) {
+
+      var geoCoord = geoCoordMap[data[i].name];
+
+      if (geoCoord) {
+        res.push({
+          name: data[i].name,
+          value: geoCoord.concat(data[i].value)
+        });
+
+      }
+    }
+    console.log('res');
+    console.log(res);
+    return res;
+  };
+
+  var option = {
+    backgroundColor: '#999',
+
+    //提示框
+    tooltip : {
+      trigger: 'item',
+      formatter: function (params) { //添加数字,否则为坐标
+        //console.log(params.value)
+        return params.name+'<br>'+':'+''+params.value[2]+''+'个'
+
+      },
+      padding:[
+        5,  // 上
+        10, // 右
+        5,  // 下
+        10, // 左
+      ],
+      textStyle:{
+        color: '#fff',
+        fontSize:'13'
+      }
+    },
+    //图例组件
+    legend: {
+      orient: 'horizontal',
+      //相等于left 、top、bottom、right
+      y: 'bottom',
+      x:'right',
+      //这里的数据名称要和series中的name名称一样，否则不显示
+      data:['高院人民法院','中级人民法院','基层人民法院'],
+      textStyle: {
+        color: '#fff'
+      }
+    },
+    geo: {//底图坐标系样式
+      z:1,
+      show:true,
+      map: '浙江',
+      roam: true,
+      selectedMode:'single',
+      itemStyle : {
+        normal : {
+          borderColor : '#fff',
+          borderWidth : 1,
+          areaColor : '#b4daf8',
+          opacity : '1',
+          label:{
+            show:true,
+            textStyle:{
+              color:'#fff'
+            }
+          }
+        },
+        emphasis : {
+          shadowOffsetY : 0,
+          areaColor : '#89c5f5',
+          borderWidth : 1,
+          borderColor : '#b4daf8',
+          label:{
+            show:true,
+            textStyle:{
+              color:'#fff'
+            }
+          }
+        }
+      },
+      label:{
+        normal:{
+          show:false
+        }
+      }
+    },
+    //这里数据中主要是冒泡图数据
+    series : [
+			{//地图数据
+				z:2,
+        name : '',
+        type : 'map',
+        mapType : '浙江',
+        selectedMode : 'single',
+        zoom : 1,
+        roam :false,
+        symbolSize:0,
+        tooltip:{//区域块hover
+          formatter: function (params) { //添加数字,否则为坐标
+            console.log(params);
+            return params.name
+          },
+				},
+        markPoint : {
+          symbol : 'image://pointbg1.png',
+          symbolSize :[20,15],
+          label : {//区域块上的文字样式
+            normal : {
+              show : false,
+              padding:[0,0,15,0],
+              verticalAlign:'middle',
+              fontWeight:'lighter',
+              formatter : function(d) {
+								/*console.log(d);*/
+                var str = '';
+
+               /*   str += ['{value|'+ d.data.courtName+ '}','\n','{num|'+ d.value[0]+ '/'+ d.value[1]+ '}' ]
+                    .join('')*/
+
+                return str;
+              },
+              rich : {
+                value : {
+                  color : '#f8f8f8',
+                  fontSize :18,
+                  fontWeight:'bold',
+                  padding:[8,0]
+                },
+
+                num : {
+                  color : '#f8f8f8',
+                  fontSize :22,
+                  fontWeight:'bold'
+                },
+                img : {
+                  height : 15,
+                  backgroundColor : {
+                    image : '../resources/image/icon/location.png'
+                  }
+                }
+              }
+            },
+            emphasis : {
+              show : true
+            }
+          },//区域样式
+          itemStyle : {
+            normal : {
+              color : 'rgba(3,70,113,0.5)',
+              borderColor:'#f8f8f8',
+              borderWidth:0.5
+
+            }
+          },
+          //data : proviceData,
+
+        },
+        itemStyle : {
+          normal : {
+            borderColor : '#fff',
+            borderWidth : 1,
+            areaColor : '#b4daf8',
+            opacity : '1',
+            label:{
+              show:true,
+              textStyle:{
+                color:'#fff'
+              }
+            }
+          },
+          emphasis : {
+            shadowOffsetY : 0,
+            areaColor : '#89c5f5',
+            borderWidth : 1,
+            borderColor : '#b4daf8',
+            label:{
+              show:true,
+              textStyle:{
+                color:'#fff'
+              }
+            }
+          }
+        },
+				label:{
+				  normal:{
+				    show:true
+					}
+				},
+				data:proviceData
+			},
+      {
+				z:7,
+				name: '高院人民法院',
+				type: 'effectScatter',
+				coordinateSystem: 'geo',
+				//标点的大小
+				data: convertData(data1),
+				symbolSize:20,
+				label: {
+					normal: {
+						formatter: '{b}',
+						position: 'right',
+						show: true  //根据需求可以更改标点标签是否显示
+					},
+					emphasis: {
+						show: true
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: '#E14B67'
+					}
+				},
+
+      },
+
+			{
+        z:7,
+        name:'基层人民法院',
+        type: 'effectScatter',
+        coordinateSystem: 'geo',
+        data: convertData(data3),  //slice里面的数可以是0 ，意思是全部显示  0,1000 意思是显示这组数据中最大前1000组
+        symbolSize:10,
+        showEffectOn: 'render',
+        rippleEffect: {
+          brushType: 'stroke'
+        },
+        hoverAnimation: true,
+        label: {
+          normal: {
+            formatter: '{b}',
+            position: 'right',
+            show: false
+          },
+          emphasis: {
+            show: true
+          }
+        },
+        itemStyle: {
+          normal: {
+            color: '#48BCF2',
+            shadowBlur: 10,
+            shadowColor: '#333'
+          }
+        }
+      }
+    ]
+  };
+
+  chart.setOption(option);
+
+
+</script>
+</body>
+</html>
