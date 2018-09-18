@@ -4,7 +4,9 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<script>
-function isInsalledIEVLC(){    
+    //仅适用于IE浏览器是，并且安装有vlc插件，则返回true；
+
+    function isInsalledIEVLC(){
                 try {  
               var vlcObj = new ActiveXObject("VideoLAN.Vlcplugin.2");
               if(vlcObj != null) {   

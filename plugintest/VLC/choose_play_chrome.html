@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+
+
+    //仅适用于firefox浏览器是，并且安装有vlc插件，则返回true；
+    function isInsalledFFVLC(){
+      var numPlugins=navigator.plugins.length;
+      for  (i=0;i<numPlugins;i++){
+        plugin=navigator.plugins[i];
+        if(plugin.name.indexOf("VideoLAN") > -1 || plugin.name.indexOf("VLC") > -1){
+          return true;
+        }
+      }
+      return false;
+    }
+
+		/* 浏览器检测 */
+    function checkBrowser(){
+      if(isInsalledFFVLC()){
+        alert("已装VLC插件");
+      }else{
+        alert("未装VLC插件");
+      }
+    }
+    function play() {
+      var vlc=getVLC("vlc")
+      // 添加播放地址
+      //vlc.playlist.add(window.opener.vdUrl);
+      // 播放
+      // vlc.playlist.play();
+      // 添加播放地址方式2 -- 推荐用下面的方法控制播放列表
+      //vedio_url =""; // 播放路径
+      var vedio_url = "rtsp://184.72.239.149/vod/mp4://BigBuckBunny_175k.mov";
+      console.log(vlc)
+      //var vedio_url=window.opener.vdUrl;
+      var itemId= vlc.playlist.add(vedio_url);
+      vlc.playlist.playItem(itemId);
+    }
+    function getVLC(name)
+    {
+      if (window.document[name])
+      {
+        return window.document[name];
+      }
+      if (navigator.appName.indexOf("Microsoft Internet")==-1)
+      {
+        if (document.embeds && document.embeds[name])
+          return document.embeds[name];
+      }
+      else
+      {
+        return document.getElementById(name);
+      }
+    }
+	</script>
+</head>
+<body onload="checkBrowser();">
+	<div>
+		<button onclick="play()">播放</button>
+	</div>
+
+	<object
+		classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921"
+		codebase="http://download.videolan.org/pub/videolan/vlc/last/win32/axvlc.cab"
+		id="vlc"
+		name="vlc"
+		class="vlcPlayer"
+		events="True"
+		 width="640" height="480"
+		>
+			<param name="Src" value="" />
+			<param name="ShowDisplay" value="True" />
+			<param name="AutoLoop" value="False" />
+			<param name="AutoPlay" value="True" />
+		 <embed name="vlc"  type="application/x-google-vlc-plugin" version="VideoLAN.VLCPlugin.2" autoplay="yes" loop="no" width="640" height="480"
+			 target="" ></embed>
+	</objetc>
+</body>
+</html>

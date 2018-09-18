@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script>
+    var itemId = 0;
+    function getVLC(name)
+    {
+      if (window.document[name])
+      {
+        return window.document[name];
+      }
+      if (navigator.appName.indexOf("Microsoft Internet")==-1)
+      {
+        if (document.embeds && document.embeds[name])
+          return document.embeds[name];
+      }
+      else
+      {
+        return document.getElementById(name);
+      }
+    }
+
+
+
+    function doGo(mrl)
+    {
+      var vlc = getVLC("vlc");
+      vlc.playlist.clear();
+      vlc.playlist.add(mrl);
+      vlc.playlist.play();
+
+    }
+
+
+
+
+    function doStop()
+    {
+      var vlc = getVLC("vlc");
+      vlc.playlist.stop();
+
+    }
+
+	</script>
+</head>
+<body>
+<div style="margin: 50px">
+	<span style="margin: 20px;" />
+	<a title="rtsp://184.72.239.149/vod/mp4://BigBuckBunny_175k.mov" href="#" onclick="doGo(this.title);return false;">实时视频流1</a>
+
+	<a title="rtsp://184.72.239.149/vod/mp4://BigBuckBunny_175k.mov" href="#" onclick="doGo(this.title);return false;">实时视频流</a>
+	<a title="http://yun.it7090.com/video/XHLaunchAd/video01.mp4" href="#" onclick="doGo(this.title);return false;">http流</a>
+
+	<span style="margin: 20px;" />
+</div>
+<div>
+	<OBJECT classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921" id="vlc"
+					codebase=""
+					width="600" height="480" events="True">
+		<param name="MRL" value="" />
+		<param name="Src" value="" />
+		<param name="ShowDisplay" value="True" />
+		<param name="AutoLoop" value="False" />
+		<param name="AutoPlay" value="False" />
+		<param name="Time" value="True"/>
+		<EMBED pluginspage="http://www.videolan.org"
+					 type="application/x-vlc-plugin"
+					 version="VideoLAN.VLCPlugin.2"
+					 width="600"
+					 height="480"
+					 text="Waiting for video"
+					 name="vlc"
+		></EMBED>
+	</OBJECT>
+</div>
+<div>
+	<input type=button id="btn_stop" value="停止" onClick='doStop();'>
+
+	</div>
+</div>
+
+<div>
+	<a href="../../bootstraptest/carousel.html">返回ie11</a>
+</div>
+</body>
+</html>
