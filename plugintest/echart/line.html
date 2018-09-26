@@ -19,8 +19,9 @@
             text: '未来一周气温变化',
             subtext: '纯属虚构'
         },
-        tooltip: {
-            trigger: 'axis'
+       tooltip: {
+          	show:true
+            //trigger: 'axis'
         },
         legend: {
             data:['最高气温','最低气温']
@@ -40,13 +41,16 @@
         xAxis:  {
             type: 'category',
             boundaryGap: false,
+						axisLabel:{
+							color:'#fff',
+							formatter:'{b}'
+						},
+						axisLine: {show: false},
+						axisTick: {show: false},
             data: ['周一','周二','周三','周四','周五','周六','周日']
         },
         yAxis: {
-            type: 'value',
-            axisLabel: {
-                formatter: '{value} °C'
-            }
+            type: 'value'
         },
         series: [
             {
