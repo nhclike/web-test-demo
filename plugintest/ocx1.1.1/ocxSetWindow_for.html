@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title></title>
+    <style>
+        .selectScreen{
+            color:red;
+        }
+    </style>
+</head>
+<body >
+<button id="danbin1_start" >单兵1播放</button>
+<button id="danbin1_stop" >单兵1停止</button>
+
+<button id="fourScreen" data-screen="4">4分屏</button>
+
+
+<object classid="CLSID:22A0C36F-457B-469D-88D7-3C76D0EB4BD7" id="recordVideoOcx" style="width:500px;height:500px;"></object>
+<script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+
+  var stopwno=-1;
+  var ocxInstance={
+    ocx:recordVideoOcx,
+    wno:0
+  };
+  var ocx=null;
+
+    $(function () {
+      ocx=ocxInstance.ocx;
+
+      $('#fourScreen').click(function () {
+        ocxInstance.ocx.CurrentWindowIndex=0;
+        ocx.SetWindowLayout(4,0);
+
+
+        $(this).addClass('selectScreen').siblings('.selectScreen').removeClass('selectScreen')
+
+      })
+
+      $('#danbin1_start').click(function () {
+
+          play(ocxInstance);
+        }
+      );
+      $('#danbin1_stop').click(function () {
+        var playwno=ocxInstance.ocx.CurrentWindowIndex();
+          stop(playwno)
+        }
+      );
+
+      ocx.attachEvent("OnCloseVideo", function() {
+        stopwno=ocx.CurrentWindowIndex;
+        stop(stopwno)
+      });
+
+
+    });
+
+
+
+  function play(ocxInstance){
+    console.log(ocxInstance.ocx.CurrentWindowIndex());
+
+    var playwno=ocxInstance.ocx.CurrentWindowIndex();
+
+    var file = "e://test.mp4";
+    if(ocx.PlayFile(playwno,4, file)){
+
+      ocx.SetInfo(playwno, "0");
+      //打开声音
+      ocx.StartAudio(playwno);
+
+    }
+
+  }
+  function stop(stopwno){
+
+    ocx.SetVideoWndHandle(stopwno, -1);
+    ocx.Stop(stopwno);
+
+  }
+
+
+</script>
+</body>
+</html>
