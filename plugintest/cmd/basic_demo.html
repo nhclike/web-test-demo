@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<button onclick="openCmd()">打开命令行窗口</button>
+	<script>
+		function openCmd() {
+      var cmd=new ActiveXObject("WScript.Shell");
+      var value="";
+      cmd.run("cmd.exe /c "+"ffplay.exe",0);
+    }
+	</script>
+</body>
+</html>

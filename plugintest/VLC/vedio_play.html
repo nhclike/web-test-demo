@@ -17,6 +17,8 @@ var then_time; // 播放开始时间(播放开始的日期，看下面实现代�
 var isPlaying=0; // 是否播放状态 （0 未播放 1 播放）
 // 初始化 === 很重要哦，控制程序的入口
 function initPlayUrl(){
+    var height = document.body.clientHeight ;
+    height -= 1;
  vlc=document.getElementById("vlc");
  // 添加播放地址
  //vlc.playlist.add(window.opener.vdUrl);

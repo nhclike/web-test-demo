@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>测试layDate季度 & 联动</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+
+	<style>
+	body{padding: 20px;}
+	.demo-input{padding-left: 10px; height: 38px; min-width: 262px; line-height: 38px; border: 1px solid #e6e6e6;  background-color: #fff;  border-radius: 2px;}
+	.demo-footer{padding: 50px 0; color: #999; font-size: 14px;}
+	.demo-footer a{padding: 0 5px; color: #01AAED;}
+	</style>
+	<script src="./jquery-1.11.1.min.js"></script> <!-- 改成你的路径 -->
+	<script src="./laydate/laydate.js"></script> <!-- 改成你的路径 -->
+</head>
+<body>
+	<input type="text" class="demo-input" placeholder="请选择季度" id="test1">
+	<input type="text" class="demo-input" placeholder="请选择季度范围" id="test2">
+
+	<br/>
+	<br/>
+	<select id="selectedOption" class="demo-input dateSelector" name="degree" lay-filter="required" date-target="HELLO">
+		<option value="y">年</option>
+		<option value="s" selected>季</option>
+		<option value="m">月</option>
+	</select>
+	<input id="helloId" type="text" readonly class="demo-input dateTargetHELLO" placeholder="请输入时间范围" />
+	<br/>
+	<br/>
+	<select id="selectedOption" class="demo-input dateSelector" name="degree" lay-filter="required" date-target="WORLD">
+		<option value="y" selected>年</option>
+		<option value="s">季</option>
+		<option value="m">月</option>
+		<option value="d">日</option>
+	</select>
+	<input id="worldId" type="text" readonly class="demo-input dateTargetWORLD" placeholder="请输入时间范围" />
+	<br/><br/><br/><button onclick="getDateText()" style="line-height:30px;">TEST</button><br/>
+	<script>
+		lay('#version').html('-v'+ laydate.v);
+		$Date = laydate;
+
+		//季节选择
+		renderSeasonDate(document.getElementById('test1'),1);
+		renderSeasonDate(document.getElementById('test2'));
+
+		//联动测试
+		//initDateForm(1);
+		initDateForm();
+		
+		/** 
+		 * 季度初始化 
+		 * @param ohd 季度input dom对象非jquery对象 
+		 * @param sgl 有值单个，无值默认范围
+		 */  
+		function renderSeasonDate(ohd,sgl){  
+			var ele = $(ohd);  
+		   $Date.render({  
+			elem: ohd,
+			type: 'month',  
+			format: 'yyyy年M季度',  
+			range: sgl?null:'~', 
+			min:"1900-1-1",
+			max:"2099-12-31",
+			btns: ['clear', 'confirm'],
+			ready: function(value, date, endDate){
+				var hd = $("#layui-laydate"+ele.attr("lay-key"));  
+				if(hd.length>0){  
+					hd.click(function(){  
+						ren($(this));  
+					});  
+				}  
+				ren(hd);  
+			},  
+			done: function(value, date, endDate){ 
+				if(!isNull(date)&&date.month>0&&date.month<5){  
+					ele.attr("startDate",date.year+"-"+date.month);  
+				}else{
+					ele.attr("startDate","");
+				}
+				if(!isNull(endDate)&&endDate.month>0&&endDate.month<5){  
+					ele.attr("endDate",endDate.year+"-"+endDate.month)  
+				}else{
+					ele.attr("endDate","");
+				}  
+			}  
+		  });  
+		  var ren=function(thiz){  
+				var mls=thiz.find(".laydate-month-list");  
+				mls.each(function(i,e){  
+					$(this).find("li").each(function(inx,ele){  
+						var cx = ele.innerHTML;  
+						if(inx<4){  
+							ele.innerHTML=cx.replace(/月/g,"季度");  
+						}else{  
+							ele.style.display="none";  
+						}  
+					});  
+				});  
+		  }  
+		}
+		/**  
+		 * 初始化表单中年季月日范围选择  
+		 * 下拉框与日期框对应：  
+		 *  <select class="dateSelector" date-target="PI" ...  
+		 *  <input type="text" class="dateTargetPI" readonly ...  
+		 *  PI为自定义的对应关键字  
+		 *   
+		 * @param form 要渲染的form的jquery对象，当form为空默认值为全页面
+		 * @param sgl 有值单个，无值默认范围	 
+		 */  
+		function initDateForm(sgl,form){
+			if(isNull(form))form = $(document.body);  
+			var ltm = function(tar,tars,tva){  
+				tars.each(function(){  
+					$(this).removeAttr("lay-key");  
+					this.outerHTML=this.outerHTML;  
+				});  
+				tars = form.find(".dateTarget"+tar);  
+				tars.each(function(){  
+					var ele = $(this);  
+					if("y"==tva){ 
+					console.log(this);  
+						$Date.render({
+							elem: this,  
+							type: 'year',  
+							range: '~',  
+							format: 'yyyy年',
+							range: sgl?null:'~', 
+							done: function(value, date, endDate){  
+								if(typeof(date.year)=="number")ele.attr("startDate",date.year);
+								else ele.attr("startDate","");
+								if(typeof(endDate.year)=="number")ele.attr("endDate",endDate.year);
+								else ele.attr("endDate","");								
+							}  
+						});  
+						  
+					}else if("s"==tva){  
+						ele.attr("startDate","");  
+						ele.attr("endDate","");  
+						renderSeasonDate(this,sgl);  
+					}else if("m"==tva){  
+						ele.attr("startDate","");  
+						ele.attr("endDate","");  
+						$Date.render({  
+							elem: this,  
+							type: 'month',  
+							range: '~',  
+							format: 'yyyy年MM月',
+							range: sgl?null:'~',						
+							done: function(value, date, endDate){  
+								if(typeof(date.month)=="number")ele.attr("startDate",date.year+"-"+date.month);  
+								else ele.attr("startDate","");
+								if(typeof(endDate.month)=="number")ele.attr("endDate",endDate.year+"-"+endDate.month);
+								else ele.attr("endDate","");								
+							}  
+						});  
+					}else if("d"==tva){  
+						ele.attr("startDate","");  
+						ele.attr("endDate","");  
+						$Date.render({  
+							elem: this,  
+							range: '~',  
+							format: 'yyyy年MM月dd日',
+							range: sgl?null:'~',							
+							done: function(value, date, endDate){  
+								if(typeof(date.date)=="number")ele.attr("startDate",date.year+"-"+date.month+"-"+date.date);
+								else ele.attr("startDate","");								
+								if(typeof(endDate.date)=="number")ele.attr("endDate",endDate.year+"-"+endDate.month+"-"+endDate.date);
+								else ele.attr("endDate","");								
+							}  
+						});  
+					}  
+				});  
+			}  
+			var sels = form.find(".dateSelector");
+			sels.each(function(i,e){  
+				var ths = this;  
+				var thiz = $(e);  
+				var tar = thiz.attr("date-target");  
+				thiz.next().find("dd").click(function(){  
+					var tva = thiz.val();  
+					var tars = form.find(".dateTarget"+tar);  
+					ltm(tar,tars,tva);  
+				});
+				thiz.change(function(){  
+					var tva = $(this).val();  
+					var tars = form.find(".dateTarget"+tar);  
+					ltm(tar,tars,tva);  
+				});  
+				var tars = form.find(".dateTarget"+tar);  
+				ltm(tar,tars,thiz.val());  
+			});  
+		}  
+		function isNull(s){
+			if(s==null||typeof(s)=="undefined"||s=="")return true;
+			return false;
+		}
+		
+
+		function getDateText(){
+			var ele = $("#worldId");
+			console.log(ele.val());
+			console.log(ele.attr("startDate")+","+ele.attr("endDate"));
+		}
+	</script>
+</body>
+</html>

@@ -16,26 +16,30 @@ codebase="DpsdkOcx.cab#version=1.0.0.0">
 	window.onload=init();
 	function init(){
 		try
-	{
-		var obj = new ActiveXObject("DPSDK_OCX.DPSDK_OCXCtrl.1");
-	}
-	catch(e)
-	{
-		alert("安装ocx");
-		return;
-	}
+    {
+      var obj = new ActiveXObject("DPSDK_OCX.DPSDK_OCXCtrl.1");
+    }
+    catch(e)
+    {
+      alert("安装ocx");
+      return;
+    }
 		var obj = document.getElementById("DPSDK_OCX");
     gWndId = obj.DPSDK_CreateSmartWnd(0, 0, 100, 100);
     console.log(gWndId);
     obj.DPSDK_SetWndCount(gWndId, 9);  //ÉèÖÃ·ÖÆÁÊýÁ¿
     	obj.DPSDK_SetWndStyle(1)	;     //ÉèÖÃ´°¿Ú·ç¸ñ
-    	
+
 		//obj.DPSDK_SetSmartWndFullScreen(gWndId); //ÉèÖÃÈ«ÆÁ
 
-		obj.DPSDK_SetSelWnd(gWndId, 1); 
+		obj.DPSDK_SetSelWnd(gWndId, 1);
 		var nWndNo = obj.DPSDK_GetSelWnd(gWndId);
-    obj.DPSDK_SetWndText(gWndId, nWndNo, "测试1", "宋体", 0, 7, 7, 0, 100, 100, 100);
-    obj.DPSDK_SetWndText(gWndId, 2, "测试2", "黑体", 0, 7, 7, 0, 100, 100, 100);
+    obj.DPSDK_SetWndText(gWndId, nWndNo, "测试1", "宋体", 0, 17,17,50,0, 100, 100);
+    obj.DPSDK_SetWndText(gWndId,2, "测试2", "黑体", 0, 17, 17, 0, 0, 0, 100);
+    obj.DPSDK_SetWndText(gWndId, 3, "测试3", "黑体", 0, 17, 17, 0, 0, 100,100);
+    obj.DPSDK_SetWndText(gWndId,4, "测试4", "黑体", 0, 17, 17, 0, 0, 0, 100);
+        obj.DPSDK_SetWndText(gWndId,5, "测试5", "黑体", 0, 17, 17, 30, 30, 50, 50);
+        obj.DPSDK_SetWndText(gWndId,6, "测试6", "黑体", 0, 17, 17, 30, 30, 100, 100);
 
 	}
 </script>

@@ -32,13 +32,14 @@ function setVolumeShow(){
 } 
  
 function doGo(mrl) 
-{ 
-        var vlc = getVLC("vlc"); 
-        itemId=vlc.playlist.add(mrl); 
-        vlc.playlist.playItem(itemId); 
-        document.getElementById("btn_stop").disabled = false; 
-        setVolumeShow();
-        checkVedioStatus();
+{
+
+    var vlc = getVLC("vlc");
+    itemId=vlc.playlist.add(mrl);
+    vlc.playlist.playItem(itemId);
+    document.getElementById("btn_stop").disabled = false;
+    setVolumeShow();
+    checkVedioStatus();
  }        
    
  
@@ -71,9 +72,13 @@ function checkVedioStatus(){
   var vlc=getVLC("vlc");
   console.log(vlc.input.state);
 }
+function init() {
+    var height = document.body.clientHeight ;
+    height -= 1;
+}
 </script> 
 </head> 
-<body> 
+<body onload="init()">
 <div style="margin: 50px"> 
         <span style="margin: 20px;" /> 
         <a title="rtsp://184.72.239.149/vod/mp4://BigBuckBunny_175k.mov" href="#" onclick="doGo(this.title);return false;">实时视频流</a> 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+	<title>Document</title>
+</head>
+<body>
+	<object id="DPSDK_OCX" classid="CLSID:D3E383B6-765D-448D-9476-DFD8B499926D" style="width:500px;height:500px;" 
+codebase="DpsdkOcx.cab#version=1.0.0.0">
+				</object>	
+				<button id="playBtn">开始播放</button>
+				<script>
+				var gWndId=0;
+	window.onload=init();
+	function init(){
+		try
+		{
+			var obj = new ActiveXObject("DPSDK_OCX.DPSDK_OCXCtrl.1");
+    }
+		catch(e)
+		{
+			alert("安装ocx");
+			return;
+		}
+		setOption();
+		loginServer();
+		playBtn.onclick=function(){
+			startPlay();
+		}
+	}
+	function setOption(){
+		var obj = document.getElementById("DPSDK_OCX");
+    gWndId = obj.DPSDK_CreateSmartWnd(0, 0, 100, 100);
+    obj.DPSDK_SetWndCount(gWndId, 4);  
+    obj.DPSDK_SetWndStyle(1)	;    
+		obj.DPSDK_SetSelWnd(gWndId, 1); 
+		var nWndNo = obj.DPSDK_GetSelWnd(gWndId);
+    obj.DPSDK_SetWndText(gWndId, nWndNo, "1111", "11111", 0, 7, 7, 0, 100, 100, 100);
+	}
+
+	function loginServer(){
+		var obj = document.getElementById("DPSDK_OCX");
+		var result = obj.DPSDK_Login("199.138.1.14", "9000", "system", "jsgyjsc");
+		if(result==0){
+			console.log("登录成功");
+		}
+		else{
+			//console.log("登录失败"+result);
+		}
+	}
+	function logoutServer(){
+			var obj = document.getElementById("DPSDK_OCX");
+			var result = obj.DPSDK_Logout();
+			if(result==0){
+				console.log("登出成功");
+			}
+			else{
+				console.log("登出失败"+result);
+			}
+
+	}
+
+	function startPlay(){
+		var obj = document.getElementById("DPSDK_OCX");
+	  var nWndNo = obj.DPSDK_GetSelWnd(gWndId);
+		var	nRet = obj.DPSDK_StartTimePlaybackByWndNo(gWndId, nWndNo, "1000021$1$0$2", 3,
+      1540166694, 1540177497);
+
+    console.log("startPlay"+nRet+"nWndNo"+nWndNo);
+	}
+</script>
+</body>
+</html>

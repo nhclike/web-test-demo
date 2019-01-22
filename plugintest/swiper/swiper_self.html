@@ -51,75 +51,103 @@
 <script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
 <script src="../../src/bootstrap/js/bootstrap.min.js"></script>
 <script>
-	var swiperScroll={
-	  data:[],
-    view_width:450,
-		li_width:150,
-    curIndex:0,
-    ulEle:$('.scroll-list>ul'),
-    header_index_flag:-1,
-    footer_index_flag:-2,
-		setOffsetX:0,
-		init:function () {
-	    console.log(this.ulEle);
-	    this.dataLength=parseInt(this.data.length);
-			this.ul_width=parseInt(this.li_width*this.dataLength);
-	    this.view_num=parseInt(this.view_width/this.li_width);
-	    this.maxOffset=parseInt((this.dataLength-this.view_num)*this.li_width);
-      $(this.ulEle).width(this.ul_width+'px');
-      var  str='';
-      for(var i=0; i<this.dataLength;i++){
-        str+='<li>'+
-          '<span>'+this.data[i]+'</span>'+
-          '</li>'
-      }
-      $(this.ulEle).html(str);
-    },
-		prev:function () {
-	    if(this.curIndex<0){
-        if(this.curIndex==this.header_index_flag){
-          this.curIndex=0
-        }
-        if(this.curIndex==this.footer_index_flag){
-          return;
-        }
-			}
-      this.curIndex++;
-      this.setOffsetX=this.curIndex*this.li_width;
-      if(this.setOffsetX>this.maxOffset){
-        this.curIndex=this.footer_index_flag;
-        return
-      }
-      $(this.ulEle).css('left','-'+this.setOffsetX+'px');
-    },
-		next:function () {
-      if(this.curIndex<0){
-        if(this.curIndex==this.header_index_flag){
-          return ;
-        }
-        if(this.curIndex==this.footer_index_flag){
-          this.curIndex=this.dataLength-this.view_num;
-        }
-      }
-      console.log(this.curIndex);
-      this.curIndex--;
-      this.setOffsetX=this.curIndex*this.li_width;
-      if(this.setOffsetX<0){
-        this.curIndex=this.header_index_flag;
-        return
-      }
-      $(this.ulEle).css('left','-'+this.setOffsetX+'px');
-    }
-	};
-	swiperScroll.data=['长江场-东风场1','长江场-东风场2','长江场-东风场3','长江场-东风场4','长江场-东风场5']
-  swiperScroll.init();
-  $('.prev').click(function () {
-    swiperScroll.prev();
-  })
-  $('.next').click(function () {
-    swiperScroll.next();
+    var swiperScroll={
+        data:[],
+        view_width:450,
+        li_width:150,
+        curIndex:0,
+        header_index_flag:-1,
+        footer_index_flag:-2,
+        setOffsetX:0,
+        init:function () {
+            this.ulEle=$('.scroll-list>ul');
+            this.dataLength=parseInt(this.data.length);
+            this.ul_width=parseInt(this.li_width*this.dataLength);
+            this.view_num=parseInt(this.view_width/this.li_width);
+            this.maxOffset=parseInt((this.dataLength-this.view_num)*this.li_width);
+            $( this.ulEle).width(this.ul_width+'px');
+            var  str='';
+            for(var i=0; i<this.dataLength;i++){
+                str+='<li class="'+this.data[i].id+'">'+
+                    '<span title="'+this.data[i].name+'">'+this.data[i].name+'</span>'+
+                    '</li>'
+            }
+            if(this.dataLength<=this.view_num){
+                $(this.ulEle).css('left','0px');
+                $('.prev').hide();
+                $('.next').hide();
 
-  })
+            }
+            else{
+                $('.prev').show();
+                $('.next').show();
+            }
+            $( this.ulEle).html(str);
+
+            return str;
+        },
+        prev:function () {
+            if(this.curIndex<0){
+                if(this.curIndex==this.header_index_flag){
+                    this.curIndex=0
+                }
+                if(this.curIndex==this.footer_index_flag){
+                    $('.prev').hide();
+                    $('.next').show();
+                    return;
+                }
+                else{
+                    $('.prev').show();
+                    $('.next').show();
+                }
+            }
+            this.curIndex++;
+            this.setOffsetX=this.curIndex*this.li_width;
+            if(this.setOffsetX>this.maxOffset){
+                this.curIndex=this.footer_index_flag;
+                return
+            }
+            $(this.ulEle).css('left','-'+this.setOffsetX+'px');
+        },
+        next:function () {
+            if(this.curIndex<0){
+                if(this.curIndex==this.header_index_flag){
+                    $('.prev').show();
+                    $('.next').hide();
+                    return ;
+                }else{
+                    $('.prev').show();
+                    $('.next').show();
+                }
+                if(this.curIndex==this.footer_index_flag){
+                    this.curIndex=this.dataLength-this.view_num;
+                }
+            }
+            console.log(this.curIndex);
+            this.curIndex--;
+            this.setOffsetX=this.curIndex*this.li_width;
+            if(this.setOffsetX<0){
+                this.curIndex=this.header_index_flag;
+                return
+            }
+            $(this.ulEle).css('left','-'+this.setOffsetX+'px');
+        }
+    };
+    swiperScroll.data=[
+        {id:1,name:'长江场-东风场1'},
+		{id:2,name:'长江场-东风场2'},
+        {id:3,name:'长江场-东风场3'},
+        {id:4,name:'长江场-东风场4'},
+        {id:5,name:'长江场-东风场5'}
+	]
+    swiperScroll.init();
+    $('.prev').click(function () {
+        swiperScroll.prev();
+    })
+    $('.next').click(function () {
+        swiperScroll.next();
+
+    })
 </script>
 </body>
 </html>

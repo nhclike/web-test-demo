@@ -689,6 +689,7 @@ function ButtonQueryRecord_onclick()
 //    ShowCallRetInfo(obj.DPSDK_QueryRecordInfo(szCameraId, nRecordSource, nRecordType, nStartTime, nEndTime), "查询录像");
 
 //	gXmlRecords = obj.DPSDK_QueryRecordInfo(szCameraId, nRecordSource, nRecordType, nStartTime, nEndTime);
+	console.log("szCameraId"+szCameraId+"nRecordSource"+nRecordSource+"nEndTime"+nEndTime+"nEndTime"+nEndTime);
 	alert(obj.DPSDK_QueryRecordInfo(szCameraId, nRecordSource, nRecordType, nStartTime, nEndTime));
 }
 
@@ -724,7 +725,7 @@ function ButtonStartTimePlaybackByWndNo_onclick()
     var strEndTime = document.getElementById("textEndTime").value;	
     var nStartTime = getDate(strStartTime).getTime()/1000;
 	var nEndTime = getDate(strEndTime).getTime()/1000;
-
+	console.log(nWndNo+"nWndNo"+nRecordSource+"nRecordSource"+nEndTime+"nEndTime"+nStartTime+"nStartTime"+szCameraId+"szCameraId");
 	ShowCallRetInfo(obj.DPSDK_StartTimePlaybackByWndNo(gWndId, nWndNo, szCameraId, nRecordSource, nStartTime, nEndTime), "按时间回放");
 }
 

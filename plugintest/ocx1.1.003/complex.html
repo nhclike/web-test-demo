@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<object id="DPSDK_OCX" classid="CLSID:D3E383B6-765D-448D-9476-DFD8B499926D" style="width:500px;height:500px;"
+        codebase="DpsdkOcx.cab#version=1.0.0.0">
+</object>
+
+<div>
+    <button onclick="play()">开始播放</button>
+</div>
+<script src="./ocxPlay.js"></script>
+<script>
+    ocxPlay._initOcx();
+    function play() {
+        ocxPlay.startPlayByWndNo("1000021$1$0$2");
+    }
+</script>
+</body>
+</html>
