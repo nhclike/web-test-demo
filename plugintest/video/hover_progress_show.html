@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<title>带时间段切割的进度条</title>
+	<link rel="stylesheet" href="../../src/font-awesome/css/font-awesome.min.css">
+	<style type="text/css">
+		#progress_box{
+			width: 500px;
+			height: 20px;
+			border: 1px solid  #ddd;
+			display: flex;
+			justify-content: center;
+		}
+		.startTime,.endTime{
+			flex: 0 0 80px;
+			width: 80px;
+			text-align: center;
+		}
+
+		.progress-wrapper{
+			flex: 1;
+			position: relative;
+			float:left;
+			height: 20px;
+		}
+		.progress_bg{
+			position: absolute;
+			top:0;
+			left: 0;
+			height: 20px;
+			width: 100%;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			overflow: hidden;
+			cursor: pointer;
+			background-color:rgba(33,148,255,0.4);
+			z-index: 9999;
+		}
+		.progress_hover_time{
+			position: absolute;
+			display: none;
+			top:0;
+			left: 0;
+			width: 60px;
+			height: 20px;
+		}
+		.progress_time{
+			display: none;
+			width: 100px;
+			height: 20px;
+			border-radius: 5px;
+			position: absolute;
+			background:transparent;
+			left:0;
+			top:0;
+			cursor: pointer;
+			border:1px #ddd solid;
+			box-sizing:border-box;
+			z-index: 500;
+		}
+		.progress_time:hover{
+			border-color:#F7B824;
+		}
+
+	</style>
+</head>
+<body style="background-color: #fff;">
+<div id="videobox">
+	<div id="progress_box">
+		<div class="startTime">12:00:00</div>
+		<div class="progress-wrapper">
+			<div class="progress_bg">
+				<div class="progress_hover_time">12:00:00</div>
+			</div>
+			<div class="progress_time">
+				<i class="fa fa-thumb-tack fa-lg" style="width: 20px;height: 20px"></i>
+				<span id="progress_time">12:00:00</span>
+			</div>
+
+		</div>
+		<div class="endTime">12:30:00</div>
+	</div>
+</div>
+
+
+<script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+  $(function(){
+    var  tag = false,ox = 0,left = 0; //tag为鼠标确认事件标注ox鼠标拖动起点位置，left为鼠标进度条移动距离
+	  var moveFlag=false;
+    var  bar_width=parseInt($('.progress_bg').width());
+    var  bgleft = $('.progress_bg').offset().left;
+    var timeleft=left; //默认时间显示位置和进度位置相同
+	var allTime=30*60*1000;
+	var beginTime=new Date("2019/3/4 12:00:00").getTime();
+      $('.progress_bg').mouseenter(function (e) {
+		 console.log("mouseenter");
+          moveFlag=true;
+      }).mousemove(function (e) {
+          console.log('mousemove');
+          if(moveFlag){
+              left = e.pageX - bgleft;
+              console.log('left'+left+'bgleft'+bgleft+'e.pageX '+e.pageX );
+              bgleft = $('.progress_bg').offset().left;
+              left = e.pageX - bgleft;
+              console.log('left'+left+'bgleft'+bgleft+'e.pageX '+e.pageX )
+              if (left <= 0) {
+                  left = 0;
+              }else if (left > bar_width) {
+                  left = bar_width;
+              }
+              console.log("beginTime"+beginTime);
+              var timeShow=toLocaleDateString(((left/bar_width)*allTime) + beginTime);
+              $('.progress_hover_time').text(timeShow);
+              if(left>bar_width-60){
+                  var offsetleft=bar_width-60;
+                  $('.progress_hover_time').css("left",offsetleft+"px");
+			  }
+			  else{
+                  $('.progress_hover_time').css("left",left+"px");
+
+              }
+              $('.progress_hover_time').css("display","block");
+
+          }
+
+      }).mouseleave(function (e) {
+          moveFlag=false;
+          console.log("mouseleave");
+      });
+    $('.progress_bg').mousedown(function () {
+      tag = false;
+      console.log('click+mousedown'+tag);
+    }).mouseup(function () {
+      console.log('click+mouseup')
+    }).click(function(e) {//鼠标点击
+      if (!tag) {
+        bgleft = $('.progress_bg').offset().left;
+
+
+        left = e.pageX - bgleft;
+        console.log('bar_width'+bar_width+'timeleft'+timeleft+'left'+left+'bgleft'+bgleft+'e.pageX '+e.pageX )
+        if (left <= 0) {
+          left = 0;
+        }else if (left > bar_width) {
+          left = bar_width;
+        }
+          var timeShow=toLocaleDateString(((left/bar_width)*allTime) + beginTime)
+          $('#progress_time').text(timeShow);
+		  if(left>bar_width-90){
+		      var offsetleft=bar_width-90;
+              $('.progress_time').css('left', offsetleft);
+
+          }
+		  else {
+              $('.progress_time').css('left', left+"px");
+
+          }
+          $('.progress_time').css('display', "block");
+          $('.progress_hover_time').css("display","none");
+
+          console.log('click')
+      }
+    });
+    function stopEvent(event){ //阻止冒泡事件
+      //取消事件冒泡
+      var e=arguments.callee.caller.arguments[0]||event; //若省略此句，下面的e改为event，IE运行可以，但是其他浏览器就不兼容
+      if (e && e.stopPropagation) {
+        // this code is for Mozilla and Opera
+        e.stopPropagation();
+      } else if (window.event) {
+        // this code is for IE
+        window.event.cancelBubble = true;
+      }
+    }
+  });
+
+  function toLocaleDateString (ms) {
+      var date=new Date(ms);
+      return  addZero(date.getHours())+":"+addZero(date.getMinutes())+":"+addZero(date.getSeconds());
+  }
+  function addZero(num) {
+      if(num<10)
+          return "0" + num;
+      return num;
+  }
+</script>
+</body>
+</html>
