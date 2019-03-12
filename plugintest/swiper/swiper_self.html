@@ -55,7 +55,7 @@
         data:[],
         view_width:450,
         li_width:150,
-        curIndex:0,
+        curIndex:-1,
         header_index_flag:-1,
         footer_index_flag:-2,
         setOffsetX:0,
@@ -72,7 +72,7 @@
                     '<span title="'+this.data[i].name+'">'+this.data[i].name+'</span>'+
                     '</li>'
             }
-            if(this.dataLength<=this.view_num){
+            if(this.dataLength<=this.view_num){  //数据长度不超过视图可容纳长度
                 $(this.ulEle).css('left','0px');
                 $('.prev').hide();
                 $('.next').hide();
@@ -87,50 +87,46 @@
             return str;
         },
         prev:function () {
-            if(this.curIndex<0){
-                if(this.curIndex==this.header_index_flag){
-                    this.curIndex=0
-                }
-                if(this.curIndex==this.footer_index_flag){
-                    $('.prev').hide();
-                    $('.next').show();
-                    return;
-                }
-                else{
-                    $('.prev').show();
-                    $('.next').show();
-                }
+            if(this.curIndex==this.header_index_flag){
+                this.curIndex=0
             }
+
+            console.log(this.curIndex);
+
             this.curIndex++;
             this.setOffsetX=this.curIndex*this.li_width;
             if(this.setOffsetX>this.maxOffset){
                 this.curIndex=this.footer_index_flag;
-                return
+                $('.prev').hide();
+                $('.next').show();
             }
-            $(this.ulEle).css('left','-'+this.setOffsetX+'px');
+            else{
+                $('.prev').show();
+                $('.next').show();
+                $(this.ulEle).css('left','-'+this.setOffsetX+'px');
+			}
+
+
         },
         next:function () {
-            if(this.curIndex<0){
-                if(this.curIndex==this.header_index_flag){
-                    $('.prev').show();
-                    $('.next').hide();
-                    return ;
-                }else{
-                    $('.prev').show();
-                    $('.next').show();
-                }
-                if(this.curIndex==this.footer_index_flag){
-                    this.curIndex=this.dataLength-this.view_num;
-                }
+            if(this.curIndex==this.footer_index_flag){
+                this.curIndex=this.dataLength-this.view_num;
             }
+
             console.log(this.curIndex);
             this.curIndex--;
             this.setOffsetX=this.curIndex*this.li_width;
             if(this.setOffsetX<0){
                 this.curIndex=this.header_index_flag;
-                return
+                $('.prev').show();
+                $('.next').hide();
             }
-            $(this.ulEle).css('left','-'+this.setOffsetX+'px');
+            else{
+                $('.prev').show();
+                $('.next').show();
+                $(this.ulEle).css('left','-'+this.setOffsetX+'px');
+
+            }
         }
     };
     swiperScroll.data=[
