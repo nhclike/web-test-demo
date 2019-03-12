@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>画板实验</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		#myCanvas{ background-color:transparent; border: 1px solid #BFBFBF; }
+	</style>
+</head>
+
+<body>
+<div class="box" style="position: relative">
+	<img src="./Image/1.jpg" alt="" style="position: absolute;top:0;left: 0;width: 300px;height: 200px" >
+	<canvas id="myCanvas" style="position: absolute;top:0;left: 0;width: 300px;height: 200px"></canvas>
+
+</div>
+
+<div style="position: relative;top:300px;">
+	<button onclick="clean();">清 空</button>
+	<button onclick="save();">生成图片</button>
+	<button onclick="merge();">图片合成</button>
+</div>
+
+<img style="position: relative;top:400px;" id='img' alt='请涂鸦……' />
+<!--<p id="textId">sdfsdfs</p>-->
+<!--<textarea id="log" cols="30" rows="5"></textarea>-->
+<script type="text/javascript">
+  var canvas,board,img;
+  canvas = document.getElementById('myCanvas');
+  img= document.getElementById('img');
+
+  canvas.height = 300;
+  canvas.width = 500;
+
+  board = canvas.getContext('2d');
+
+  var mousePress = false;
+  var last = null;
+
+  function beginDraw(){
+    mousePress = true;
+  }
+
+  function drawing(event){
+    event.preventDefault();
+    if(!mousePress)return;
+    var xy = pos(event);
+    if(last!=null){
+      board.beginPath();
+      board.moveTo(last.x,last.y);
+      board.lineTo(xy.x,xy.y);
+      board.stroke();
+    }
+    last = xy;
+
+  }
+
+  function endDraw(event){
+    mousePress = false;
+    event.preventDefault();
+    last = null;
+  }
+
+  function pos(event){
+    var x,y;
+    if(isTouch(event)){
+      x = event.touches[0].pageX;
+      y = event.touches[0].pageY;
+    }else{
+      x = event.offsetX+event.target.offsetLeft;
+      y = event.offsetY+event.target.offsetTop;
+    }
+    // log('x='+x+' y='+y);
+    return {x:x,y:y};
+  }
+
+  function log(msg){
+    var log = document.getElementById('log');
+    var val = log.value;
+    log.value = msg+'n'+val;
+  }
+
+  function isTouch(event){
+    var type = event.type;
+    if(type.indexOf('touch')>=0){
+      return true;
+    }else{
+      return false;
+    }
+  }
+
+  function save(){
+    //base64
+    var dataUrl = canvas.toDataURL();
+    //document.getElementById('textId').innerText(dataUrl);
+//			 document.getElementById("textId").innerHTML = dataUrl;
+    // dataUrl = dataUrl.replace("image/png","image/octet-stream");
+    img.src = dataUrl;
+  }
+
+
+  function clean(){
+    board.clearRect(0,0,canvas.width,canvas.height);
+
+  }
+  function merge() {
+      var dataUrl = canvas.toDataURL();
+      drawAndShareImage("./Image/1.jpg",dataUrl,300,200)
+  }
+  function drawAndShareImage(bgUrl,drawUrl,width,height){
+      var canvas = document.createElement("canvas");
+      canvas.width = width;
+      canvas.height = height;
+      var context = canvas.getContext("2d");
+      var myImage = new Image();
+      myImage.src = bgUrl;    //背景图片  你自己本地的图片或者在线图片
+      myImage.crossOrigin = 'Anonymous';
+
+      myImage.onload = function(){
+          context.drawImage(myImage , 0 , 0 , width , height);
+          var myImage2 = new Image();
+          myImage2.src = drawUrl;   //你自己本地的图片或者在线图片
+          myImage2.crossOrigin = 'Anonymous';
+          myImage2.onload = function(){
+              context.drawImage(myImage2 , 0 , 0 , width , height);
+              var base64 = canvas.toDataURL("image/png");  //"image/png" 这里注意一下
+              // document.getElementById('avatar').src = base64;
+              img.setAttribute('src' , base64);
+          }
+      }
+  }
+  board.lineWidth = 2;
+  board.strokeStyle="#0000ff";
+
+
+  canvas.onmousedown = beginDraw;
+  canvas.onmousemove = drawing;
+  canvas.onmouseup = endDraw;
+  canvas.addEventListener('touchstart',beginDraw,false);
+  canvas.addEventListener('touchmove',drawing,false);
+  canvas.addEventListener('touchend',endDraw,false);
+</script>
+
+<!--[ lim_{x to 0} ]-->
+
+</body>
+
+</html>
