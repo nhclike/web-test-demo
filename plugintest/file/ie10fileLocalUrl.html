@@ -9,14 +9,12 @@
 <body>
 
 <script type="text/javascript">
-
-
   //根据不同浏览器获取路径
   function getvl(obj){
-//判断浏览器
+	//判断浏览器
     obj.select();
     obj.blur();
- var   file_url = document.selection.createRange().text;
+ 	var file_url = document.selection.createRange().text;
     alert(file_url);
     document.getElementById("text").innerHTML="获取文件域完整路径为："+file_url;
   }

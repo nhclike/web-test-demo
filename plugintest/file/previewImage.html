@@ -21,7 +21,7 @@
 					img.width  =  rect.width;
 					img.height =  rect.height;
 					img.style.marginTop = rect.top+'px';
-				}
+				};
 				var reader = new FileReader();
 				reader.onload = function(evt){img.src = evt.target.result;}
 				reader.readAsDataURL(file.files[0]);

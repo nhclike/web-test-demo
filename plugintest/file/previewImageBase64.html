@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="img">
+<input type="file" id="img-select">
+<script>
+    function imgPreview() {
+        var files = this.files;
+        var file = files[0];
+        var reader = new FileReader();
+        reader.onload = function() {
+            var result = this.result;
+            document.getElementById('img').src=result;//img的id
+        };
+        reader.readAsDataURL(file);
+    }
+    document.getElementById('img-select').addEventListener('change',imgPreview);
+</script>
+</body>
+</html>
