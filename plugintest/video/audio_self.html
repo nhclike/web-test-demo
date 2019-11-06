@@ -101,15 +101,13 @@ padding: 0 8px;
 		<div id="play_time">
 			<span id="curTime">00:00:00</span> / <span id="allTime">00:00:00</span>
 		</div>
-
 	</div>
-
   <audio id="audioLocalSource" src=""></audio>
 </div>
 <script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
 <script type="text/javascript">
   $('#play_btn').click(function () {
-    audioLocalSource.src='src/test.mp3';
+    audioLocalSource.src='./src/testpszhuanmp3.mp3';
     audioLocalSource.play();
     $(pauseBtn).prop('disabled',false);
     pauseBtn.addEventListener('click', localAudioPause, false);
@@ -117,7 +115,7 @@ padding: 0 8px;
   });
   $('#stop_btn').click(function () {
     audioLocalSource.src='';
-		$(pauseBtn).prop('disabled',true);
+	$(pauseBtn).prop('disabled',true);
     pauseBtn.removeEventListener('click', localAudioPause, false);
     clearInterval(playTime_timer);
     playTime_timer=null;

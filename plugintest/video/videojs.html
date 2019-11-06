@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=10" />
@@ -30,7 +28,9 @@
     $('#startplaybtn').click(function () {
 
         myPlayer.ready(function() {
-          myPlayer.src("src/ceshi.avi");
+          myPlayer.src("http://172.19.82.43:8086/hls/2.mp4");
+          //myPlayer.src("./src/15.05.33-15.05.47[R][0@0][0].mp4");
+
           myPlayer.play();
           myPlayer.on("durationchange", function() {
             console.log('durationchange')
@@ -45,9 +45,13 @@
           // 监听停止
           myPlayer.on("ended", function() {
            // myPlayer.src('');
-            stop()
+            stop();
             console.log('ended')
           });
+            myPlayer.on("error", function(data) {
+                console.log('error');
+                console.log(data);
+            });
         })
       }
     );
@@ -56,19 +60,18 @@
       //myPlayer.enterFullScreen();
       stop()
 
-    })
-		function stop() {
+    });
+	function stop() {
       myPlayer.pause();
       var whereYouAt = myPlayer.currentTime();
       console.log(whereYouAt)
     }
     function playchange() {
-      console.log('playchange')
+      console.log('playchange');
       // 如果 currentTime() === duration()，则视频已播放完毕
       if (myPlayer.duration() != 0 && myPlayer.currentTime() === myPlayer.duration()) {
         // 播放结束
         //alert('播放结束')
-
       }
     }
   })

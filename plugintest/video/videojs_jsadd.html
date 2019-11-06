@@ -4,8 +4,6 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=10" />
 	<title>Video.js Test Suite</title>
-<!--	<link href="//vjs.zencdn.net/4.10/video-js.css" rel="stylesheet">
-	<script src="//vjs.zencdn.net/4.10/video.js"></script>-->
 	<link href="../../src/video/video-js.css" rel="stylesheet">
 	<script src="../../src/video/videojs-ie8.min.js"></script>
 	<script src="../../src/video/video.js"></script>
@@ -22,19 +20,18 @@
 <script src="../../src/bootstrap/js/jquery-1.11.3.js"></script>
 
 <script>
-	var i=0;
+  var i=0;
   $(function () {
 
     $('#add').click(function () {
-
-				var video=$('#video');
-      addVideoJsEle(video);
-      alert('example_video_1'+i)
-      var myPlayer = videojs('example_video_1'+i);
-      myPlayer.ready(function() {
-        myPlayer.src("src/protect.mp4");
-        myPlayer.play();
-      })
+		var video=$('#video');
+        addVideoJsEle(video);
+        alert('example_video_1'+i)
+        var myPlayer = videojs('example_video_1'+i);
+        myPlayer.ready(function() {
+            myPlayer.src("src/protect.mp4");
+            myPlayer.play();
+        })
       }
     );
     $('#delete').click(function () {
@@ -42,7 +39,7 @@
 
     })
 
-  })
+  });
   //增加videojs元素
   function addVideoJsEle(ele){
     i++;
