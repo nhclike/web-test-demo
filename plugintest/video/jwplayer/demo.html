@@ -1,0 +1,27 @@
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">  
+<head>  
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />  
+<title>live-player</title>  
+<style type="text/css">  
+</style>  
+</head>  
+<body>  
+<script type='text/javascript' src='jwplayer.js'></script>  
+<b>RTMP直播系统</b>
+<div id='mediaspace'>This text will be replaced</div>  
+<script type='text/javascript'>  
+   var server = window.location.hostname;  
+   // mylive 对应nginx.conf配置项application的名字  
+   // live_stream 对应Adobe Flash Stream Media Live Encoder配置的stream名称  
+   var live_url = 'rtmp://172.19.82.123:1935/oflaDemo/265';
+  jwplayer('mediaspace').setup({  
+    'flashplayer': 'jwplayer.flash.swf',  
+    'file': live_url,  
+    'controlbar': 'bottom',  
+    'width': '760',  
+    'height': '428',  
+    //autostart: true,  //如果打开此标志，在打开网页时会自动播放直播流  
+  });  
+</script>  
+</body>  
+</html>  
