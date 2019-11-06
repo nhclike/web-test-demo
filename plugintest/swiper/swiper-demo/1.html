@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./swiper.min.css">
+    <!-- Demo styles -->
+    <style>
+        *{ margin: 0;
+
+            padding: 0;
+
+            border: 0;
+
+            font: inherit;
+
+            font-size: 100%;
+            font-family:"microsoft yahei" !important;
+
+            vertical-align: middle;}
+        .fd-part {
+            position: relative;
+
+            margin: 0 auto 120px auto;
+        }
+        .swiper-container {
+            padding-bottom: 80px;
+        }
+        .swiper-slide {
+            width: 383px;
+            height: 460px;
+            background-color: #fff;
+            box-shadow: 0 8px 30px #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+
+        }
+        .swiper-slide img{
+            display: block;
+            width: 100%;
+            height:260px;
+        }
+        .swiper-slide h2 {
+            position: relative;
+            margin:10px 35px;
+            font-size: 24px;
+            color: #404040;
+        }
+
+        .swiper-slide p {
+            margin: 0 35px 20px 35px;
+            font-size: 16px;
+            color: #666;
+            line-height: 36px;
+        }
+        .swiper-pagination {
+            width: 100%;
+            bottom: 0px;
+        }
+        /* swiper pagination */
+        .fd-part .swiper-pagination-bullets .swiper-pagination-bullet {
+            margin: 0 5px;
+            background-color: #bec5cf;
+            width: 10px;
+            height: 10px;
+            opacity: 1;
+        }
+        .fd-part .swiper-pagination-bullets .swiper-pagination-bullet-active {
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Swiper -->
+<div class="fd-part">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./img/17101512njoq.png">
+                <h2>顶层设计与咨询规划1</h2>
+                <p>华宇提供面向行业、部门、组织、单位等不同层面的信息化建设规划咨询服务。结合客户信息化发展现状，在业务、流程、...</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/17101512njoq.png">
+                <h2>顶层设计与咨询规划2</h2>
+                <p>华宇提供面向行业、部门、组织、单位等不同层面的信息化建设规划咨询服务。结合客户信息化发展现状，在业务、流程、...</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/17101512njoq.png">
+                <h2>顶层设计与咨询规划</h2>
+                <p>华宇提供面向行业、部门、组织、单位等不同层面的信息化建设规划咨询服务。结合客户信息化发展现状，在业务、流程、...</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/17101512njoq.png">
+                <h2>顶层设计与咨询规划3</h2>
+                <p>华宇提供面向行业、部门、组织、单位等不同层面的信息化建设规划咨询服务。结合客户信息化发展现状，在业务、流程、...</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/17101512njoq.png">
+                <h2>顶层设计与咨询规划4</h2>
+                <p>华宇提供面向行业、部门、组织、单位等不同层面的信息化建设规划咨询服务。结合客户信息化发展现状，在业务、流程、...</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/17101512njoq.png">
+                <h2>顶层设计与咨询规划5</h2>
+                <p>华宇提供面向行业、部门、组织、单位等不同层面的信息化建设规划咨询服务。结合客户信息化发展现状，在业务、流程、...</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/17101512njoq.png">
+                <h2>顶层设计与咨询规划6</h2>
+                <p>华宇提供面向行业、部门、组织、单位等不同层面的信息化建设规划咨询服务。结合客户信息化发展现状，在业务、流程、...</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/17101512njoq.png">
+                <h2>顶层设计与咨询规划7</h2>
+                <p>华宇提供面向行业、部门、组织、单位等不同层面的信息化建设规划咨询服务。结合客户信息化发展现状，在业务、流程、...</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/17101512njoq.png">
+                <h2>顶层设计与咨询规划8</h2>
+                <p>华宇提供面向行业、部门、组织、单位等不同层面的信息化建设规划咨询服务。结合客户信息化发展现状，在业务、流程、...</p>
+            </div>
+
+        </div>
+
+        <!-- Add Pagination -->
+        <!--<div class="swiper-pagination swiper-pagination-bullets"></div>-->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+
+<script src="../../../src/jquery-1.11.3.js"></script>
+<script src="./swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var width=window.innerWidth;
+    $('.fd-part').css('width',width+'px');
+
+
+var swiper = new Swiper('.swiper-container', {
+        watchSlidesProgress: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        loop: true,
+        loopedSlides: 5,
+        autoplay: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        on: {
+            progress: function (progress) {
+                for (i = 0; i < this.slides.length; i++) {
+                    var slide = this.slides.eq(i);
+                    var slideProgress = this.slides[i].progress;
+                    modify = 1;
+                    if (Math.abs(slideProgress) > 1) {
+                        modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
+                    }
+                    translate = slideProgress * modify * 56 + 'px';
+                    scale = 1 - Math.abs(slideProgress) / 9;
+                    zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+                    slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+                    slide.css('zIndex', zIndex);
+                    slide.css('opacity', 1);
+                    if (Math.abs(slideProgress) > 3) {
+                        slide.css('opacity', 0);
+                    }
+                }
+            },
+            setTransition: function (transition) {
+                for (var i = 0; i < this.slides.length; i++) {
+                    var slide = this.slides.eq(i);
+                    slide.transition(transition);
+                }
+
+            }
+        }
+    });
+</script>
+</body>
+</html>

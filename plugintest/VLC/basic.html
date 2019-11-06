@@ -5,9 +5,8 @@
 	<title>Document</title>
 	<script>
     //仅适用于IE浏览器是，并且安装有vlc插件，则返回true；
-
     function isInsalledIEVLC(){
-                try {  
+          try {
               var vlcObj = new ActiveXObject("VideoLAN.Vlcplugin.2");
               if(vlcObj != null) {   
                   return true;    
@@ -15,35 +14,40 @@
            } catch (e) {  
               return false;  
            }   
-            }   
-function checkBrowser(){
-	var is=isInsalledIEVLC()
-	if(is){
-		//alert('this is vlcObj')
-	}
-	else{
-	//alert('this is not vlc')
-	}
-}
+    }
+    function checkBrowser(){
+        var is=isInsalledIEVLC();
+        if(is){
+            //alert('this is vlcObj')
+        }
+        else{
+        //alert('this is not vlc')
+        }
+    }
 
 	</script>
 </head>
 <body onload="checkBrowser();">
-<object
-  classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921" 
-  codebase="http://download.videolan.org/pub/videolan/vlc/last/win32/axvlc.cab"
-  id="vlc"
-  name="vlc"
-  class="vlcPlayer"
-  events="True"
-   width="640" height="480"
-  >
-    <param name="Src" value="rtsp://184.72.239.149/vod/mp4://BigBuckBunny_175k.mov" />
-    <param name="ShowDisplay" value="True" />
-    <param name="AutoLoop" value="False" />
-    <param name="AutoPlay" value="True" />
-   <embed id="vlcEmb"  type="application/x-google-vlc-plugin" version="VideoLAN.VLCPlugin.2" autoplay="yes" loop="no" width="640" height="480"
-     target="rtsp://184.72.239.149/vod/mp4://BigBuckBunny_175k.mov" ></embed>
-</objetc>
+    <div>
+        <object classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921"
+                codebase="http://download.videolan.org/pub/videolan/vlc/last/win32/axvlc.cab"
+                id="vlc"
+                name="vlc"
+                class="vlcPlayer"
+                events="True"
+                width="640" height="480">
+            <param name="Src" value="rtsp://122.224.250.139:554/pag://122.224.250.139:7302:190718042718037560:0:MAIN:TCP?streamform=rtp"/>
+            <param name="ShowDisplay" value="True" />
+            <param name="AutoLoop" value="False" />
+            <param name="AutoPlay" value="True" />
+            <embed id="vlcEmb"
+                   type="application/x-google-vlc-plugin"
+                   version="VideoLAN.VLCPlugin.2"
+                   autoplay="yes"
+                   loop="no" width="640" height="480"
+                   target="http://172.19.82.43:8086/hls/1.mp4">
+            </embed>
+        </objetc>
+    </div>
 </body>
 </html>

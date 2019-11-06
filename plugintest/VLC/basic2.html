@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+    //仅适用于IE浏览器是，并且安装有vlc插件，则返回true；
+
+    function isInsalledIEVLC(){
+        try {
+              var vlcObj = new ActiveXObject("VideoLAN.Vlcplugin.2");
+              if(vlcObj != null) {   
+                  return true;    
+              }  
+           } catch (e) {  
+              return false;  
+           }   
+    }
+    function checkBrowser(){
+        var is=isInsalledIEVLC();
+        if(is){
+            //alert('this is vlcObj')
+        }
+        else{
+        //alert('this is not vlc')
+        }
+    }
+    function doGo(mrl)
+    {
+        var vlc = getVLC("vlc");
+        itemId=vlc.playlist.add(mrl);
+        vlc.playlist.playItem(itemId);
+    }
+    function getVLC(name)
+    {
+        if (window.document[name])
+        {
+            return window.document[name];
+        }
+        if (navigator.appName.indexOf("Microsoft Internet")==-1)
+        {
+            if (document.embeds && document.embeds[name])
+                return document.embeds[name];
+        }
+        else
+        {
+            return document.getElementById(name);
+        }
+    }
+	</script>
+</head>
+<body onload="checkBrowser();">
+<a title="http://172.19.82.43:8086/hls/1.mp4" href="#" onclick="doGo(this.title);return false;">实时视频流</a>
+<div style="width: 500px;height: 400px">
+    <object type='application/x-vlc-plugin' id='vlc'
+            events='True' width="100%" height="100%"
+            pluginspage="http://www.videolan.org"
+            codebase="http://downloads.videolan.org/pub/videolan/vlc-webplugins/2.0.6/npapi-vlc-2.0.6.tar.xz">
+        <param name="Src" value="" />
+        <param name='mrl' value='' />
+        <param name='volume' value='50' />
+        <param name='autoplay' value='false' />
+        <param name='loop' value='false' />
+        <param name='fullscreen' value='true' />
+    </object>
+</div>
+
+</body>
+</html>

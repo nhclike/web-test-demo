@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="./swiper.min.css">
+    <!-- Demo styles -->
+    <style>
+        html, body {
+            position: relative;
+            height: 100%;
+        }
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color:#000;
+            margin: 0;
+            padding: 0;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+
+        }
+        .swiper-slide>a{
+            width: 100%;
+            height: 100%;
+        }
+        .wrapper1{
+            width: auto;
+            height: 100%;
+            background: url("./img/banner2.jpg") center no-repeat;
+            background-size: 100% 100%;
+        }
+        .wrapper2{
+            width: auto;
+            height: 100%;
+            background: url("./img/banner4.jpg") center no-repeat;
+            background-size: 100% 100%;
+        }
+        .wrapper3{
+            width: auto;
+            height: 100%;
+            background: url("./img/banner2.jpg") center no-repeat;
+            background-size: 100% 100%;
+        }
+        .wrapper4{
+            width: auto;
+            height: 100%;
+            background: url("./img/banner4.jpg") center no-repeat;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Swiper -->
+<div class="industry-top" style="height: 700px">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="wrapper1"></div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="wrapper2"></div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="wrapper3"></div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="wrapper4"></div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<script src="../../../src/jquery-1.11.3.js"></script>
+<script src="./swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var width = window.innerWidth;
+    var proportion = 1920/width;
+    var height = 872/proportion;
+    $('.industry-top').css('height',height+'px')
+    var swiper = new Swiper('.swiper-container', {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 10000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        }
+    });
+</script>
+</body>
+</html>
