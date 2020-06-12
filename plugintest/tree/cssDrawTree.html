@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    /** mTree.css zyj 2018.4.21 */
+    ul,li{list-style-type:none;}
+    .mTree {
+        display:block;
+        position:relative;
+        padding:5px 15px;
+        border: 1px solid #ddd
+    }
+    .mTree span{
+        display:inline-block;
+        box-sizing:border-box;
+        height:30px;
+        line-height:28px;
+        min-width:60px;
+        text-align:center;
+        color:#fff;
+        background:#3BA0FF;
+        border-radius:5px;
+        padding:0 8px;
+    }
+    .mTree ul>li>div{
+        overflow: hidden;
+    }
+
+    .mTree ul{
+        position:relative;
+        padding-left:60px;
+        margin:0;
+    }
+    .mTree ul>li{
+        position:relative;
+        padding:5px 0;
+    }
+    .mTree>ul{
+        padding:0;
+        margin:0;
+    }
+
+    /** 水平方向连线 */
+    .mTree>ul ul>li:after{
+        content:' ';
+        position:absolute;
+        top:20px;
+        left:-45px;
+        width:45px;
+        border:none;
+        border-top:1px solid #ddd;
+    }
+    /** 垂直方向连线 */
+    .mTree ul>li:not(:last-child):before{
+        content:' ';
+        position:absolute;
+        top:0;left:-45px;
+        height:100%;
+        border:none;
+        border-left:1px solid #ddd;
+    }
+    .mTree ul>li:last-child:before{
+        content:' ';
+        position:absolute;
+        top:0;
+        left:-45px;
+        height:20px;
+        border:none;
+        border-left:1px solid #ddd;
+    }
+    /*二级菜单样式自定义*/
+
+    .second-menu>span{
+        display: block;
+        padding:0 5px;
+        word-break:keep-all;       /* 不换行 */
+        white-space:nowrap;        /* 不换行 */
+        background: green;
+        float: left;
+    }
+    .second-menu>div>b{
+        margin:5px;
+        padding: 5px;
+        background: red;
+        float: left;
+    }
+
+    /*二级菜单样式自定义2*/
+
+    .second-menu2>span{
+        padding:0 5px;
+        word-break:keep-all;       /* 不换行 */
+        white-space:nowrap;        /* 不换行 */
+        background: green;
+    }
+    .second-menu2>div>b{
+        margin:5px;
+        padding: 5px;
+        background: red;
+        float: left;
+    }
+
+
+</style>
+<body>
+<div style="width: 400px">
+    <div class="mTree">
+        <ul>
+            <li class="first-menu">
+                <span>浙江高院</span>
+                <ul>
+                    <li class="second-menu">
+                        <span>院务处院务处</span>
+                        <div>
+                            <b>12</b><b>12</b><b>213</b><b>123</b><b>1231</b>
+                            <b>12</b><b>12</b><b>213</b><b>123</b><b>1231</b>
+                        </div>
+
+
+                    </li>
+                    <li class="second-menu">
+                        <span>办公室</span>
+
+                        <div>
+                            <b>12</b><b>12</b><b>213</b><b>123</b><b>1231</b>
+                            <b>12</b><b>12</b><b>213</b><b>123</b><b>1231</b>
+                        </div>
+                    </li>
+                    <li class="second-menu">
+                        <span>办公室</span>
+
+                        <div>
+                            <b>12</b><b>12</b><b>213</b><b>123</b><b>1231</b>
+                            <b>12</b><b>12</b><b>213</b><b>123</b><b>1231</b>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span>杭州中院</span>
+                <ul>
+                    <li class="second-menu2">
+                        <span>院务处</span>
+                        <div>
+                            <b>12</b><b>12</b><b>213</b><b>123</b><b>1231</b>
+                            <b>12</b><b>12</b><b>213</b><b>123</b><b>1231</b>
+                        </div>
+
+
+                    </li>
+                    <li class="second-menu2">
+                        <span>办公室1111111111111</span>
+
+                        <div>
+                            <b>12</b><b>12</b><b>213</b><b>123</b><b>1231</b>
+                            <b>12</b><b>12</b><b>213</b><b>123</b><b>1231</b>
+                        </div>
+                    </li>
+                    <li class="second-menu2">
+                        <span>办公室</span>
+
+                        <div>
+                            <b>12</b><b>12</b><b>213</b><b>123</b><b>1231</b>
+                            <b>12</b><b>12</b><b>213</b><b>123</b><b>1231</b>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>

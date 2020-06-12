@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>ie文件下载并且监听下载过程</div>
+    <script>
+
+        /**
+         * 下载进度
+         * @pararns
+         */
+        function downLoadProcess(url){
+            // 创建xhr对象
+            var req = new XMLHttpRequest();
+            //向服务器发送请求 open() send()
+            req.open("GET", url, true);
+            req.responseType = "blob";
+            //监听进度事件
+            req.addEventListener("progress", uploadProgress, false);
+            req.addEventListener("load", uploadComplete, false);
+            req.addEventListener("error", uploadFailed, false);
+            req.addEventListener("abort", uploadCanceled, false);
+
+            // req.onreadystatechange = function () {  //同步的请求无需onreadystatechange
+            //     if (req.readyState === 4 && req.status === 200) {
+            //         var filename = "D://4803086.mp4";
+            //         if (typeof window.chrome !== 'undefined') {
+            //             // Chrome version
+            //             var link = document.createElement('a');
+            //             link.href = window.URL.createObjectURL(req.responseURL);
+            //             link.download = filename;
+            //             link.click();
+            //         } else if (typeof window.navigator.msSaveBlob !== 'undefined') {
+            //             // IE version
+            //             var blob = new Blob([req.response], { type: 'application/force-download' });
+            //             window.navigator.msSaveBlob(blob, filename);
+            //         } else {
+            //             // Firefox version
+            //             var file = new File([req.response], filename, { type: 'application/force-download' });
+            //             window.open(URL.createObjectURL(file));
+            //         }
+            //     }
+            // };
+
+            //设置返回数据的类型
+            req.send();
+        }
+
+        function uploadProgress(evt) {
+            console.info(evt.lengthComputable);
+
+            if (evt.lengthComputable) { /*后端的主要时间消耗都在查询数据和生成文件，所以可以设置默认值，直到真正到达下载的进度，再开始走进度条*/
+                var percent = Math.round(evt.loaded * 100 / evt.total);
+                var v = percent.toFixed(2) + '%';
+                console.info(v);
+            }else{
+                console.info('unable to compute');
+            }
+        }
+
+        function uploadComplete(evt) {
+            /* 服务器端返回响应时候触发event事件*/
+            console.info('下载完成');
+            var blob = evt.currentTarget.response;
+            var filename = "4803086.mp4";
+            window.navigator.msSaveBlob(blob, filename);
+        }
+
+        function uploadFailed(evt) {
+            console.info('下载失败');
+        }
+
+        function uploadCanceled(evt) {
+            console.info('下载取消');
+        }
+    </script>
+</body>
+</html>
