@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+ <h1>通过改注册表，修改ie默认下载路径</h1>
+</body>
+<script type="text/javascript">
+window.onload = function(){
+	var shell = new ActiveXObject("WScript.Shell");     
+	var key1=shell.RegWrite("HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\Default Download Directory","E:\\test2","REG_SZ");//win10
+    var key2=shell.RegWrite("HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Download Directory","E:\\test2","REG_SZ");//win7
+    console.log(key1,key2);
+}
+
+
+</script>
+</html>

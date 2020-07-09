@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+
+<body>
+<input type="text" value="" id="filename"/>
+<button id="openLocalBtn" type="button">打开本地文件</button>
+<script src="/src/jquery-1.11.3.js"></script>
+<script>
+
+    openLocalBtn.onclick=function () {
+
+		var filename=document.getElementById('filename').value;
+        openFileIIs(filename)
+
+  };
+    function openFileIIs(filename) {
+        try {
+            var obj = new ActiveXObject("wscript.shell");
+            if (obj) {
+                obj.Run("\"" + filename + "\"", 1, false);
+                //obj.run("osk");/*打开屏幕键盘*/
+                //obj.Run('"'+filename+'"');
+                obj = null;
+            }
+        } catch (e) {
+            alert("请确定是否存在该盘符或文件");
+        }
+
+    }
+</script>
+</body>
+</html>

@@ -15,29 +15,26 @@
         });
       }
 
-      function play(){
+      function download(){
         var file = "http://prdvoddownload.xylink.com/vodfiles/downloadfiles/20207/20_07_06_13_31_21_1594015033042.mp4?auth_key=1594017219-0-0-b7d3eea3a49b0c101eb0de5d63862e5e";
         //var file = "e://test.mp4";
-        if(recordVideoOcx.PlayFile(0,4, file)){
-          recordVideoOcx.SetVideoWndHandle(0, 0);
-          recordVideoOcx.SetInfo(0, "0");
+          ocx.Describe(0, 1, 0,0,0, false);
+          ocx.SetPlayBackBufferLimit(0, 1500, 200,3000);
+          ocx.DownloadFile(0, 'D://');
+          ocx.SetVideoWndHandle(0, 0);
+          ocx.SetInfo(0, "0");
           console.info("SetInfo");
           //打开声音
-          recordVideoOcx.StartAudio(0);
+          ocx.StartAudio(0);
           console.info("StartAudio");
-        }
       }
 
-      function stop(){
-        recordVideoOcx.Stop(0);
-        recordVideoOcx.SetVideoWndHandle(0, -1);
-      }
+
     </script>
 </head>
 <body onload="init();">
-<input type="button" value="播放" onclick="play();">
-<input type="button" value="停止" onclick="stop();">
-<object classid="CLSID:22A0C36F-457B-469D-88D7-3C76D0EB4BD7" id="recordVideoOcx" style="width:500px;height:500px;"></object>
+<input type="button" value="下载" onclick="download();">
+<object classid="CLSID:22A0C36F-457B-469D-88D7-3C76D0EB4BD7" id="ocx" style="width:500px;height:500px;"></object>
 <h1>使用1:替换videoplay</h1>
 <h1>2:运行videoplay下的regOcx.bat</h1>
 </body>
