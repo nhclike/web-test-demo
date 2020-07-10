@@ -5,76 +5,207 @@
     <title>Title</title>
 </head>
 <body>
-    <div>ie文件下载并且监听下载过程</div>
+<button id="selectLocalBtn" type="button"  onclick="fnSetDownloadPath()">下载路径</button>
+<input style="height: 32px;width:220px;color: #333;font-size: 18px" type="text" id="downloadPath" value=""  readonly="readonly" />
+<button id="openFilesPath" onclick="openFilesPath()">打开文件目录</button>
+<input type="file" value="" placeholder="下载文件的地址" id="file">
+<button onclick="downloadFile()">开始下载</button>
+<script src="./../../src/jquery-1.11.3.js"></script>
     <script>
+        var defaultDownloadPath='C:/downloadFile';
+        function downloadFile() {
+            var url=$("#file").val();
+            var savePath=$("#downloadPath").val();
+            SaveFileToClientPC(url,savePath);
+
+        }
+        //设置下载路径
+        function fnSetDownloadPath() {
+            var folders=BrowseFolder();
+            if(folders=="C:\\"){
+                alert("因权限问题无法下载到C盘根目录,我们将自动为您选择下载路径");
+                folders='';
+            }
+            folders=folders?folders:defaultDownloadPath;
+
+            $("#downloadPath").val(folders);
+            reviseIEDownloadPath(folders);
+            console.log(folders);
+        }
+        //浏览本地文件夹
+        function BrowseFolder() {
+            try {
+                var Message = "Please select the folder path.";  //选择框提示信息
+                var Shell = new ActiveXObject("Shell.Application");
+                var Folder = Shell.BrowseForFolder(0, Message, 0x0040, 0x11); //起始目录为：我的电脑
+                //var Folder = Shell.BrowseForFolder(0,Message,0); //起始目录为：桌面
+                if (Folder != null) {
+                    Folder = Folder.items();  // 返回 FolderItems 对象
+                    Folder = Folder.item();  // 返回 Folderitem 对象
+                    Folder = Folder.Path;   // 返回路径
+                    if (Folder.charAt(Folder.length - 1) != "\\") {
+                        Folder = Folder + "\\";
+                    }
+                    return Folder;
+                }
+            } catch (e) {
+                alert(e.message);
+            }
+        }
+
+        //打开文件本地路径
+        function openFilesPath() {
+            var filename=$('#downloadPath').val();
+            openFileIIs(filename)
+        }
+
+        //打开本地文件夹
+        function openFileIIs(filename) {
+            try {
+                var obj = new ActiveXObject("wscript.shell");
+                if (obj) {
+                    obj.Run("\"" + filename + "\"", 1, false);
+                    obj = null;
+                }
+            } catch (e) {
+                console.log(e);
+                alert("请确定是否存在该盘符或文件");
+            }
+
+        }
+
+        //修改ie的下载路径
+        function reviseIEDownloadPath(path) {
+            var shell = new ActiveXObject("WScript.Shell");
+            try{
+                shell.RegWrite("HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\Default Download Directory",path,"REG_SZ");//win10
+            }
+            catch (e){
+                console.log(e);
+            }
+            try {
+                shell.RegWrite("HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Download Directory",path,"REG_SZ");//win7
+            }
+            catch (e){
+                console.log(e);
+            }
+        }
+        //保存文件到客户端---只能下载同域文件
+        function SaveFileToClientPC(strURL,savePath) {
+            try {
+                var objXML = new ActiveXObject('Microsoft.XMLHTTP');
+                objXML.open('GET', strURL, false);
+                objXML.send();
+                var stream=new ActiveXObject("ADODB.Stream");
+                stream.Type =1;
+                stream.Mode =3;
+                stream.open();
+                stream.Write(objXML.ResponseBody);
+                stream.SaveToFile(savePath,2);
+                stream.close();
+                objXML=null;
+                //window.alert('下载成功！');
+            }
+            catch (err) {
+                console.log(err);
+                //window.alert('下载失败，请检查保存路径是否可访问！');
+            }
+        }
+
+        //创建文件夹
+        function mikdir(path){
+            var fso=new ActiveXObject("Scripting.FileSystemObject");
+
+            fso.CreateFolder (path);
+        }
+
+        //判断文件夹是否存在
+        function isExistsFolder(filespec){
+            var fso=new ActiveXObject("Scripting.FileSystemObject");
+            if(fso.FolderExists(filespec)){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
+        //判断是否存在文件
+        function isExistsFile(filespec){
+            var fso=new ActiveXObject("Scripting.FileSystemObject");
+            if(fso.FileExists(filespec)){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
 
         /**
-         * 下载进度
+         * xhr监听下载进度
          * @pararns
          */
-        function downLoadProcess(url){
+        function downLoadProcess(url,name){
             // 创建xhr对象
             var req = new XMLHttpRequest();
             //向服务器发送请求 open() send()
             req.open("GET", url, true);
             req.responseType = "blob";
             //监听进度事件
-            req.addEventListener("progress", uploadProgress, false);
-            req.addEventListener("load", uploadComplete, false);
-            req.addEventListener("error", uploadFailed, false);
-            req.addEventListener("abort", uploadCanceled, false);
+            req.addEventListener("progress", function (evt) {
+                console.log('progress');
+                console.info(evt);
 
-            // req.onreadystatechange = function () {  //同步的请求无需onreadystatechange
-            //     if (req.readyState === 4 && req.status === 200) {
-            //         var filename = "D://4803086.mp4";
-            //         if (typeof window.chrome !== 'undefined') {
-            //             // Chrome version
-            //             var link = document.createElement('a');
-            //             link.href = window.URL.createObjectURL(req.responseURL);
-            //             link.download = filename;
-            //             link.click();
-            //         } else if (typeof window.navigator.msSaveBlob !== 'undefined') {
-            //             // IE version
-            //             var blob = new Blob([req.response], { type: 'application/force-download' });
-            //             window.navigator.msSaveBlob(blob, filename);
-            //         } else {
-            //             // Firefox version
-            //             var file = new File([req.response], filename, { type: 'application/force-download' });
-            //             window.open(URL.createObjectURL(file));
-            //         }
-            //     }
-            // };
+                if (evt.lengthComputable) { /*后端的主要时间消耗都在查询数据和生成文件，所以可以设置默认值，直到真正到达下载的进度，再开始走进度条*/
+                    var percent = Math.round(evt.loaded * 100 / evt.total);
+                    var v = percent.toFixed(2) + '%';
+                    console.info(v);
+                }else{
+                    console.info('unable to compute');
+                }
+            }, false);
+            req.addEventListener("load", function (evt) {
+                /* 服务器端返回响应时候触发event事件*/
+                console.info('request success load');
+                var blob = evt.currentTarget.response;
+                window.navigator.msSaveBlob(blob,name);
+            }, false);
+            req.addEventListener("error", function () {
+                console.log('request error');
+
+            }, false);
+            req.addEventListener("abort", function (evt) {
+                console.log('request被停止');
+            }, false);
+            req.addEventListener("loadend", function (evt) {
+                console.log('request 结束',evt);
+            }, false);
+
+            req.onreadystatechange = function () {  //同步的请求无需onreadystatechange
+                if (req.readyState === 4 && req.status === 200) {
+                    console.log('onreadystatechange');
+                    console.log(req);
+                    // var filename = "D://4803086.mp4";
+                    // if (typeof window.chrome !== 'undefined') {
+                    //     // Chrome version
+                    //     var link = document.createElement('a');
+                    //     link.href = window.URL.createObjectURL(req.responseURL);
+                    //     link.download = filename;
+                    //     link.click();
+                    // } else if (typeof window.navigator.msSaveBlob !== 'undefined') {
+                    //     // IE version
+                    //     var blob = new Blob([req.response], { type: 'application/force-download' });
+                    //     window.navigator.msSaveBlob(blob, filename);
+                    // } else {
+                    //     // Firefox version
+                    //     var file = new File([req.response], filename, { type: 'application/force-download' });
+                    //     window.open(URL.createObjectURL(file));
+                    // }
+                }
+            };
 
             //设置返回数据的类型
             req.send();
-        }
-
-        function uploadProgress(evt) {
-            console.info(evt.lengthComputable);
-
-            if (evt.lengthComputable) { /*后端的主要时间消耗都在查询数据和生成文件，所以可以设置默认值，直到真正到达下载的进度，再开始走进度条*/
-                var percent = Math.round(evt.loaded * 100 / evt.total);
-                var v = percent.toFixed(2) + '%';
-                console.info(v);
-            }else{
-                console.info('unable to compute');
-            }
-        }
-
-        function uploadComplete(evt) {
-            /* 服务器端返回响应时候触发event事件*/
-            console.info('下载完成');
-            var blob = evt.currentTarget.response;
-            var filename = "4803086.mp4";
-            window.navigator.msSaveBlob(blob, filename);
-        }
-
-        function uploadFailed(evt) {
-            console.info('下载失败');
-        }
-
-        function uploadCanceled(evt) {
-            console.info('下载取消');
         }
     </script>
 </body>
