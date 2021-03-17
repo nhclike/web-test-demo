@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="requestFullScreen()">
+<div>
+    full
+</div>
+<script>
+    function requestFullScreen() {
+        var el = document.documentElement;
+
+        var rfs = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullScreen;
+
+        if (typeof rfs != 'undefined' && rfs) {
+            rfs.call(el);
+            return;
+        }
+        var wscript = new ActiveXObject('WScript.Shell');
+        wscript.SendKeys('{F11}');
+    }
+</script>
+</body>
+</html>

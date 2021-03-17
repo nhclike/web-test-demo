@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="saveSession" onclick="saveSession()">
+        保存sessionStorage
+    </button>
+    <button id="getSession" onclick="getSession()">
+        获取sessionStorage
+    </button>
+    <script>
+        function saveSession() {
+            var num=parseInt(10000*Math.random());
+            sessionStorage.setItem("token",num);
+        }
+        function getSession() {
+            var val=sessionStorage.getItem('token');
+            alert(val);
+        }
+    </script>
+</body>
+</html>

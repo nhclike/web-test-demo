@@ -9,12 +9,13 @@
 <body>
 
 <script type="text/javascript">
-  var filePath='c://case.sql';
+  var filePath='C://1.png';
   getFileSize(filePath);
   function getFileSize(filePath)
   {
     var fso = new ActiveXObject("Scripting.FileSystemObject");
-    alert("文件大小为："+fso.GetFile(filePath).size);
+    console.log("fso.GetFile(filePath)",fso.GetFile(filePath));
+    //alert("文件大小为："+fso.GetFile(filePath).size);
   }
 </script>
 </body>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    .container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    #circleDesk {
+        position: relative;
+        top: 100px;
+        left: 200px;
+    }
+
+    #circleDesk .circleSeat {
+        position: absolute;
+        background: transparent url("./confSeat.png") no-repeat 0 0 / 100% 100%;
+        color: #000;
+        text-align: center;
+        font-size: 12px;
+        border: 1px solid red;
+    }
+    #circleDesk .circleSeat .seatNum{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000;
+        width: 40px;
+        height: 40px;
+        border: 1px solid green;
+    }
+    #circleDesk .centerDesk {
+        background: transparent url("./confDeskCircle.png") no-repeat 0 0 / 100% 100%;
+        width: 800px;
+        height: 400px;
+        border-radius: 50% / 50%;
+        position: relative;
+    }
+
+</style>
+<div class="container">
+    <div id="circleDesk">
+        <div  class="deskBox">
+            <!--
+                圆心
+                半径 iR = 50px;
+                圆心坐标(150,150)
+            -->
+            <div class="centerDesk"></div>
+            <!--
+                ==========================
+                最大菜单块(正方形)
+                对角线长度 mDLen = oR - iR;
+                边长 mWidth = mHeight = mDLen的平方 / 2 的结果 再开方 最后取整
+                ==========================
+                菜单块滑动圆
+                半径 mR = iR + (mDLen / 2)
+                ==========================
+            -->
+            <div id="C1" class="circleSeat" >
+                <span>张三1</span>
+                <span id="CN1" class="seatNum">1</span>
+            </div>
+            <div id="C2" class="circleSeat" >
+                <span>张三2</span>
+                <span id="CN2" class="seatNum">2</span>
+            </div>
+            <div id="C3" class="circleSeat" >
+                <span>张三2</span>
+                <span id="CN3" class="seatNum">3</span>
+            </div>
+            <div id="C4" class="circleSeat" >
+                <span>张三3</span>
+                <span id="CN4" class="seatNum">4</span>
+            </div>
+            <div id="C5" class="circleSeat" >
+                <span>张三3</span>
+                <span id="CN5" class="seatNum">5</span>
+            </div>
+            <div id="C6" class="circleSeat" >
+                <span>张三3</span>
+                <span id="CN6" class="seatNum">6</span>
+            </div>
+            <div id="C7" class="circleSeat" >
+                <span>张三3</span>
+                <span id="CN7" class="seatNum">7</span>
+            </div>
+            <div id="C8" class="circleSeat" >
+                <span>张三3</span>
+                <span id="CN8" class="seatNum">8</span>
+            </div>
+            <div id="C9" class="circleSeat" >
+                <span>张三3</span>
+                <span id="CN9" class="seatNum">9</span>
+            </div>
+            <div id="C10" class="circleSeat" >
+                <span>张三3</span>
+                <span id="CN10" class="seatNum">10</span>
+            </div>
+            <div id="C11" class="circleSeat" >
+                <span>张三3</span>
+                <span id="CN11" class="seatNum">11</span>
+            </div>
+            <div id="C12" class="circleSeat" >
+                <span>张三3</span>
+                <span id="CN12" class="seatNum">12</span>
+            </div>
+            <div id="C13" class="circleSeat" >
+                <span>张三13</span>
+                <span id="CN13" class="seatNum">13</span>
+            </div>
+            <div id="C14" class="circleSeat" >
+                <span>张三13</span>
+                <span id="CN14" class="seatNum">14</span>
+            </div>
+            <div id="C15" class="circleSeat" >
+                <span>张三13</span>
+                <span id="CN15" class="seatNum">15</span>
+            </div>
+            <div id="C16" class="circleSeat" >
+                <span>张三13</span>
+                <span id="CN16" class="seatNum">16</span>
+            </div>
+            <div id="C17" class="circleSeat" >
+                <span>张三13</span>
+                <span id="CN17" class="seatNum">17</span>
+            </div>
+            <div id="C18" class="circleSeat" >
+                <span>张三13</span>
+                <span id="CN18" class="seatNum">18</span>
+            </div>
+            <div id="C19" class="circleSeat" >
+                <span>张三13</span>
+                <span id="CN19" class="seatNum">19</span>
+            </div>
+            <div id="C20" class="circleSeat" >
+                <span>张三13</span>
+                <span id="CN20" class="seatNum">20</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="../../src/jquery-1.11.3.js"></script>
+<script>
+    
+    drawCircleDesk(20);
+    drawCircleDeskNum(20);
+    function drawCircleDesk(num) {
+        var cW=parseInt($(".centerDesk").width());
+        var cH=parseInt($(".centerDesk").height());
+
+        var dL=$(".centerDesk").offset().left;
+        var dT=$('.centerDesk').offset().top;
+        console.log('dL',dL,'dT',dT);
+        var mWidth = 40;//座位大小
+
+        var irx = cW/2; //中间圆的半径
+        var iry= cH/2;
+        var orx = irx+mWidth;//最外层圆的半径,决定座位与中间圆的紧密程度，圆环的宽度
+        var ory=iry+mWidth;
+        var osx=dL+irx-mWidth/2;   //决定座位相对中间圆的位置
+        var osy=dT+iry-mWidth/2;   //决定座位相对中间圆的位置
+
+        $("#circleDesk .circleSeat").width(mWidth);
+        $("#circleDesk .circleSeat").height(mWidth);
+        //绘制圆形座位
+        for(var i=1;i<=num;i++){
+            var Cx=parseInt( -(Math.cos( (270-(360/num)*i) * Math.PI/180 ) * (orx + irx )/2) + osx  );
+            var Cy=parseInt( (Math.sin( (270-(360/num)*i) * Math.PI/180 ) * (ory + iry )/2) + osy  );
+
+            $("#C"+i).offset( {top:Cy,left:Cx} );
+        }
+    }
+    function drawCircleDeskNum(num) {
+        var cW=parseInt($(".centerDesk").width());
+        var cH=parseInt($(".centerDesk").height());
+
+        var dL=$(".centerDesk").offset().left;
+        var dT=$('.centerDesk').offset().top;
+        console.log('dL',dL,'dT',dT);
+        var mWidth = 40;//座位大小
+
+        var irx = cW/2; //中间圆的半径
+        var iry= cH/2;
+        var orx = irx-mWidth*2;//最外层圆的半径,决定座位与中间圆的紧密程度，圆环的宽度
+        var ory=iry-mWidth*2;
+        var osx=dL+irx-mWidth/2;   //决定座位相对中间圆的位置
+        var osy=dT+iry-mWidth/2;   //决定座位相对中间圆的位置
+
+
+        //绘制圆形座位
+        for(var i=1;i<=num;i++){
+            var Cx=parseInt( -(Math.cos( (270-(360/num)*i) * Math.PI/180 ) * (orx + irx )/2) + osx  );
+            var Cy=parseInt( (Math.sin( (270-(360/num)*i) * Math.PI/180 ) * (ory + iry )/2) + osy  );
+
+            $("#CN"+i).offset( {top:Cy,left:Cx} );
+        }
+    }
+</script>
+</body>
+</html>

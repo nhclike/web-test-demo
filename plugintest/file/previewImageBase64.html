@@ -10,10 +10,13 @@
 <script>
     function imgPreview() {
         var files = this.files;
+        console.log('imgPreview',files);
+
         var file = files[0];
         var reader = new FileReader();
         reader.onload = function() {
             var result = this.result;
+            console.log("result",result);
             document.getElementById('img').src=result;//img的id
         };
         reader.readAsDataURL(file);

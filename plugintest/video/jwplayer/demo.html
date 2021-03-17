@@ -6,22 +6,34 @@
 </style>  
 </head>  
 <body>  
-<script type='text/javascript' src='jwplayer.js'></script>  
+
+<script type='text/javascript' src='jwplayer.js'></script>
+<script type='text/javascript' src='jwplayer.html5.js'></script>
+
 <b>RTMP直播系统</b>
 <div id='mediaspace'>This text will be replaced</div>  
 <script type='text/javascript'>  
    var server = window.location.hostname;  
    // mylive 对应nginx.conf配置项application的名字  
    // live_stream 对应Adobe Flash Stream Media Live Encoder配置的stream名称  
-   var live_url = 'rtmp://172.19.82.247:9001/live/mp4';
-  jwplayer('mediaspace').setup({  
+   //var live_url = 'rtmp://172.19.82.247:9001/live/mp4';
+   //var live_url='https://cdn.theguardian.tv/webM/2015/07/20/150716YesMen_synd_768k_vp8.webm';
+   //var live_url='./../src/protect.mp4';
+   var live_url='http://vjs.zencdn.net/v/oceans.mp4';
+   
+  jwplayer('mediaspace').setup({
     'flashplayer': 'jwplayer.flash.swf',  
-    'file': live_url,  
+    'file': live_url,
     'controlbar': 'bottom',  
     'width': '760',  
-    'height': '428',  
+    'height': '428'
     //autostart: true,  //如果打开此标志，在打开网页时会自动播放直播流  
-  });  
+  });
+  // setTimeout(function () {
+  //     jplayer.load(live_url);
+  //
+  // },20)
+
 </script>  
 </body>  
 </html>  

@@ -18,11 +18,40 @@
       return false;
     }
 
+    function isInsalledIEVLC(){
+        try {
+            var vlcObj = new ActiveXObject("VideoLAN.Vlcplugin.2");
+            if(vlcObj != null) {
+                return true;
+            }
+        } catch (e) {
+            return false;
+        }
+    }
+    function isInsalledIEVLC1(){
+        try {
+            var vlcObj = new ActiveXObject("VideoLAN.Vlcplugin.1");
+            if(vlcObj != null) {
+                return true;
+            }
+        } catch (e) {
+            return false;
+        }
+    }
 		/* 浏览器检测 */
     function checkBrowser(){
       if(isInsalledFFVLC()){
         alert("已装VLC插件");
-      }else{
+      }
+      else if(isInsalledIEVLC()){
+          alert("已装VLC插件");
+
+      }else if(isInsalledIEVLC1()){
+          alert("已装VLC插件");
+
+      }
+      else{
+
         alert("未装VLC插件");
       }
     }

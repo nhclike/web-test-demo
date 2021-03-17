@@ -1,0 +1,63 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <script>
+        var filesList = new Array();
+        var filesIndex = 0;
+        var fso = new ActiveXObject("Scripting.FileSystemObject");
+        function searchFilesList(filePath){
+            var f = fso.GetFolder(filePath);
+            // 遍历目录
+            var fk = new Enumerator(f.SubFolders);
+            for (; !fk.atEnd(); fk.moveNext()) {
+                filesList[filesIndex++] = fk.item();
+                searchFilesList(fk.item());
+            }
+            // 遍历目录文件
+            var fc = new Enumerator(f.files);
+            for (; !fc.atEnd(); fc.moveNext()) {
+                filesList[filesIndex++] = fc.item();
+            }
+        }
+        function searchFiles(){
+            //console.log("fixfolder.value",fixfolder.value);
+            var val='C:\\NBSavePicture'
+            searchFilesList(val);
+            // 循环信息信息
+            for (var i=0; i<filesList.length; i++){
+                textarea.innerHTML += filesList[i]+"<br>";
+            }
+
+        }
+
+        function imgPreview() {
+            var files = this.files;
+            var file = files[0];
+            var reader = new FileReader();
+            reader.onload = function() {
+                var result = this.result;
+                console.log("result",result);
+                document.getElementById('img').src=result;//img的id
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function readImg() {
+            alert("文件大小为："+fso.GetFile('C:\\NBSavePicture\\1.png').size);
+
+        }
+    </script>
+</head>
+<body bgcolor="#FFFFFF" onload="searchFiles()">
+<table >
+    <tr>
+        <td id = "textarea">
+
+        </td>
+    </tr>
+</table>
+<input type="file" id="img-select" value="C:\NBSavePicture\\1.png" onload="imgPreview">
+<img src="" id="img" alt="">
+<button onclick="readImg">readImg</button>
+</body>
+</html>

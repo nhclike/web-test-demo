@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="saveLocalStorage" onclick="saveLocalStorage()">
+        保存localStorage
+    </button>
+    <button id="getLocalStorage" onclick="getLocalStorage()">
+        获取localStorage
+    </button>
+    <script>
+        function saveLocalStorage() {
+            var num=parseInt(10000*Math.random());
+            localStorage.setItem("token",num);
+        }
+        function getLocalStorage() {
+            var val=localStorage.getItem('token');
+            alert(val);
+        }
+    </script>
+</body>
+</html>
