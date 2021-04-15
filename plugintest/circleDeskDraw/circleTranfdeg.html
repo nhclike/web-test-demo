@@ -39,7 +39,7 @@
         width: 500px;
         height: 500px;
         border-radius: 500px;
-        position: relative;
+        position: absolute;
     }
 
 </style>
@@ -171,13 +171,15 @@
 <script>
     
     drawCircleDesk(25);
-    drawCircleDeskNum(25);
+    //drawCircleDeskNum(25);
     function drawCircleDesk(num) {
         var cW=parseInt($(".centerDesk").width());
         var cH=parseInt($(".centerDesk").height());
 
         var dL=$(".centerDesk").offset().left;
         var dT=$('.centerDesk').offset().top;
+        // var dL=$(".centerDesk").css('left');
+        // var dT=$('.centerDesk').css('top');
         console.log('dL',dL,'dT',dT);
         var mWidth = 40;//座位大小
 
@@ -192,10 +194,17 @@
         $("#circleDesk .circleSeat").height(mWidth);
         //绘制圆形座位
         for(var i=0;i<num;i++){
+            var degNum=(360/num)*i+'deg';
+
             var Cx=parseInt( -(Math.cos( (270-(360/num)*i) * Math.PI/180 ) * (orx + irx )/2) + osx  );
             var Cy=parseInt( (Math.sin( (270-(360/num)*i) * Math.PI/180 ) * (ory + iry )/2) + osy  );
             var ii=i+1;
             $("#C"+ii).offset( {top:Cy,left:Cx} );
+            $("#C"+ii).css({
+                transform:`rotate(${degNum})`
+                // top:Cy,
+                // left:Cx
+            })
         }
     }
     function drawCircleDeskNum(num) {

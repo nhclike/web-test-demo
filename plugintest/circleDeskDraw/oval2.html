@@ -36,7 +36,7 @@
     }
     #circleDesk .centerDesk {
         background: transparent url("./confDeskCircle.png") no-repeat 0 0 / 100% 100%;
-        width: 800px;
+        width: 900px;
         height: 400px;
         border-radius: 50% / 50%;
         position: relative;
@@ -138,11 +138,91 @@
                 <span>张三13</span>
                 <span id="CN19" class="seatNum">19</span>
             </div>
+
             <div id="C20" class="circleSeat" >
                 <span>张三13</span>
                 <span id="CN20" class="seatNum">20</span>
             </div>
-
+            <div id="C21" class="circleSeat" >
+                <span>张三21</span>
+                <span id="CN21" class="seatNum">21</span>
+            </div>
+            <div id="C22" class="circleSeat" >
+                <span>张三22</span>
+                <span id="CN22" class="seatNum">22</span>
+            </div>
+            <div id="C23" class="circleSeat" >
+                <span>张三23</span>
+                <span id="CN23" class="seatNum">23</span>
+            </div>
+            <div id="C24" class="circleSeat" >
+                <span>张三24</span>
+                <span id="CN24" class="seatNum">24</span>
+            </div>
+            <div id="C25" class="circleSeat" >
+                <span>张三25</span>
+                <span id="CN25" class="seatNum">25</span>
+            </div>
+            <div id="C26" class="circleSeat" >
+                <span>张三26</span>
+                <span id="CN26" class="seatNum">26</span>
+            </div>
+            <div id="C27" class="circleSeat" >
+                <span>张三13</span>
+                <span id="CN27" class="seatNum">27</span>
+            </div>
+            <div id="C28" class="circleSeat" >
+                <span>张三13</span>
+                <span id="CN28" class="seatNum">28</span>
+            </div>
+            <div id="C29" class="circleSeat" >
+                <span>张三13</span>
+                <span id="CN29" class="seatNum">29</span>
+            </div>
+            <div id="C30" class="circleSeat" >
+                <span>张三13</span>
+                <span id="CN30" class="seatNum">30</span>
+            </div>
+            <div id="C31" class="circleSeat" >
+                <span>张三13</span>
+                <span id="CN31" class="seatNum">31</span>
+            </div>
+            <div id="C32" class="circleSeat" >
+                <span>张三13</span>
+                <span id="CN32" class="seatNum">32</span>
+            </div>
+            <div id="C33" class="circleSeat" >
+                <span>张三13</span>
+                <span id="CN33" class="seatNum">33</span>
+            </div>
+            <div id="C34" class="circleSeat" >
+                <span>张三13</span>
+                <span id="CN34" class="seatNum">34</span>
+            </div>
+            <div id="C35" class="circleSeat" >
+                <span>张三13</span>
+                <span id="CN35" class="seatNum">35</span>
+            </div>
+            <div id="C36" class="circleSeat" >
+                <span>张三13</span>
+                <span id="CN36" class="seatNum">36</span>
+            </div>
+            <div id="C37" class="circleSeat" >
+                <span>张三13</span>
+                <span id="CN37" class="seatNum">37</span>
+            </div>
+            <div id="C38" class="circleSeat" >
+                <span>张三13</span>
+                <span id="CN38" class="seatNum">38</span>
+            </div>
+            <div id="C39" class="circleSeat" >
+                <span>张三13</span>
+                <span id="CN39" class="seatNum">39</span>
+            </div>
+            <div id="C40" class="circleSeat" >
+                <span>张三13</span>
+                <span id="CN40" class="seatNum">40</span>
+            </div>
         </div>
     </div>
 </div>
@@ -150,8 +230,8 @@
 <script src="../../src/jquery-1.11.3.js"></script>
 <script>
     
-    drawCircleDesk(20);
-    drawCircleDeskNum(20);
+    drawCircleDesk(40);
+    // drawCircleDeskNum(40);
     function drawCircleDesk(num) {
         var cW=parseInt($(".centerDesk").width());
         var cH=parseInt($(".centerDesk").height());
@@ -163,19 +243,29 @@
 
         var irx = cW/2; //中间圆的半径
         var iry= cH/2;
-        var orx = irx+mWidth;//最外层圆的半径,决定座位与中间圆的紧密程度，圆环的宽度
-        var ory=iry+mWidth;
+
         var osx=dL+irx-mWidth/2;   //决定座位相对中间圆的位置
         var osy=dT+iry-mWidth/2;   //决定座位相对中间圆的位置
 
         $("#circleDesk .circleSeat").width(mWidth);
         $("#circleDesk .circleSeat").height(mWidth);
+        var oL=2*Math.PI*900+4*(400-900);
+        var pol=oL/num;
         //绘制圆形座位
         for(var i=0;i<=num;i++){
-            var Cx=parseInt( -(Math.cos( (270-(360/num)*i) * Math.PI/180 ) * (orx + irx )/2) + osx  );
-            var Cy=parseInt( (Math.sin( (270-(360/num)*i) * Math.PI/180 ) * (ory + iry )/2) + osy  );
+            var degNum=(360/num)*i+'deg';
+            var or=180*pol/((360/num)*i*Math.PI);
+
+            var Cx=parseInt( -(Math.cos( (270-(360/num)*i) * Math.PI/180 ) * (cW+mWidth )/2) + osx  );
+            var Cy=parseInt( (Math.sin( (270-(360/num)*i) * Math.PI/180 ) * (cH+mWidth )/2) + osy  );
 
             $("#C"+Number(i+1)).offset( {top:Cy,left:Cx} );
+            var ii=i+1;
+            $("#C"+ii).css({
+                transform:`rotate(${degNum})`
+                // top:Cy,
+                // left:Cx
+            })
         }
     }
     function drawCircleDeskNum(num) {

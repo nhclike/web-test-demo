@@ -8,13 +8,46 @@
 <h1>findIndex 测试</h1>
 
 <script>
-  var ages = [3, 10, 18, 20];
+ //  var ages = [3, 10, 18, 20];
 
-  function checkAdult(age) {
-    return age >= 18;
+ //  function checkAdult(age) {
+ //    return age >= 18;
+ //  }
+	// var index=ages.findIndex(checkAdult);
+ //  console.log(index);
+
+
+  function unique(uniqueArr) {
+    uniqueArr.reverse();
+  var has = {};
+  return uniqueArr.reduce(function (arr, item) {
+    !has[item.id] && (has[item.id] = true && arr.push(item));
+    return arr;
+  }, []);
+}
+
+var arr = [
+  {
+    id: 'P001',
+    name: 12,
+  },
+  {
+    id: 'P002',
+    name: 2,
+  },
+  {
+    id: 'P001',
+    name: 1,
+  },
+  {
+    id: 'P001',
+    name: 123,
   }
-	var index=ages.findIndex(checkAdult);
-  console.log(index);
+];
+let r=unique(arr)
+/* 调用 */
+console.log(r)
+
 </script>
 </body>
 </html>

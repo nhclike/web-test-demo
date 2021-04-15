@@ -171,11 +171,11 @@
         $("#circleDesk .circleSeat").width(mWidth);
         $("#circleDesk .circleSeat").height(mWidth);
         //绘制圆形座位
-        for(var i=1;i<=num;i++){
+        for(var i=0;i<=num;i++){
             var Cx=parseInt( -(Math.cos( (270-(360/num)*i) * Math.PI/180 ) * (orx + irx )/2) + osx  );
             var Cy=parseInt( (Math.sin( (270-(360/num)*i) * Math.PI/180 ) * (ory + iry )/2) + osy  );
 
-            $("#C"+i).offset( {top:Cy,left:Cx} );
+            $("#C"+Number(i+1)).offset( {top:Cy,left:Cx} );
         }
     }
     function drawCircleDeskNum(num) {
@@ -196,11 +196,11 @@
 
 
         //绘制圆形座位
-        for(var i=1;i<=num;i++){
+        for(var i=0;i<=num;i++){
             var Cx=parseInt( -(Math.cos( (270-(360/num)*i) * Math.PI/180 ) * (orx + irx )/2) + osx  );
             var Cy=parseInt( (Math.sin( (270-(360/num)*i) * Math.PI/180 ) * (ory + iry )/2) + osy  );
 
-            $("#CN"+i).offset( {top:Cy,left:Cx} );
+            $("#CN"+Number(i+1)).offset( {top:Cy,left:Cx} );
         }
     }
 </script>
